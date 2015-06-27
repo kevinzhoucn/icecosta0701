@@ -1,0 +1,27 @@
+<div class="dashboard-item">
+  <div class="item-content">
+    <%#= link_to '设置网站基本信息', cpanel_site_configs_path %>
+    <a href="/cpanel/site_configs">
+      设置网站基本信息
+      <span class="item-detail">
+      <br>
+      </span>
+    </a>
+    <br>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <p>
+          创建项目
+        </p>
+        <li><a href="<%= new_service_path %>"><%= t('services') %></a></li>
+        <li><a href="<%= new_news_path %>"><%= t('news') %></a></li>
+        <li><a href="<%= new_activity_path %>"><%= t('activities') %></a></li>
+        <li><a href="<%= new_position_path %>"><%= t('positions') %></a></li>
+        <li><a href="<%= new_resume_path %>"><%= t('resumes') %></a></li>
+        <li><a href=""><%= t('about') %></a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  
+</div>
+</div>
