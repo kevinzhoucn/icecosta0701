@@ -1,0 +1,6 @@
+/*additional css*/
+.ipacro-content .ipacro-postcontent-0 .layout-item-0 { padding-right: 10px;padding-left: 10px;  }
+.ipacro-content .ipacro-postcontent-0 .layout-item-1 { margin-right: 0px;margin-left: 10px;  }
+.ipacro-content .ipacro-postcontent-0 .layout-item-2 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#C7C7C7;border-right-color:#C7C7C7;border-bottom-color:#C7C7C7;border-left-color:#C7C7C7; color: #1C1C1C; background: #F0F9FF; padding: 10px;  }
+.ie7 .ipacro-post .ipacro-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .ipacro-post .ipacro-layout-cell {border:none !important; padding:0 !important; }
