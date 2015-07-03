@@ -1,4 +1,4 @@
-<h1>Listing positions</h1>
+<!-- <h1>Listing positions</h1>
 
 <table>
   <thead>
@@ -29,3 +29,34 @@
 <br>
 
 <%= link_to 'New Position', new_position_path %>
+ -->
+
+ <div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(http://tigermed.net/images/2_01.jpg);background-size:100%;">
+      </div>
+    </div>
+  </div>
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width:25%">
+        <section style="margin-top:1em">
+        <form action="http://baidu.com/s?site%3Abrivates.com%20" method="post">
+          <input type="search" placeholder="搜索职位" result="8">
+          <a class="ipacro-button">搜索...</a>
+        </form>
+        </section>
+      </div>
+      <div class="ipacro-layout-cell layout-item-0" style="width:75%">
+        <div class="layout-item-2" style="margin-top:1em;min-height:300px">
+          <ul>
+          <% @positions.each do |position| %>
+            <li><%= link_to position.title, position %> <%=position.position_type%></li>
+          <%end%>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

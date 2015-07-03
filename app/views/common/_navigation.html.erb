@@ -21,12 +21,13 @@
     <% end %>
   </ul> -->
   <ul class="ipacro-hmenu">
-    <li><a href="<%= root_path %>">首&nbsp;&nbsp;页</a></li>
-    <li><a href=""><%= t('about') %></a></li>
-    <li><a href="<%= services_path %>"><%= t('services') %></a></li>
-    <li><a href="<%= news_index_path %>"><%= t('news') %></a></li>
-    <li><a href="<%= activities_path %>"><%= t('activities') %></a></li>
-    <li><a href="<%= positions_path %>"><%= t('positions') %></a></li>
-    <li><a href="#">联系我们</a></li>
+    <li><a id="home" href="<%= root_path %>">首&nbsp;&nbsp;页</a></li>
+    <li><a id="about" href=""><%= t('about') %></a></li>
+    <li><a id="services" href="<%= services_path %>"><%= t('services') %></a></li>
+    <li><a id="news" href="<%= news_index_path %>"><%= t('news') %></a></li>
+    <li><a id="activities" href="<%= activities_path %>"><%= t('activities') %></a></li>
+    <li><a id="positions" href="<%= positions_path %>"><%= t('positions') %></a></li>
+    <li><a id="contacts" href="#">联系我们</a></li>
   </ul> 
 </nav>
+<script type="text/javascript" src="/js/addmenuclass.js"></script>

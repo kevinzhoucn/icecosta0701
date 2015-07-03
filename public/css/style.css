@@ -666,7 +666,7 @@ ul.ipacro-hmenu>li:last-child, ul.ipacro-hmenu>li.last-child {
 
 ul.ipacro-hmenu>li>a
 {
-   padding:0 38px;
+   padding:0 35px;
    margin:0 auto;
    position: relative;
    display: block;
@@ -702,7 +702,7 @@ ul.ipacro-hmenu>li>a.active
    background: -ms-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
    background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
    -svg-background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
-   padding:0 38px;
+   padding:0 35px;
    margin:0 auto;
    color: #415D19;
    text-decoration: none;
@@ -724,7 +724,7 @@ ul.ipacro-hmenu>li>a:hover, .desktop ul.ipacro-hmenu>li:hover>a
    background: -ms-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
    background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
    -svg-background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
-   padding:0 38px;
+   padding:0 35px;
    margin:0 auto;
 }
 ul.ipacro-hmenu>li>a:hover, 
