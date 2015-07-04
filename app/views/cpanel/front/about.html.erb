@@ -1,12 +1,15 @@
-<p>This is about!</p>
 
-<p>
-  <%= @about_en.value %>
-  <%= link_to '编辑', edit_cpanel_site_config_path(@about_en) %>
-</p>
 
-<p>
-  <%= @about_cn.value %>
-  <%= link_to '编辑', edit_cpanel_site_config_path(@about_cn) %>
-</p>
 
+<div id="about">
+  <h2 class="header">关于我们</h2>
+  <p>
+    <%= @about_en.value %>
+    <%= link_to '编辑', edit_cpanel_site_config_path(@about_en) %>
+  </p>
+
+  <p>
+    <%= @about_cn.value %>
+    <%= link_to '编辑', edit_cpanel_site_config_path(@about_cn) %>
+  </p>
+</div>
