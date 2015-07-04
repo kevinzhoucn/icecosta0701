@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="zh-CN">
   <head>
-    <title>Projects Control Panel</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= render_stylesheets %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <title>IPA-CRO</title>
+    <!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="/css/style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="/css/style.ie7.css" media="screen" /><![endif]-->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/additional.style.css">
   </head>
-  <body class="<%= controller_name %>">
-
-  <%= yield %>
-
+  <body>
+    <div id="ipacro-main">
+      <div class="ipacro-sheet clearfix">
+        <div class="ipacro-layout-wrapper">
+          <div class="ipacro-content-layout">
+            <div class="ipacro-content-layout-row">
+              <div class="ipacro-layout-cell ipacro-content">
+                <article class="ipacro-post ipacro-article">
+                  <%=yield%>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= render partial:'common/footer'%>
+    </div>
+  </body>
   </body>
 </html>
