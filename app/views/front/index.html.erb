@@ -8,18 +8,7 @@
   </div>
   <div class="ipacro-content-layout">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width: 42%" >
-        <!-- <img alt="" width="350" height="250" src="images/shutterstock_24758047.jpg" class="" style="margin-right: 10px; float: left;"> -->
-        <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="margin-right: 10px; float: left;">
-      </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 58%" >
-        <p><span style="font-weight: bold;">
-          <%= @about_cn.html_safe.truncate(200) %>
-        </p>
-        <p align="right">
-          <a href="#" class="ipacro-button">More...</a>
-        </p>
-      </div>
+      <%= render partial:'common/front_index/front_about'%>
     </div>
   </div>
   <div class="ipacro-content-layout-wrapper layout-item-1">
@@ -27,7 +16,7 @@
       <div class="ipacro-content-layout-row">
         <div class="ipacro-layout-cell layout-item-2" style="width: 100%" >
           <blockquote style="margin: 0px">
-            Malesuada mauris faucibus a sed praesent auctor et leo. Vestibulum faucibus tellus nisi in quis amet nisi gravida quam sagittis fermentum morbi libero suspendisse non. Egestas lacus condimentum leo nisi ut non eu blandit elit in nibh.
+            不想当裁缝的厨师不是好司机
           </blockquote>
         </div>
       </div>
@@ -35,27 +24,7 @@
   </div>
   <div class="ipacro-content-layout">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width: 39%" >
-      <h3>Patient Awareness</h3><div class="image-caption-wrapper" style="float: left; width: 207px"><img alt="" width="100%" height="" src=" <%= @news_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:489px"></div>
-
-      <% @front_news.each do |item| %>
-        <li>
-          <%= link_to item.title, item %>
-        </li>
-      <% end %>
-
-      </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 61%" >
-        <h3>Training Programs</h3>
-        <div class="image-caption-wrapper" style="float: left; width: 340px"><img alt="" width="100%" height="" src=" <%= @activity_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:410px">
-        </div>
-        <br><br>
-        <% @front_activites.each do |item| %>
-          <li>
-            <%= link_to item.title, item %>
-          </li>
-        <% end %>
-      </div>
+    <%= render partial:'common/front_index/front_news_activities'%>
     </div>
   </div>
 </div>

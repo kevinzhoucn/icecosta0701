@@ -1,0 +1,27 @@
+<div class="ipacro-layout-cell layout-item-0" style="width: 39%" >
+  <h3>最新资讯</h3>
+  <div class="image-caption-wrapper" style="float: left; width: 207px">
+    <img alt="" width="100%" height="" src=" <%= @news_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:489px">
+  </div>
+
+  <% @front_news.each do |item| %>
+    <li>
+      <%= link_to item.title, item %>
+    </li>
+  <% end %>
+  <p align="right">
+    <a href="/news" class="ipacro-button">查看全部...</a>
+  </p>
+</div>
+<div class="ipacro-layout-cell layout-item-0" style="width: 61%" >
+  <h3>员工园地</h3>
+  <div class="image-caption-wrapper" style="float: left; width: 340px">
+    <img alt="" width="100%" height="" src=" <%= @activity_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:410px">
+  </div>
+  
+  <% @front_activites.each do |item| %>
+    <li>
+      <%= link_to item.title, item %>
+    </li>
+  <% end %>
+</div>

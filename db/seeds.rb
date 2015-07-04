@@ -42,16 +42,16 @@
 # SiteConfig.save_default("site_logo","logo.png")
 # SiteConfig.save_default("site_slogan","SLOGAN")
 
-# Picture.delete_all
-# Picture.create(key: "about_image", value: "about_image")
-# Picture.create(key: "news_image")
-# Picture.create(key: "activity_image")
+Picture.delete_all
+Picture.create(key: "about_image", value: "about_image")
+Picture.create(key: "news_image")
+Picture.create(key: "activity_image")
 
 
-# Partner.delete_all
-# Partner.create(name: "Google", url: "http://www.google.com")
-# Partner.create(name: "Baidu", url: "http://www.baidu.com")
-# Partner.create(name: "Bing", url: "http://www.bing.com")
+Partner.delete_all
+Partner.create(name: "Google", url: "http://www.google.com")
+Partner.create(name: "Baidu", url: "http://www.baidu.com")
+Partner.create(name: "Bing", url: "http://www.bing.com")
 
 Service.delete_all
 Service.create(title: "Service1", content: "Service1")

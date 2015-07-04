@@ -1,0 +1,11 @@
+<div class="ipacro-layout-cell layout-item-0" style="width: 42%" >
+  <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="margin-right: 10px; float: left;">
+</div>
+<div class="ipacro-layout-cell layout-item-0" style="width: 58%" >
+  <p>
+    <%= @about_cn.html_safe.truncate(200) %>
+  </p>
+  <p align="right">
+    <a href="/about" class="ipacro-button">查看全部...</a>
+  </p>
+</div>

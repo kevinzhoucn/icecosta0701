@@ -23,7 +23,7 @@
               <li style="font-size:1.1em">
                 <%= link_to news.title, news %>
                 <% if news.created_at %>
-                  <%= news.created_at.strftime('%Y-%m-%d') %>
+                  <sub>发布时间：<%= news.created_at.strftime('%Y-%m-%d') %></sub>
                 <% end %>
                 <p><%= link_to 'Edit', edit_news_path(news) %></p>
                 <p><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></p>

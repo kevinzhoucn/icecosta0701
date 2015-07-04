@@ -1,0 +1,10 @@
+<h3 style="border-radius:10px;background:url('../images/nav.png');height:30px;line-height:30px;transform:skew(-12deg);text-align:justify">我们提供的服务</h3>
+<div>
+  <ul>
+    <% @services.each do |service| %>
+      <li>
+        <%= link_to service.title, service %>
+      </li>
+    <%end%>
+  </ul>
+</div>

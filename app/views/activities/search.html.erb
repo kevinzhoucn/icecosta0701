@@ -1,11 +1,29 @@
-<div class="layout-item-2">
-  <h3>搜索结果</h3>
-  <ul>
-    <% @activities.each do |activity| %>
-      <li style="font-size:1.1em">
-        <%= link_to activity.title, activity %>
-      </li>
-    <%end%>
-  </ul>
-  <%= paginate @activities %>
-</div>        
+<div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width:100%">
+        <h6>
+          当前位置：<%=link_to '员工园地', activities_path%>>搜索结果
+        </h6>
+      </div>
+    </div>
+  </div>
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="layout-item-2" style="min-height:450px">
+        <h3>搜索关键字【<%= @key_words %>】的结果</h3>
+        <ul>
+        <% @activities.each do |activity| %>
+          <li style="font-size:1.1em">
+            <%= link_to activity.title, activity %>
+            <% if activity.created_at %>
+              <sub>发布时间：<%= activity.created_at.strftime('%Y-%m-%d') %></sub>
+            <% end %>
+          </li>
+        <%end%>
+      </ul>
+      <%= paginate @activities %>
+      </div>
+    </div>
+  </div>
+</div>
