@@ -1,8 +1,7 @@
-/* ´úÂëÕûÀí£ºÀÁÈËÖ®¼Ò www.lanrenzhijia.com */
 .flickerplate {
 	position:relative;
 	width:100%;
-	height:400px;
+	height:250px;/*æŒ‰è¦æ±‚æ”¹æˆ250px*/
 	background-color:#e6e6e6;
 	overflow:hidden
 }
@@ -212,4 +211,4 @@ font-size:1.667em
 .flickerplate.animate-scroller-slide ul.flicks {
 	position:auto
 }
-/* ´úÂëÕûÀí£ºÀÁÈËÖ®¼Ò www.lanrenzhijia.com */
+/* Â´ÃºÃ‚Ã«Ã•Ã»Ã€Ã­Â£ÂºÃ€ÃÃˆÃ‹Ã–Â®Â¼Ã’ www.lanrenzhijia.com */

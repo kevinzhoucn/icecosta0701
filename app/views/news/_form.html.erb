@@ -8,6 +8,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "添加",class:"ipacro-button"%>
+    <%= link_to '返回', news_index_path,class:"ipacro-button"%>|
+    <%= f.button :submit, "添加",class:"ipacro-button", style:"font-weight:bolder"%>
   </div>
 <% end %>
