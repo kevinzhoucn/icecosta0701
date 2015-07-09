@@ -1,0 +1,131 @@
+/* Created by Artisteer v4.1.0.59782 */
+
+.ipacro-header, #ipacro-header-bg, .ipacro-layout-cell, .ipacro-layout-wrapper, .ipacro-footer, .ipacro-nav, #ipacro-hmenu-bg, .ipacro-sheet,
+.clearfix {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+
+.ipacro-textblock > div {
+   display: block;
+   line-height: normal;
+   zoom: 1;
+}
+
+.ipacro-header
+{
+   z-index: 1;
+   background-image: [headerimage];
+   background-position: [headerposition];
+}
+
+#ipacro-header-bg 
+{
+   display: none;
+}
+
+.ipacro-hmenu>li, .ipacro-hmenu>li>a
+{
+   display: inline !important;
+   zoom: 1;
+   float: none !important;
+   vertical-align: top;
+}
+ul.ipacro-hmenu, ul.ipacro-hmenu ul {
+   zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).className="cleared");
+}
+#ipacro-hmenu-bg 
+{
+   display: none;
+}
+
+ul.ipacro-hmenu>li:first-child {
+   padding-right:1px;
+}
+ul.ipacro-hmenu>li{
+   zoom:expression(runtimeStyle.zoom=1,insertBefore(document.createElement('span'),firstChild).className='ipacro-hmenu-separator');
+}
+ul.ipacro-hmenu>li>span.ipacro-hmenu-separator
+{
+   position:absolute;
+   display: block;
+   top:0;
+   left:  -1px;
+   width: 1px;
+   height: 24px;
+   background: url('images/menuseparator.png') center center no-repeat;
+}
+ul.ipacro-hmenu>li:first-child>span.ipacro-hmenu-separator
+{
+   display:none;
+}
+
+.ipacro-content-layout, .ipacro-content-layout-row, .ipacro-layout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.ipacro-layout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+
+input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+* html input[type="text"]
+{
+   margin :0;
+}
+
+form.ipacro-search>input[type="text"]
+{
+   margin:0 0 0 -3px;
+   zoom:expression(runtimeStyle.zoom = 1, parentNode.insertBefore(document.createElement('div'), this).appendChild(this));
+}
+
+form.ipacro-search div>input[type="text"]
+{
+   width: 100%;
+}
+
+* html form.ipacro-search>input[type="text"] 
+{
+   margin :0;
+}
+
+.ipacro-postmetadataheader{
+   zoom:1;
+}
+
+.ipacro-postheadericons span{
+   zoom: 1;
+}
+.ipacro-postcontent {
+   height: 1%;
+}
+
+.ipacro-postmetadatafooter{
+   zoom:1;
+}
+
+.ipacro-postfootericons span{
+   zoom: 1;
+}
+.close-alt, .arrow-right-alt, .arrow-left-alt {
+   display: block !important;
+}
+.cw, .ccw {
+   display: none !important;
+}
+
+.ipacro-content 
+{
+   width: auto;
+   float:none;
+}
+

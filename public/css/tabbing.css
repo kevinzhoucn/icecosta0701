@@ -1,0 +1,16 @@
+div [id^=content]{
+  display: none;
+}
+div [id^=content]:first-child{
+  display: block;
+}
+* [id^=label]{
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  font-size: 1.5em !important;
+  text-align: justify;
+  background-color: #BBDDEC;
+  margin:0 !important;

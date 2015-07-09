@@ -1,0 +1,36 @@
+<script src="/js/flickerslider/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
+<script src="/js/flickerslider/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+<link href="/css/flickerplate.css"  type="text/css" rel="stylesheet">
+<script src="/js/flickerslider/flickerplate.min.js" type="text/javascript"></script>
+<script>
+  $(document).ready(function(){
+    $('.flicker-example').flicker({
+      dot_alignment: 'right',
+      flick_animation: 'jquery-slide'
+    });
+  });
+</script>
+<style type="text/css">
+  .ipacro-postcontent ul>li:before, .ipacro-post ul>li:before, .ipacro-textblock ul>li:before{content:none; /*去掉li前面的小三角*/}
+  .ipacro-postcontent li, .ipacro-post li, .ipacro-textblock li{margin: 0;}/*去掉li外边距*/
+</style>
+<div class="flicker-example" data-block-text="false" id="slideshow">
+  <ul>
+    <li data-background="images/12small.jpg">
+      <div class="flick-title">测试图片1</div>
+      <div class="flick-sub-text">如果能看到这段文字，说明图片轮播工作正常</div>
+    </li>
+    <li data-background="http://getwebplate.com/bower_components/webplate/project/img/background/home.jpg">
+      <div class="flick-title">测试图片2</div>
+      <div class="flick-sub-text">如果能看到这段文字，说明图片轮播工作正常</div>
+    </li>
+    <li data-background="http://getwebplate.com/bower_components/webplate/project/img/background/plugin-flickerplate.jpg">
+      <div class="flick-title">测试图片3</div>
+      <div class="flick-sub-text">如果能看到这段文字，说明图片轮播工作正常</div>
+    </li>
+    <li data-background="http://getwebplate.com/bower_components/webplate/project/img/background/plugin-formplate.jpg">
+      <div class="flick-title">测试图片4</div>
+      <div class="flick-sub-text">如果能看到这段文字，说明图片轮播工作正常</div>
+    </li>
+  </ul>
+</div>

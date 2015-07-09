@@ -1,4 +1,4 @@
-<h1>Listing services</h1>
+<!-- <h1>Listing services</h1>
 
 <table>
   <thead>
@@ -26,4 +26,35 @@
 
 <br>
 
-<%= link_to 'New Service', new_service_path %>
+<%= link_to 'New Service', new_service_path %> -->
+
+<div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(/images/services.jpg);background-size:100%;" >
+      </div>
+    </div>
+  </div>
+    <style type="text/css">
+      @import url('/css/tabbing.css');
+    </style>
+    <script type="text/javascript" src="/js/tabbing.js"></script>
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
+        <ul style="margin:1em 0 1em 0;">
+        <% @services.each do |service| %>
+          <li id="label<%=service.title%>"><%=@service.title%></li>
+        <%end%>
+        </ul>
+      </div>
+      <div class="ipacro-layout-cell layout-item-0" style="width:75%" id="tabs">
+        <% @services.each do |service| %>
+          <div id="content<%=service.title%>" class="layout-item-2" style="margin-top:1em;min-height:300px">
+            <%=@service.title%>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
