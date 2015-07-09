@@ -5,6 +5,8 @@ else
   source 'http://ruby.taobao.org'
 end
 
+# source 'https://rubygems.org'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -63,7 +65,7 @@ gem 'rolify'
 gem 'cancancan'
 
 # 表单
-gem 'simple_form', '3.1.0.rc2', github: 'plataformatec/simple_form'
+gem 'simple_form', git: 'https://github.com/plataformatec/simple_form', :tag => 'v3.1.0.rc2'
 
 # Bootstrap
 # Bootstrap

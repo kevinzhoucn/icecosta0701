@@ -77,4 +77,15 @@ Rails40Starter::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.163.com",
+    :port => 25,
+    # :domain => "domain.of.sender.net",
+    :authentication => :login,
+    :user_name => "tr_reuters@163.com",
+    :password => "Passw0rd",
+    # :enable_starttls_auto => true
+  }
 end

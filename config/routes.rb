@@ -18,6 +18,9 @@ Rails40Starter::Application.routes.draw do
     resources :site_configs
   end
 
+  get '/about' => 'front#about', as: :front_about
+  get '/contact' => 'front#contact_us', as: :front_contact
+
   devise_for :users
   
   root 'front#index'

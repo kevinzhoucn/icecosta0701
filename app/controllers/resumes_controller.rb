@@ -22,7 +22,12 @@ class ResumesController < ApplicationController
 
   def create
     @resume = Resume.new(resume_params)
-    @resume.save
+
+    if @resume.save
+      flash[:notice] = ''
+      Notifier.resume_received(@resume).deliver 
+    end
+
     respond_with(@resume)
   end
 
