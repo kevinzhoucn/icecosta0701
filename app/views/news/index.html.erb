@@ -11,6 +11,10 @@
         <h3>搜索快讯</h3>
         <input type="search" placeholder="请输入关键字" size="16" />
         <input class="ipacro-button" style="font-weight: bolder; zoom: 1;" type="submit" value="搜索">
+        <%= form_tag news_search_path, :method => 'get' do %>
+          <%= text_field_tag :key, params[:key] %>
+          <%= submit_tag "搜索", :name => nil %>
+        <% end %>
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
         <div class="layout-item-2">
@@ -22,7 +26,8 @@
               </li>
             <%end%>
           </ul>
-        </div>
+          <%= paginate @news %>
+        </div>        
       </div>
     </div>
   </div>

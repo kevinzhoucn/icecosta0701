@@ -5,6 +5,7 @@
     <%= f.input :title %>
     <%= f.input :content %>
     <%= f.input :news_type %>
+    <%= f.input :lang, value: "zh", style: "display:none" %>
   </div>
 
   <div class="form-actions">
@@ -12,3 +13,21 @@
     <%= f.button :submit, "发布",class:"ipacro-button", style:"font-weight:bolder"%>
   </div>
 <% end %>
+
+<p>English</p>
+<%= simple_form_for(@news) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.input :news_type %>
+    <%= f.input :lang, value: "en" %>
+  </div>
+
+  <div class="form-actions">
+    <%= link_to '返回', news_index_path,class:"ipacro-button"%>|
+    <%= f.button :submit, "发布",class:"ipacro-button", style:"font-weight:bolder"%>
+  </div>
+<% end %>
+

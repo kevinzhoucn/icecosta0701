@@ -43,6 +43,10 @@
         <h3>搜索员工动态</h3>
         <input type="search" placeholder="请输入关键字" size="16" />
         <input class="ipacro-button" style="font-weight: bolder; zoom: 1;" type="submit" value="搜索">
+        <%= form_tag activities_search_path, :method => 'get' do %>
+          <%= text_field_tag :key, params[:key] %>
+          <%= submit_tag "搜索", :name => nil %>
+        <% end %> 
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
         <div class="layout-item-2">
@@ -52,8 +56,9 @@
               <li style="font-size:1.1em">
                 <%= link_to activity.title, activity %>
               </li>
-            <%end%>
+            <%end%>            
           </ul>
+          <%= paginate @activities %>
         </div>
       </div>
     </div>

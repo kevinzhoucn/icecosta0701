@@ -5,4 +5,7 @@ class Cpanel::FrontController < Cpanel::ApplicationController
   def about
     @cpanel_site_about = SiteConfig.about_title
   end
+
+  def dashboard
+  end
 end

@@ -4,10 +4,16 @@ class ActivitiesController < ApplicationController
   respond_to :html
 
   def index
-    @activities = Activity.all
+    @activities = Activity.all.page params[:page]
     respond_with(@activities)
   end
 
+  def search
+    @key_words = params[:key]
+    @activities = Activity.search(params[:key]).page params[:page]
+    respond_with(@activities)
+  end
+  
   def show
     respond_with(@activity)
   end

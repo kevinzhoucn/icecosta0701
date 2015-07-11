@@ -31,6 +31,7 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem 'kaminari'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -52,6 +53,8 @@ end
 
 # 上传组件
 gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mongoid-grid_fs', git: 'https://github.com/ahoward/mongoid-grid_fs'
 gem 'mini_magick'
 
 # Mongoid 辅助插件

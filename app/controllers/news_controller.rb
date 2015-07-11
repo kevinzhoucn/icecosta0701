@@ -4,7 +4,13 @@ class NewsController < ApplicationController
   respond_to :html
 
   def index
-    @news = News.all
+    @news = News.all.page params[:page]
+    respond_with(@news)
+  end
+
+  def search
+    @key_words = params[:key]
+    @news = News.search(params[:key]).page params[:page]
     respond_with(@news)
   end
 
@@ -42,6 +48,6 @@ class NewsController < ApplicationController
     end
 
     def news_params
-      params.require(:news).permit(:title, :content, :news_type)
+      params.require(:news).permit(:title, :content, :news_type, :lang)
     end
 end

@@ -1,5 +1,6 @@
 class FrontController < ApplicationController
   def index
+    @slides = Slide.all
   end
 
   def about

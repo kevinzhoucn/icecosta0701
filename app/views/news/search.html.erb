@@ -1,0 +1,11 @@
+<div class="layout-item-2">
+  <h3>搜索结果</h3>
+  <ul>
+    <% @news.each do |news| %>
+      <li style="font-size:1.1em">
+        <%= link_to news.title, news %>
+      </li>
+    <%end%>
+  </ul>
+  <%= paginate @news %>
+</div>        

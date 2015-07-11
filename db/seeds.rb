@@ -30,3 +30,4 @@ eos
 SiteConfig.save_default("style_url", "/css/style_white.css")
 
 SiteConfig.save_default("about", "about")
+

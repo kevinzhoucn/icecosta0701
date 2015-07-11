@@ -20,9 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  site_title: "IPA"
   hello: "Hello world"
   services: "Our Services"
   about: "About Us"
   activities: "Activities"
   positions: "Join Us"
   resumes: "Resume"
+  
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
