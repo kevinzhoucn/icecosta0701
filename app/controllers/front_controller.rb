@@ -4,7 +4,8 @@ class FrontController < ApplicationController
   end
 
   def about
-    @about = SiteConfig.about
+    @about_en = SiteConfig.about_en
+    @about_cn = SiteConfig.about_cn
   end
 
   def contact_us

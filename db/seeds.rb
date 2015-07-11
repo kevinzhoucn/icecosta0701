@@ -4,6 +4,7 @@
 # 如需新增设置项，请在这里初始化默认值，然后到后台修改
 # 首页
 # SiteConfig.index_html
+SiteConfig.delete_all
 SiteConfig.save_default("index_html",<<-eos
 <div class="box" style="text-align:center;">
   <p><img alt="Big_logo" src="/assets/big_logo.png"></p>
@@ -29,5 +30,6 @@ eos
 
 SiteConfig.save_default("style_url", "/css/style_white.css")
 
-SiteConfig.save_default("about", "about")
+SiteConfig.save_default("about_cn", "关于")
+SiteConfig.save_default("about_en", "about")
 
