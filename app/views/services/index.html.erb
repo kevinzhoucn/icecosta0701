@@ -35,25 +35,22 @@
       </div>
     </div>
   </div>
-    <style type="text/css">
-      @import url('/css/tabbing.css');
-    </style>
-    <script type="text/javascript" src="/js/tabbing.js"></script>
-  <div class="ipacro-content-layout">
+  <div class="ipacro-content-layout" style="margin-top:10px;">
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
-        <ul style="margin:1em 0 1em 0;">
-        <% @services.each do |service| %>
-          <li id="label<%=service.title%>"><%=@service.title%></li>
-        <%end%>
-        </ul>
-      </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width:75%" id="tabs">
-        <% @services.each do |service| %>
-          <div id="content<%=service.title%>" class="layout-item-2" style="margin-top:1em;min-height:300px">
-            <%=@service.title%>
+        <h3 style="border-radius:10px;background:url('../images/nav.png');height:30px;line-height:30px;transform:skew(-12deg);text-align:justify">我们提供的服务</h3>
+          <div>
+            <ul>
+              <%@services.each do |service|%>
+                <li id="label<%=service.title%>"><%=@service.title%></li>
+              <%end%>
+            </ul>
           </div>
-        <%end%>
+      </div>
+      <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
+        <div class="layout-item-2">
+
+        </div>
       </div>
     </div>
   </div>

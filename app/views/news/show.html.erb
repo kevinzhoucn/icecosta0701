@@ -18,12 +18,26 @@
   <div class="ipacro-content-layout">
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:100%">
+        <h6>
+          当前位置：<%=link_to '资讯发布', news_index_path%>><%=@news.title%>
+        </h6>
+      </div>
+    </div>
+  </div>
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width:100%">
         <div class="layout-item-2" style="margin-top:1em;min-height:300px">
-          <blockquote style="margin: 0px">
-            Malesuada mauris faucibus a sed praesent auctor et leo. Vestibulum faucibus tellus nisi in quis amet nisi gravida quam sagittis fermentum morbi libero suspendisse non. Egestas lacus condimentum leo nisi ut non eu blandit elit in nibh.
-          </blockquote>
+          <h3>
+            <%=@news.title%>
+          </h3>
+          <hr>
+          <%=@news.content.html_safe%>
         </div>
       </div>
     </div>
   </div>
+  <p>
+    <a class="ipacro-button" onclick="window.history.go(-1)">返回</a>
+  </p>
 </div>

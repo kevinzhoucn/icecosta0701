@@ -21,6 +21,10 @@ $(document).ready(function(){
     {
       $("#news").addClass("active");
     }
+    else if(/contact/.test(url.toLowerCase()))
+    {
+      $("#contact").addClass("active");
+    }
     else
     {
       $("#home").addClass("active");

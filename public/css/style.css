@@ -10,7 +10,7 @@
    -svg-background: linear-gradient(top, rgba(87, 170, 209, 0.12) 0, rgba(255, 255, 255, 0.34) 130px) no-repeat, url('../images/page1080.png') top center, linear-gradient(top, #83C0DD 0, #F3F9FC 130px) no-repeat;
    margin:0 auto;
    font-size: 13px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
    text-align: justify;
@@ -25,7 +25,7 @@
 table, ul.ipacro-hmenu
 {
    font-size: 13px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
    text-align: justify;
@@ -82,7 +82,7 @@ ul.ipacro-vmenu a
 .ipacro-postcontent a:hover,
 .ipacro-postcontent a.hovered
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-postcontent p
@@ -103,7 +103,7 @@ ul.ipacro-vmenu a
 .ipacro-postheader, .ipacro-postheader a, .ipacro-postheader a:link, .ipacro-postheader a:visited, .ipacro-postheader a:hover
 {
    font-size: 31px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -111,21 +111,21 @@ ul.ipacro-vmenu a
 
 .ipacro-postcontent a, .ipacro-postcontent a:link
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
    color: #5E8523;
 }
 
 .ipacro-postcontent a:visited, .ipacro-postcontent a.visited
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
    color: #6E6E6E;
 }
 
 .ipacro-postcontent  a:hover, .ipacro-postcontent a.hover
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
    color: #72C0B7;
 }
@@ -134,7 +134,7 @@ ul.ipacro-vmenu a
 {
    color: #545454;
    font-size: 31px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -143,7 +143,7 @@ ul.ipacro-vmenu a
 .ipacro-blockcontent h1
 {
    font-size: 31px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -152,7 +152,7 @@ ul.ipacro-vmenu a
 .ipacro-postcontent h1 a, .ipacro-postcontent h1 a:link, .ipacro-postcontent h1 a:hover, .ipacro-postcontent h1 a:visited, .ipacro-blockcontent h1 a, .ipacro-blockcontent h1 a:link, .ipacro-blockcontent h1 a:hover, .ipacro-blockcontent h1 a:visited 
 {
    font-size: 31px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -162,7 +162,7 @@ ul.ipacro-vmenu a
 {
    color: #545454;
    font-size: 20px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -171,7 +171,7 @@ ul.ipacro-vmenu a
 .ipacro-blockcontent h2
 {
    font-size: 20px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -180,7 +180,7 @@ ul.ipacro-vmenu a
 .ipacro-postcontent h2 a, .ipacro-postcontent h2 a:link, .ipacro-postcontent h2 a:hover, .ipacro-postcontent h2 a:visited, .ipacro-blockcontent h2 a, .ipacro-blockcontent h2 a:link, .ipacro-blockcontent h2 a:hover, .ipacro-blockcontent h2 a:visited 
 {
    font-size: 20px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -191,7 +191,7 @@ ul.ipacro-vmenu a
    color: #6E6E6E;
    margin-bottom: 0;
    font-size: 18px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -201,7 +201,7 @@ ul.ipacro-vmenu a
 {
    margin-bottom: 0;
    font-size: 18px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -210,7 +210,7 @@ ul.ipacro-vmenu a
 .ipacro-postcontent h3 a, .ipacro-postcontent h3 a:link, .ipacro-postcontent h3 a:hover, .ipacro-postcontent h3 a:visited, .ipacro-blockcontent h3 a, .ipacro-blockcontent h3 a:link, .ipacro-blockcontent h3 a:hover, .ipacro-blockcontent h3 a:visited 
 {
    font-size: 18px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -221,7 +221,7 @@ ul.ipacro-vmenu a
    color: #1F1F1F;
    margin: 20px 0 5px;
    font-size: 15px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -231,7 +231,7 @@ ul.ipacro-vmenu a
 {
    margin: 20px 0 5px;
    font-size: 15px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -240,7 +240,7 @@ ul.ipacro-vmenu a
 .ipacro-postcontent h4 a, .ipacro-postcontent h4 a:link, .ipacro-postcontent h4 a:hover, .ipacro-postcontent h4 a:visited, .ipacro-blockcontent h4 a, .ipacro-blockcontent h4 a:link, .ipacro-blockcontent h4 a:hover, .ipacro-blockcontent h4 a:visited 
 {
    font-size: 15px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -250,7 +250,7 @@ ul.ipacro-vmenu a
 {
    color: #1F1F1F;
    font-size: 15px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: italic;
    text-align: left;
@@ -259,7 +259,7 @@ ul.ipacro-vmenu a
 .ipacro-blockcontent h5
 {
    font-size: 15px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: italic;
    text-align: left;
@@ -268,7 +268,7 @@ ul.ipacro-vmenu a
 .ipacro-postcontent h5 a, .ipacro-postcontent h5 a:link, .ipacro-postcontent h5 a:hover, .ipacro-postcontent h5 a:visited, .ipacro-blockcontent h5 a, .ipacro-blockcontent h5 a:link, .ipacro-blockcontent h5 a:hover, .ipacro-blockcontent h5 a:visited 
 {
    font-size: 15px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: italic;
    text-align: left;
@@ -278,7 +278,7 @@ ul.ipacro-vmenu a
 {
    color: #3D3D3D;
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: italic;
    text-align: left;
@@ -287,7 +287,7 @@ ul.ipacro-vmenu a
 .ipacro-blockcontent h6
 {
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: italic;
    text-align: left;
@@ -296,7 +296,7 @@ ul.ipacro-vmenu a
 .ipacro-postcontent h6 a, .ipacro-postcontent h6 a:link, .ipacro-postcontent h6 a:hover, .ipacro-postcontent h6 a:visited, .ipacro-blockcontent h6 a, .ipacro-blockcontent h6 a:link, .ipacro-blockcontent h6 a:hover, .ipacro-blockcontent h6 a:visited 
 {
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: italic;
    text-align: left;
@@ -450,7 +450,7 @@ li p, .ipacro-postcontent li p, .ipacro-blockcontent li p
 .ipacro-headline a:hover
 {
 font-size: 39px;
-font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+font-family: '微软雅黑', Arial;
 font-weight: bold;
 font-style: normal;
 text-decoration: none;
@@ -485,7 +485,7 @@ text-align: left;
 .ipacro-slogan a:hover
 {
 font-size: 14px;
-font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+font-family: '微软雅黑', Arial;
 font-weight: bold;
 font-style: normal;
 text-align: left;
@@ -501,7 +501,7 @@ text-align: left;
    box-shadow:0 0 3px 2px rgba(0, 0, 0, 0.05);
    margin:0 auto;
    height: 120px;/*原高180，按要求改成120px*/
-   background-image: url('../images/object0.png'), url('../images/header.png');
+   background-image: url('../images/object0_removed.png'), url('../images/header.png');
    background-position: 663px -5px, 0 0;
    background-repeat: no-repeat;
    position: relative;
@@ -678,7 +678,7 @@ ul.ipacro-hmenu>li>a
 .ipacro-hmenu a:hover
 {
    font-size: 15px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
@@ -814,7 +814,7 @@ div.ipacro-block img
 {
    color: #2E4011;
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    margin-left: 10px;
@@ -850,7 +850,7 @@ div.ipacro-block img
    margin:0 auto;
    color: #1F1F1F;
    font-size: 13px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
 }
@@ -863,7 +863,7 @@ div.ipacro-block img
 {
    color: #1F1F1F;
    font-size: 13px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
 }
@@ -871,21 +871,21 @@ div.ipacro-block img
 .ipacro-blockcontent a, .ipacro-blockcontent a:link
 {
    color: #7AAD2E;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
 }
 
 .ipacro-blockcontent a:visited, .ipacro-blockcontent a.visited
 {
    color: #878787;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
 }
 
 .ipacro-blockcontent a:hover, .ipacro-blockcontent a.hover
 {
    color: #95CD42;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
 }
 .ipacro-block ul>li:before
@@ -909,7 +909,7 @@ div.ipacro-block img
 .ipacro-block li
 {
    font-size: 13px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
    line-height: 125%;
    color: #0F0F0F;
@@ -941,7 +941,7 @@ button.ipacro-button
 {
    text-decoration: none;
    font-size: 13px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
    position:relative;
@@ -976,7 +976,7 @@ input, select, textarea, a.ipacro-search-button span
 {
    vertical-align: middle;
    font-size: 13px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
 }
@@ -1045,7 +1045,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
    padding: 8px 0;
    color: #292929 !important;
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
    text-shadow: none;
@@ -1059,7 +1059,7 @@ input.ipacro-error, textarea.ipacro-error
 input.ipacro-error, textarea.ipacro-error {
    color: #292929 !important;
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
 }
@@ -1076,7 +1076,7 @@ form.ipacro-search input[type="text"]
    box-sizing: border-box;
    color: #292929 !important;
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
 }
@@ -1121,7 +1121,7 @@ form.ipacro-search input[type="submit"], input.ipacro-search-button, a.ipacro-se
    padding:0 6px;
    color: #DEDEDE !important;
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
    cursor: pointer;
@@ -1143,7 +1143,7 @@ a.ipacro-search-button:hover, a.ipacro-search-button.hover
 {
    text-decoration: none;
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
 }
@@ -1163,7 +1163,7 @@ label.ipacro-checkbox
 {
    cursor: pointer;
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
    line-height: 16px;
@@ -1217,7 +1217,7 @@ label.ipacro-radiobutton
 {
    cursor: pointer;
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: normal;
    line-height: 12px;
@@ -1300,7 +1300,7 @@ label.ipacro-radiobutton.hovered:before
 {
    padding:10px 0;
    color: #1F1F1F;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-comment
@@ -1316,7 +1316,7 @@ label.ipacro-radiobutton.hovered:before
 .ipacro-comment-header
 {
    color: #1F1F1F;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    line-height: 100%;
 }
 
@@ -1327,25 +1327,25 @@ label.ipacro-radiobutton.hovered:before
 .ipacro-comment-header a:hover,
 .ipacro-comment-header a.hovered
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    line-height: 100%;
 }
 
 .ipacro-comment-header a, .ipacro-comment-header a:link
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    color: #334913;
 }
 
 .ipacro-comment-header a:visited, .ipacro-comment-header a.visited
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    color: #404040;
 }
 
 .ipacro-comment-header a:hover,  .ipacro-comment-header a.hovered
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    color: #3F8D84;
 }
 
@@ -1356,24 +1356,24 @@ label.ipacro-radiobutton.hovered:before
 .ipacro-comment-content a:hover,
 .ipacro-comment-content a.hovered
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-comment-content a, .ipacro-comment-content a:link
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    color: #334913;
 }
 
 .ipacro-comment-content a:visited, .ipacro-comment-content a.visited
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    color: #404040;
 }
 
 .ipacro-comment-content a:hover,  .ipacro-comment-content a.hovered
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    color: #3F8D84;
 }
 
@@ -1428,7 +1428,7 @@ label.ipacro-radiobutton.hovered:before
 .ipacro-pager a:link,
 .ipacro-pager a:visited
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
    color: #1A1A1A
 ;
@@ -1653,7 +1653,7 @@ pre
    color: #2B2B2B;
    margin: 10px 0 0 10px;
    font-size: 24px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -1667,7 +1667,7 @@ pre
 .ipacro-postheader a.hovered
 {
    font-size: 24px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: bold;
    font-style: normal;
    text-align: left;
@@ -1675,7 +1675,7 @@ pre
 
 .ipacro-postheader a, .ipacro-postheader a:link
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
    text-align: left;
    color: #86BD32;
@@ -1683,7 +1683,7 @@ pre
 
 .ipacro-postheader a:visited, .ipacro-postheader a.visited
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
    text-align: left;
    color: #6B6B6B;
@@ -1691,7 +1691,7 @@ pre
 
 .ipacro-postheader a:hover,  .ipacro-postheader a.hovered
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
    text-align: left;
    color: #8EC936;
@@ -1704,7 +1704,7 @@ pre
 .ipacro-postheadericons a:hover
 {
    font-size: 12px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    color: #404040;
 }
 
@@ -1715,21 +1715,21 @@ pre
 
 .ipacro-postheadericons a, .ipacro-postheadericons a:link
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
    color: #171717;
 }
 
 .ipacro-postheadericons a:visited, .ipacro-postheadericons a.visited
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
    color: #474747;
 }
 
 .ipacro-postheadericons a:hover, .ipacro-postheadericons a.hover
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
    color: #86BD32;
 }
@@ -1856,7 +1856,7 @@ pre
 .ipacro-postcontent li, .ipacro-post li, .ipacro-textblock li
 {
    font-size: 13px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    color: #2E2E2E;
    margin: 10px 0 -5px 9px;
 }
@@ -1911,7 +1911,7 @@ blockquote
    padding:6px 6px 6px 39px;
    margin:0 0 0 15px;
    color: #545454;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: italic;
    text-align: justify;
@@ -1925,7 +1925,7 @@ blockquote a:visited, .ipacro-postcontent blockquote a:visited, .ipacro-blockcon
 blockquote a:hover, .ipacro-postcontent blockquote a:hover, .ipacro-blockcontent blockquote a:hover, .ipacro-footer blockquote a:hover
 {
    color: #545454;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    font-weight: normal;
    font-style: italic;
    text-align: justify;
@@ -1960,7 +1960,7 @@ blockquote p,
 .ipacro-postfootericons a:hover
 {
    font-size: 12px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
    color: #4A4A4A;
 }
@@ -1972,21 +1972,21 @@ blockquote p,
 
 .ipacro-postfootericons a, .ipacro-postfootericons a:link
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
    color: #171717;
 }
 
 .ipacro-postfootericons a:visited, .ipacro-postfootericons a.visited
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
    color: #454545;
 }
 
 .ipacro-postfootericons a:hover, .ipacro-postfootericons a.hover
 {
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
    color: #80B530;
 }
@@ -2050,7 +2050,7 @@ blockquote p,
    position: relative;
    color: #000000;
    font-size: 11px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-align: center;
    padding: 0;
 }
@@ -2065,7 +2065,7 @@ blockquote p,
 {
    color: #000000;
    font-size: 11px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-footer p 
@@ -2078,58 +2078,58 @@ blockquote p,
 .ipacro-footer a:link
 {
    color: #5E8523;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
 }
 
 .ipacro-footer a:visited
 {
    color: #6B6B6B;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: underline;
 }
 
 .ipacro-footer a:hover
 {
    color: #28380F;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    text-decoration: none;
 }
 
 .ipacro-footer h1
 {
    color: #A6A6A6;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-footer h2
 {
    color: #A6A6A6;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-footer h3
 {
    color: #B5B5B5;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-footer h4
 {
    color: #949494;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-footer h5
 {
    color: #949494;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-footer h6
 {
    color: #949494;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
 }
 
 .ipacro-footer img
@@ -2198,7 +2198,7 @@ blockquote p,
 .ipacro-footer li
 {
    font-size: 14px;
-   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: '微软雅黑', Arial;
    line-height: 125%;
    color: #0F0F0F;
 }

@@ -7,24 +7,22 @@
   </div>
   <div class="ipacro-content-layout" style="margin-top:10px;">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width: 33%" >
-        <h3>公司快讯</h3>
-        <ul>
-          <% @news.each do |news| %>
-            <li style="font-size:1.1em">
-              <%= link_to news.title, news %>
-            </li>
-          <%end%>
-        </ul>
+      <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
+        <h3>搜索快讯</h3>
+        <input type="search" placeholder="请输入关键字" size="16" />
+        <input class="ipacro-button" style="font-weight: bolder; zoom: 1;" type="submit" value="搜索">
       </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 33%" >
-        <h3>重大新闻</h3>
-        <br><br>Amet leo nulla dictum auctor a nulla eu nisl augue nam. Magna etiam lobortis erat metus nibh molestie vestibulum primis consequat aenean eros mi mollis eu vestibulum. Tincidunt sagittis ligula aenean vel posuere.
-      </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 33%" >
-        <h3>参考新闻</h3>
-
-        <br><br>Amet leo nulla dictum auctor a nulla eu nisl augue nam. Magna etiam lobortis erat metus nibh molestie vestibulum primis consequat aenean eros mi mollis eu vestibulum. Tincidunt sagittis ligula aenean vel posuere.
+      <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
+        <div class="layout-item-2">
+          <h3>公司快讯</h3>
+          <ul>
+            <% @news.each do |news| %>
+              <li style="font-size:1.1em">
+                <%= link_to news.title, news %>
+              </li>
+            <%end%>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
