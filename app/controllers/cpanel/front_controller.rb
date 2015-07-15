@@ -1,5 +1,6 @@
 class Cpanel::FrontController < Cpanel::ApplicationController
   def index
+
   end
 
   # def about

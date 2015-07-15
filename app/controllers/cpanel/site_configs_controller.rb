@@ -4,8 +4,11 @@ class Cpanel::SiteConfigsController < Cpanel::ApplicationController
   respond_to :html
 
   def index
-    @cpanel_site_configs = SiteConfig.all
-    respond_with(@cpanel_site_configs)
+    # @cpanel_site_configs = SiteConfig.all
+    @cpanel_site_configs_other = []
+    @cpanel_site_configs_other << SiteConfig.where(key: 'site_logo').first
+    @cpanel_site_configs_other << SiteConfig.where(key: 'site_slogan').first
+    respond_with(@cpanel_site_configs_other)
   end
 
   def show

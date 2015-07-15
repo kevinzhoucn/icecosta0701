@@ -11,15 +11,18 @@
     </div>
   <% end %>  
 
-  <div class="field">
+  <div class="field" style="display:none">
     <%= f.label :key %><br>
     <%= f.text_field :key %>
   </div>
   <div class="field">
-    <%= f.label :value %><br>
-    <%= f.text_field :value %>
+    <%= f.text_area :value %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="quick-press">
+    <%= f.submit class:'submit', style:'width:auto;margin:10px 10px;padding:8px;font-family:"icomoon";border-radius:6px', value:'l 保存'%>
   </div>
 <% end %>
+
+<script>
+CKEDITOR.replace('site_config_value');
+</script>

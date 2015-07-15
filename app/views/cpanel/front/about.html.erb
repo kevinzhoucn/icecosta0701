@@ -1,15 +1,14 @@
-
-
-
 <div id="about">
-  <h2 class="header">关于我们</h2>
-  <p>
-    <%= @about_en.value %>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@about_en) %>
-  </p>
-
-  <p>
-    <%= @about_cn.value %>
-    <%= link_to '编辑', edit_cpanel_site_config_path(@about_cn) %>
-  </p>
+  <h2 class="header">e 公司简介管理</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <ul class="content">
+        <li class="first">中文版公司简介<span style="float:right;font-family:'icomoon'">e <%= link_to '编辑', edit_cpanel_site_config_path(@about_cn) %></span></li>
+        <li><%= @about_cn.value.truncate(100).html_safe%></li>
+<hr>
+        <li class="first">英文版公司简介<span style="float:right;font-family:'icomoon'">e <%= link_to '编辑', edit_cpanel_site_config_path(@about_en) %><span></li>
+        <li><%= @about_en.value.truncate(100).html_safe %></li>
+      </ul>
+    </div>
+  </div>
 </div>

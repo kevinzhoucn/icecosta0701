@@ -59,7 +59,8 @@
     .main {
       float: left;
       width: 79%;
-      height: 690px;
+      height: auto;
+      min-height:690px;
       background-color: rgb(255,255,255);
       position: relative;
       font-family: helvetica,verdana,sans-serif;
@@ -101,7 +102,7 @@
     }
     
     .mainContent>div {
-      position: absolute;
+      /*position: absolute;*/
       -webkit-transition:opacity 200ms linear;
       -moz-transition:opacity 200ms linear;
       -ms-transition:opacity 200ms linear;
@@ -135,15 +136,14 @@
       list-style:none;
       font: 600 14px/28px helvetica,verdana,sans-serif;
       color: rgb(102,102,102);
-      text-transform: capitalize;
     }
     .monitor li a {
       color: rgb(102,102,102);
-      text-transform: capitalize;
       text-decoration: none;
     }
-    .monitor li:first-child {
+    .monitor li.first {
       border-bottom: 1px dotted rgb(153,153,153);
+      min-width: 280px;
     }
     .monitor .count {
       color: rgb(27,106,173);

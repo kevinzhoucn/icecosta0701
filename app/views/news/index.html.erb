@@ -1,3 +1,4 @@
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 <div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
   <div class="ipacro-content-layout">
     <div class="ipacro-content-layout-row">
@@ -9,11 +10,9 @@
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
         <h3>搜索快讯</h3>
-        <input type="search" placeholder="请输入关键字" size="16" />
-        <input class="ipacro-button" style="font-weight: bolder; zoom: 1;" type="submit" value="搜索">
         <%= form_tag news_search_path, :method => 'get' do %>
-          <%= text_field_tag :key, params[:key] %>
-          <%= submit_tag "搜索", :name => nil %>
+          <%= text_field_tag :key, params[:key],type:"search", placeholder:"请输入关键字", size:"20" %>
+          <%= submit_tag "搜索", :name => nil ,class:"ipacro-button"%>
         <% end %>
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
@@ -23,6 +22,11 @@
             <% @news.each do |news| %>
               <li style="font-size:1.1em">
                 <%= link_to news.title, news %>
+                <% if news.created_at %>
+                  <%= news.created_at.strftime('%Y-%m-%d') %>
+                <% end %>
+                <p><%= link_to 'Edit', edit_news_path(news) %></p>
+                <p><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></p>
               </li>
             <%end%>
           </ul>
