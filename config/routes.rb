@@ -19,6 +19,11 @@ Rails40Starter::Application.routes.draw do
     get '/about'=> 'front#about', as: :front_about
     get '/contact' => 'front#contact_us', as: :front_contact
     resources :site_configs
+    resources :news
+    resources :activities
+    resources :services
+    resources :positions
+    resources :slides
   end
 
   get '/about' => 'front#about', as: :front_about

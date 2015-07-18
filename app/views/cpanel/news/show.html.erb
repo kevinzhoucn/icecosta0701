@@ -1,0 +1,43 @@
+<!-- <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @news.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @news.content %>
+</p>
+
+<%= link_to 'Edit', edit_news_path(@news) %> |
+<%= link_to 'Back', news_index_path %>
+ -->
+
+<div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width:100%">
+        <h6>
+          当前位置：<%=link_to '资讯发布', news_index_path%>><%=@news.title%>
+        </h6>
+      </div>
+    </div>
+  </div>
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width:100%">
+        <div class="layout-item-2" style="margin-top:1em;min-height:300px">
+          <h3>
+            <%=@news.title%>
+          </h3>
+          <hr>
+          <%=@news.content.html_safe%>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    <a class="ipacro-button" onclick="window.history.go(-1)">返回</a>
+  </p>
+</div>

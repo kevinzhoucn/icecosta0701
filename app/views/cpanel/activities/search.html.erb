@@ -1,0 +1,11 @@
+<div class="layout-item-2">
+  <h3>搜索结果</h3>
+  <ul>
+    <% @activities.each do |activity| %>
+      <li style="font-size:1.1em">
+        <%= link_to activity.title, activity %>
+      </li>
+    <%end%>
+  </ul>
+  <%= paginate @activities %>
+</div>        

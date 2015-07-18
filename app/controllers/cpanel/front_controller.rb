@@ -16,6 +16,7 @@ class Cpanel::FrontController < Cpanel::ApplicationController
   end
 
   def contact_us
-
+    @contact_cn = SiteConfig.where(key: 'contact_cn').first
+    @contact_en = SiteConfig.where(key: 'contact_en').first
   end
 end

@@ -1,0 +1,38 @@
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
+  <div class="ipacro-content-layout">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(http://tigermed.net/images/zx.jpg);background-size:100%;" >
+      </div>
+    </div>
+  </div>
+  <div class="ipacro-content-layout" style="margin-top:10px;">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
+        <h3>搜索快讯</h3>
+        <%= form_tag news_search_path, :method => 'get' do %>
+          <%= text_field_tag :key, params[:key],type:"search", placeholder:"请输入关键字", size:"20" %>
+          <%= submit_tag "搜索", :name => nil ,class:"ipacro-button"%>
+        <% end %>
+      </div>
+      <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
+        <div class="layout-item-2">
+          <h3>公司快讯</h3>
+          <ul>
+            <% @news.each do |news| %>
+              <li style="font-size:1.1em">
+                <%= link_to news.title, news %>
+                <% if news.created_at %>
+                  <%= news.created_at.strftime('%Y-%m-%d') %>
+                <% end %>
+                <p><%= link_to 'Edit', edit_news_path(news) %></p>
+                <p><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+              </li>
+            <%end%>
+          </ul>
+          <%= paginate @news %>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>

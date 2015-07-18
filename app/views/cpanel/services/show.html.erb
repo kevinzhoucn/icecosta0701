@@ -1,0 +1,21 @@
+  <div class="ipacro-content-layout" style="margin-top:10px;">
+    <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
+        <h3 style="border-radius:10px;background:url('../images/nav.png');height:30px;line-height:30px;transform:skew(-12deg);text-align:justify">我们提供的服务</h3>
+          <div>
+            <ul>
+              <% @services.each do |service| %>
+                <li>
+                  <%= link_to service.title, service %>
+                </li>
+              <%end%>
+            </ul>
+          </div>
+      </div>
+      <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
+        <div class="layout-item-2">
+          <%= @service.content %>
+        </div>
+      </div>
+    </div>
+  </div>
