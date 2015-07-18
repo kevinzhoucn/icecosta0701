@@ -53,9 +53,9 @@
 # Partner.create(name: "Baidu", url: "http://www.baidu.com")
 # Partner.create(name: "Bing", url: "http://www.bing.com")
 
-# Service.delete_all
-# Service.create(title: "Service1", content: "Service1")
-# Service.create(title: "Service2", content: "Service2")
-# Service.create(title: "Service3", content: "Service3")
-# Service.create(title: "Service4", content: "Service4")
-# Service.create(title: "Service5", content: "Service5")
+Service.delete_all
+Service.create(title: "Service1", content: "Service1")
+Service.create(title: "Service2", content: "Service2")
+Service.create(title: "Service3", content: "Service3")
+Service.create(title: "Service4", content: "Service4")
+Service.create(title: "Service5", content: "Service5")

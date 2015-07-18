@@ -6,15 +6,12 @@ class FrontController < ApplicationController
     @news_image = Picture.where(:key => "about_image").first
     @activity_image = Picture.where(:key => "activity_image").first
 
-
     @about_cn = SiteConfig.about_cn
 
     @front_news = News.all.limit(5)
     @front_activites = Activity.all.limit(5)
 
     @partner_urls = Partner.all
-
-
   end
 
   def about

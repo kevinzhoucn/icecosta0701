@@ -9,16 +9,6 @@ class Notifier < ActionMailer::Base
   #
   def resume_received(resume)
     @resume = resume
-    mail :to => 'ceo@brivates.com', :subject => '收到一份新简历'
-  end
-
-  def enquiry_received(enquiry)
-    @enquiry = enquiry
-    mail :to => 'ceo@brivates.com', :subject => '收到一条新咨询信息'
-  end
-  # 20150105 Albert 添加了招商加盟email提醒功能
-  def affiliate_received(affiliate)
-    @affiliate = affiliate
-    mail :to => 'ceo@brivates.com', :subject => '收到一个新的加盟申请'
+    mail :to => 'zzpf@163.com', :subject => '收到一份新简历'
   end
 end
