@@ -5,10 +5,12 @@ class ServicesController < ApplicationController
 
   def index
     @services = Service.all
+    @service = Service.first
     respond_with(@services)
   end
 
   def show
+    @services = Service.all
     respond_with(@service)
   end
 

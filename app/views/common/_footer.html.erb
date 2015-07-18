@@ -7,9 +7,10 @@
   </div>
   <div>
     <% Partner.all.each do |partner| %>
-      <li>
-        <%= link_to partner.name, partner.url %>
-      </li>
+      <span>
+        <%= link_to partner.name, partner.url, target:"_blank" %>
+      </span>
+      &nbsp;|&nbsp;
     <% end %>
   </div>
 </footer>
