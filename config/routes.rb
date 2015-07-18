@@ -1,5 +1,9 @@
 Rails40Starter::Application.routes.draw do
 
+  resources :partners
+
+  resources :pictures
+
   get '/news/search' => 'news#search', as: :news_search
   get '/activities/search' => 'activities#search', as: :activities_search
 

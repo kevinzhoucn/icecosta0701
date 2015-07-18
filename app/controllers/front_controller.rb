@@ -1,6 +1,10 @@
 class FrontController < ApplicationController
   def index
     @slides = Slide.all
+
+    @about_image = Picture.where(:key => "about_image").first
+
+    @partner_urls = Partner.all
   end
 
   def about
