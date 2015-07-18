@@ -1,5 +1,4 @@
 <h1>Listing cpanel_site_configs</h1>
-
 <table>
   <thead>
     <tr>
@@ -10,12 +9,11 @@
       <th></th>
     </tr>
   </thead>
-
   <tbody>
-    <% @cpanel_site_configs.each do |cpanel_site_config| %>
+    <% @cpanel_site_configs_other.each do |cpanel_site_config| %>
       <tr>
         <td><%= cpanel_site_config.key %></td>
-        <td><%= cpanel_site_config.value %></td>
+        <td><%= cpanel_site_config.value.truncate(20) %></td>
         <td><%= link_to 'Show', cpanel_site_config_path(cpanel_site_config) %></td>
         <td><%= link_to 'Edit', edit_cpanel_site_config_path(cpanel_site_config) %></td>
         <td><%= link_to 'Destroy', cpanel_site_config_path(cpanel_site_config), method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,7 +21,18 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Site config', new_cpanel_site_config_path %>
+
+<div id="about">
+  <h2 class="header">k 网站参数配</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <ul>
+        <% @cpanel_site_configs_other.each do |cpanel_site_config| %>
+        <li></li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+</div>
