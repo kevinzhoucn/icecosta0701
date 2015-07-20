@@ -23,19 +23,19 @@ class Cpanel::SlidesController < Cpanel::ApplicationController
   def create
     @slide = Slide.new(slide_params)
     @slide.save
-    redirect_to cpanel_slide_index_path
+    redirect_to cpanel_slides_path
     # respond_with(@slide)
   end
 
   def update
     @slide.update(slide_params)
-    redirect_to cpanel_slide_index_path
+    redirect_to cpanel_slides_path
     # respond_with(@slide)
   end
 
   def destroy
     @slide.destroy
-    redirect_to cpanel_slide_index_path
+    redirect_to cpanel_slides_path
     # respond_with(@slide)
   end
 

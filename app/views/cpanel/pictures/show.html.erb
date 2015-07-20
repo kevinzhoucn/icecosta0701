@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @picture.key %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @picture.value %>
+</p>
+
+<%= link_to 'Edit', edit_cpanel_picture_path(@picture) %> |
+<%= link_to 'Back', cpanel_pictures_path %>

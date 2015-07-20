@@ -1,6 +1,6 @@
 class Cpanel::FrontController < Cpanel::ApplicationController
   def index
-
+    @news = News.new
   end
 
   # def about
