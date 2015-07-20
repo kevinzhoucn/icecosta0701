@@ -5,42 +5,42 @@
 # 首页
 # SiteConfig.index_html
 
-# SiteConfig.delete_all
+SiteConfig.delete_all
 
-# SiteConfig.save_default("index_html",<<-eos
-# <div class="box" style="text-align:center;">
-#   <p><img alt="Big_logo" src="/assets/big_logo.png"></p>
-# </div>
-# eos
-# )
+SiteConfig.save_default("index_html",<<-eos
+<div class="box" style="text-align:center;">
+  <p><img alt="Big_logo" src="/assets/big_logo.png"></p>
+</div>
+eos
+)
 
-# # Wiki 首页 HTML
-# SiteConfig.save_default("wiki_index_html",<<-eos
-# <div class="box">
-#   Wiki Home page.
-# </div>
-# eos
-# )
+# Wiki 首页 HTML
+SiteConfig.save_default("wiki_index_html",<<-eos
+<div class="box">
+  Wiki Home page.
+</div>
+eos
+)
 
-# # Footer HTML
-# SiteConfig.save_default("footer_html",<<-eos
-# <p class="copyright">
-#  &copy; China Group.
-# </p>
-# eos
-# )
+# Footer HTML
+SiteConfig.save_default("footer_html",<<-eos
+<p class="copyright">
+ &copy; China Group.
+</p>
+eos
+)
 
-# SiteConfig.save_default("style_url", "/css/style_white.css")
+SiteConfig.save_default("style_url", "/css/style_white.css")
 
-# SiteConfig.save_default("about_cn", "关于")
-# SiteConfig.save_default("about_en", "about")
+SiteConfig.save_default("about_cn", "关于")
+SiteConfig.save_default("about_en", "about")
 
-# SiteConfig.save_default("about_cn", "公司简介中文版")
-# SiteConfig.save_default("about_en", "about us English")
-# SiteConfig.save_default("contact_cn", "联系信息")
-# SiteConfig.save_default("contact_en", "contact info")
-# SiteConfig.save_default("site_logo","logo.png")
-# SiteConfig.save_default("site_slogan","SLOGAN")
+SiteConfig.save_default("about_cn", "公司简介中文版")
+SiteConfig.save_default("about_en", "about us English")
+SiteConfig.save_default("contact_cn", "联系信息")
+SiteConfig.save_default("contact_en", "contact info")
+SiteConfig.save_default("site_logo","logo.png")
+SiteConfig.save_default("site_slogan","SLOGAN")
 
 Picture.delete_all
 Picture.create(key: "about_image", value: "about_image")
