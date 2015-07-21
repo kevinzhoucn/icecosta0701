@@ -17,7 +17,7 @@
 <div class="flicker-example" data-block-text="false" id="slideshow">
   <ul>
     <% @slides.each do |slide| %>
-      <% if slide.picture.avatar %>
+      <% if slide.picture && slide.picture.avatar %>
         <li data-background=" <%= slide.picture.avatar.url %> ">
           <div class="flick-title"> <%= slide.title %> </div>
           <div class="flick-sub-text">  <%= slide.sub_title %></div>
