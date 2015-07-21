@@ -25,4 +25,23 @@ class FrontController < ApplicationController
     @contact_cn = SiteConfig.contact_cn
     @contact_en = SiteConfig.contact_en
   end
+
+  def site_search
+    key = params[:key]
+    @search_result = []
+    if key
+      search_items = SEARCH_ITEMS.split(',').map { |item| item.strip.capitalize }
+
+      search_items.each do |item|
+        @search_result << search(item, key)
+      end
+    end
+  end
+
+  private
+    def search(item, key)
+      if key
+        result = eval(item).where(title: /#{key}/i)
+      end
+    end
 end
