@@ -25,6 +25,18 @@ $(document).ready(function(){
     {
       $("#contact").addClass("active");
     }
+    else if(/slides/.test(url.toLowerCase()))
+    {
+      $("#slides").addClass("active");
+    }
+    else if(/pictures/.test(url.toLowerCase()))
+    {
+      $("#pictures").addClass("active");
+    }
+    else if(/configs/.test(url.toLowerCase()))
+    {
+      $("#configs").addClass("active");
+    }
     else
     {
       $("#cpanelhome").addClass("active");

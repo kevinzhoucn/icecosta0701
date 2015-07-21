@@ -9,18 +9,13 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="admin-panel clearfix">
-      <%= render partial:'common/cpanel/slidebar'%>
-      <div class="main">
-        <ul class="topbar clearfix">
-          <li><a href="/" target="_blank">u 预览网站</a></li>
-          <li>
-            <%= link_to 's 退出登录', destroy_user_session_path, { method: :delete} %>
-          </li>
-          <li><%= link_to 'i 修改密码', edit_user_registration_path %></li>
-        </ul>
+    <div class="admin-panel clearfix" style="margin:10% auto">
+      <div class="main" style="float:none;width:75%;margin:0 auto;min-height:100px">
         <div class="mainContent clearfix">
-          <div>
+          <div class="logo">
+            <a style="color: rgb(234,83,63);"> </a>
+          </div>
+          <div style="text-align:center">
             <%= yield %>
           </div>
         </div>

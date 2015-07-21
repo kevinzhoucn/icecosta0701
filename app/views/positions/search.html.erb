@@ -3,7 +3,7 @@
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:100%">
         <h6>
-          当前位置：<%=link_to '员工园地', activities_path%>>搜索结果
+          当前位置：<%=link_to '加入我们', positions_path%>>搜索结果
         </h6>
       </div>
     </div>
@@ -11,7 +11,7 @@
   <div class="ipacro-content-layout">
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(/images/about_banner.jpg);background-size:100%;" >
-      <h1 class="ipacro-headline" style="left:20px;position:relative;border-radius:10px;background:url('../images/nav.png');width:95%;transform:skew(-12deg);line-height:51px;text-indent:15px">员工园地</h1>
+      <h1 class="ipacro-headline" style="left:20px;position:relative;border-radius:10px;background:url('../images/nav.png');width:95%;transform:skew(-12deg);line-height:51px;text-indent:15px">加入我们</h1>
       </div>
     </div>
   </div>
@@ -19,17 +19,18 @@
     <div class="ipacro-content-layout-row">
       <div class="layout-item-2" style="min-height:300px">
         <h3>搜索关键字【<%= @key_words %>】的结果</h3>
+        <hr>
         <ul>
-        <% @activities.each do |activity| %>
+        <% @positions.each do |position| %>
           <li style="font-size:1.1em">
-            <%= link_to activity.title, activity %>
-            <% if activity.created_at %>
-              <sub>发布时间：<%= activity.created_at.strftime('%Y-%m-%d') %></sub>
+            <%= link_to position.title, position %>
+            <% if position.created_at %>
+              <sub>发布时间：<%= position.created_at.strftime('%Y-%m-%d') %></sub>
             <% end %>
           </li>
         <%end%>
       </ul>
-      <%= paginate @activities %>
+      <%= paginate @positions %>
       </div>
     </div>
   </div>

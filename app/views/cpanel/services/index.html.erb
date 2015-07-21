@@ -1,31 +1,24 @@
-<div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
-  <div class="ipacro-content-layout">
-    <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(/images/services.jpg);background-size:100%;" >
+<div>
+  <h2 class="header">q 服务项目管理</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <div style="min-height:40px;line-height:40px;"> 
+        <li style="margin:0 30px;float:left">服务项目列表</li>
+        <li style="font-family: 'icomoon'">
+          <%= link_to 'q 添加',new_cpanel_service_path,style:'color:#fff;text-decoration:none;font-size:14px;float:right;margin:0 30px;padding:1px 5px',class:'submitbutton' %>
+        </li>
       </div>
-    </div>
-  </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;">
-    <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
-        <h3 style="border-radius:10px;background:url('../images/nav.png');height:30px;line-height:30px;transform:skew(-12deg);text-align:justify">我们提供的服务</h3>
-          <div>
-            <ul>
-              <% @services.each do |service| %>
-                <li>
-                  <%= link_to service.title, service %>
-                  <td><%= link_to 'Show', cpanel_service_path(service) %></td>
-                  <td><%= link_to 'Edit', edit_cpanel_service_path(service) %></td>
-                  <td><%= link_to 'Destroy', cpanel_service_path(service), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                </li>
-              <%end%>
-            </ul>
-          </div>
-      </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
-        <div class="layout-item-2">
-          <%= @service.content %>
-        </div>
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;heigh:auto;overflow:hidden">
+        <ul style="width:100%">
+        <% @services.each do |service| %>
+          <li>
+            <%= link_to service.title, edit_cpanel_service_path(service) %>
+            <span style="position: absolute;right:340px">
+            <%= link_to 'X  删除', cpanel_service_path(service), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
+            </span>
+          </li>
+        <%end%>
+        </ul>
       </div>
     </div>
   </div>

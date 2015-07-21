@@ -1,15 +1,28 @@
 <%= simple_form_for([:cpanel, @slide]) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :sub_title %>
+  <div class="form-inputs" style="margin:5px 30px;font-size:12px;color:gray">
+    <%= f.input :title ,label:'图片轮播大标题： '%><br>
+    <%= f.input :sub_title,label:'图片轮播小标题： ' %>
     <%#= f.input :image_url %>
-    <%= f.input :avatar, label: "上传图片：" %>
+    <%#= f.input :avatar, label: "上传图片：" %>    
+    <%#= f.collection_radio_buttons :avatar, @pictures_array, :first, :last %>
+    <p>选择图片</p>
+    <div id="picture_group" style="height:300px;overflow-y:scroll;padding:10px;border:1px solid #eee;margin:10px 20px">
 
+      <ul>
+      <% @pictures.each do |picture| %>
+        <li style="list-style:none;float:left;min-width:150px;margin:0 5px;text-align:center">
+          <%= f.input_field :picture_id, type: :radio, value: picture.id %>
+            <%= image_tag picture.avatar.url(:tile) %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit , class:'submitbutton',value:'确定'%>
+    <button class="submitbutton" onclick="window.history.go(-1);return false;">取消</button>
   </div>
 <% end %>

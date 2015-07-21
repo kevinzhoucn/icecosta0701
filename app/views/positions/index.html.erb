@@ -1,25 +1,30 @@
 <div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
   <div class="ipacro-content-layout">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(http://tigermed.net/images/2_01.jpg);background-size:100%;">
+      <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(/images/about_banner.jpg);background-size:100%;" >
+      <h1 class="ipacro-headline" style="left:20px;position:relative;border-radius:10px;background:url('../images/nav.png');width:95%;transform:skew(-12deg);line-height:51px;text-indent:15px">加入我们</h1>
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout">
+  <div class="ipacro-content-layout" style="margin-top:10px;min-height:400px;">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width:25%">
-        <section style="margin-top:1em">
-        <form action="http://baidu.com/s?site%3Abrivates.com%20" method="post">
-          <input type="search" placeholder="搜索职位" result="8">
-          <a class="ipacro-button">搜索...</a>
-        </form>
-        </section>
+      <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('../images/header.png');background-position:center">
+        <h3>搜索职位</h3>
+        <%= form_tag positions_search_path, :method => 'get' do %>
+          <%= text_field_tag :key, params[:key],type:"search", placeholder:"请输入关键字", size:"20" %>
+          <%= submit_tag "搜索", :name => nil ,class:"ipacro-button"%>
+        <% end %>
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width:75%">
         <div class="layout-item-2" style="margin-top:1em;min-height:300px">
           <ul>
           <% @positions.each do |position| %>
-            <li><%= link_to position.title, position %> <%=position.position_type%></li>
+            <li>
+              <%= link_to position.title, position %>&nbsp;&nbsp;
+              <% if position.created_at %>
+                  &nbsp;&nbsp;<sub>级别：<%=position.position_type%>&nbsp;&nbsp;发布时间：<%= position.created_at.strftime('%Y-%m-%d') %></sub>
+              <% end %>
+            </li>
           <%end%>
           </ul>
         </div>
