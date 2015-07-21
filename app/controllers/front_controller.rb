@@ -38,6 +38,10 @@ class FrontController < ApplicationController
     end
   end
 
+  def glossaries
+    @glossaries = SiteConfig.get_config('glossaries')
+  end
+
   private
     def search(item, key)
       if key

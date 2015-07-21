@@ -21,6 +21,7 @@ Rails40Starter::Application.routes.draw do
     get '/' => 'front#index', as: :front_index    
     get '/about'=> 'front#about', as: :front_about
     get '/contact' => 'front#contact_us', as: :front_contact
+    get '/glossary' => 'front#glossaries', as: :front_glossary
     resources :site_configs
     resources :news
     resources :activities
@@ -33,6 +34,7 @@ Rails40Starter::Application.routes.draw do
   get '/about' => 'front#about', as: :front_about
   get '/contact' => 'front#contact_us', as: :front_contact
   get '/search' => 'front#site_search', as: :front_search
+  get '/glossary' => 'front#glossaries', as: :front_glossary
 
   devise_for :users
   
