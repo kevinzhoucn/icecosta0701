@@ -23,21 +23,21 @@ class Cpanel::PartnersController < Cpanel::ApplicationController
   def create
     @partner = Partner.new(partner_params)
     if @partner.save
-      redirect_to cpanel_partner_index_path
+      redirect_to cpanel_partners_path
     end
     # respond_with(@partner)
   end
 
   def update
     if @partner.update(partner_params)
-      redirect_to cpanel_partner_index_path
+      redirect_to cpanel_partners_path
     end
     # respond_with(@partner)
   end
 
   def destroy
     if @partner.destroy
-      redirect_to cpanel_partner_index_path
+      redirect_to cpanel_partners_path
     end
     # respond_with(@partner)
   end
