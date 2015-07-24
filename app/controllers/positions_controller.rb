@@ -7,7 +7,11 @@ class PositionsController < ApplicationController
     @positions = Position.all
     respond_with(@positions)
   end
-
+  def search
+    @key_words = params[:key]
+    @positions = Position.search(params[:key]).page params[:page]
+    respond_with(@positions)
+  end
   def show
     respond_with(@position)
   end
