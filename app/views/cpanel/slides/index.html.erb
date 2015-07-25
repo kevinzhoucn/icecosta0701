@@ -16,7 +16,11 @@
       <tr>
         <td><%= slide.title %></td>
         <td><%= slide.image_url %></td>
-        <td><%= slide.picture.avatar.url %></td>
+        <td>
+          <% if slide.picture %>
+            <%= slide.picture.avatar.url %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', cpanel_slide_path(slide) %></td>
         <td><%= link_to 'Edit', edit_cpanel_slide_path(slide) %></td>
         <td><%= link_to 'Destroy', cpanel_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } %></td>
