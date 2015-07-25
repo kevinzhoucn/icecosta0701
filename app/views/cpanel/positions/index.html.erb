@@ -1,34 +1,27 @@
-<%= link_to 'New Position', new_cpanel_position_path %>
-
- <div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
-  <div class="ipacro-content-layout">
-    <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(http://tigermed.net/images/2_01.jpg);background-size:100%;">
+<div>
+  <h2 class="header">d 职位招聘管理</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <div style="min-height:40px;line-height:40px;"> 
+        <span style="margin-left:30px">当前正在招聘的职位</span>
+        <span class="submitbutton" style="font-family: 'icomoon';margin-left:150px">
+        <%= link_to 'q新职位',new_cpanel_position_path,style:'color:#fff;text-decoration:none;font-size:15px' %>
+        </span>
       </div>
-    </div>
-  </div>
-  <div class="ipacro-content-layout">
-    <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width:25%">
-        <section style="margin-top:1em">
-        <form action="http://baidu.com/s?site%3Abrivates.com%20" method="post">
-          <input type="search" placeholder="搜索职位" result="8">
-          <a class="ipacro-button">搜索...</a>
-        </form>
-        </section>
-      </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width:75%">
-        <div class="layout-item-2" style="margin-top:1em;min-height:300px">
-          <ul>
-          <% @positions.each do |position| %>
-            <li><%= link_to position.title, position %> <%=position.position_type%></li>
-
-            <td><%= link_to 'Show', cpanel_position_path(position) %></td>
-          <td><%= link_to 'Edit', edit_cpanel_position_path(position) %></td>
-          <td><%= link_to 'Destroy', cpanel_position_path(position), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-          </ul>
-        </div>
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;overflow:hidden">
+        <ul style="width:100%">
+        <% @positions.each do |position| %>
+          <li>
+            <%= link_to position.title, edit_cpanel_position_path(position) %>
+            <% if position.created_at %>
+              <sub>&nbsp;&nbsp; <%= position.created_at.strftime('%Y-%m-%d') %><sub>
+            <% end %>
+            <span style="position: absolute;right:340px">
+            <%= link_to 'X  删除', cpanel_position_path(position), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
+            </span>
+          </li>
+        <%end%>
+        </ul>
       </div>
     </div>
   </div>

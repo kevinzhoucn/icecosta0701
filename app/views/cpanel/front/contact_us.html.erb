@@ -1,11 +1,44 @@
-<div id="about">
+<style type="text/css">
+    ul.content >li.first{
+      font-family:icomoon
+    }
+    #dashboard .monitor{
+      float:none;
+      margin:5px 30px 7px 30px ;
+      display:block;
+    }
+  </style>
+<div id="dashboard">
   <h2 class="header">a 联系信息管理</h2>
   <div class="monitor">
     <div class="clearfix">
-      <ul class="content">
-        <li class="first">联系信息 | <span><%= link_to '编辑', edit_cpanel_site_config_path(@contact_cn) %></span></li>
-        <li class="first">Contact | <span><%= link_to '编辑', edit_cpanel_site_config_path(@contact_en) %></span></li>
+      <ul class="content" style="float:none">
+        <li class="first">
+          k 中文联系信息
+        </li>
+        <li style="height:auto;overflow:hidden;font-family:icomoon">
+          <%= link_to 'e 编辑', edit_cpanel_site_config_path(@contact_cn),class:'submitbutton',style:"text-decoration:none;position:relative;float:right;padding:2px 5px;margin-top:5px;font-size:14px" %>
+        </li>
       </ul>
+      <div>
+        <%= @contact_cn.value.truncate(160).html_safe%>
+      </div>
+    </div>
+  </div>
+  
+  <div class="monitor">
+    <div class="clearfix">
+      <ul class="content" style="float:none">
+        <li class="first">
+          k 英文联系信息
+        </li>
+        <li style="height:auto;overflow:hidden;font-family:icomoon">
+          <%= link_to 'e 编辑', edit_cpanel_site_config_path(@contact_en),class:'submitbutton',style:"text-decoration:none;position:relative;float:right;padding:2px 5px;margin-top:5px" %>
+        </li>
+      </ul>
+      <div>
+        <%= @contact_en.value.truncate(160).html_safe%>
+      </div>
     </div>
   </div>
 </div>

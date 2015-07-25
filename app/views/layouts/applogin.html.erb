@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>信必达-控制台</title>
+    <link rel="stylesheet" type="text/css" href="/css/admin-style.css">
+    <%= javascript_include_tag "application" %>
+    <script src="//cdn.ckeditor.com/4.5.1/full/ckeditor.js"></script>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="admin-panel clearfix">
+      <div class="main">
+        <div class="mainContent clearfix">
+          <div>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

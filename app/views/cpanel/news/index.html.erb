@@ -1,22 +1,29 @@
-<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-<div id="dashboard">
+<div>
   <h2 class="header">d 资讯发布管理</h2>
-  <div class="monitor quick-press">
+  <div class="monitor">
     <div class="clearfix">
-      <ul class="content">
-        <li class="first">公司快讯</li>
+      <div style="min-height:40px;line-height:40px;"> 
+        <span style="margin-left:30px">公司资讯列表</span>
+        <span class="submitbutton" style="font-family: 'icomoon';margin-left:150px">
+        <%= link_to 'q新资讯',new_cpanel_news_path,style:'color:#fff;text-decoration:none;font-size:15px' %>
+        </span>
+      </div>
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;heigh:auto;overflow:hidden">
+        <ul style="width:100%">
         <% @news.each do |news| %>
-          <li style="font-size:1.1em">
-            <%= link_to news.title, news %>
+          <li>
+            <%= link_to news.title, edit_cpanel_news_path(news) %>
             <% if news.created_at %>
-              <%= news.created_at.strftime('%Y-%m-%d') %>
+              <sub>&nbsp;&nbsp; <%= news.created_at.strftime('%Y-%m-%d') %><sub>
             <% end %>
-            <span><%= link_to 'Edit', edit_cpanel_news_path(news) %></span>
-            <span><%= link_to 'Destroy', cpanel_news_path(news), method: :delete, data: { confirm: 'Are you sure?' } %></span>
+            <span style="position: absolute;right:340px">
+            <%= link_to 'X  删除', cpanel_news_path(news), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
+            </span>
           </li>
         <%end%>
-      </ul>
-      <%= paginate @news %>
+        </ul>
+        <%= paginate @news %>
+      </div>
     </div>
   </div>
 </div>

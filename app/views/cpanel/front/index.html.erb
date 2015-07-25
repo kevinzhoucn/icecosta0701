@@ -1,24 +1,33 @@
-<div id="dashboard" style="display:block">
+<div id="dashboard">
   <h2 class="header">c 控制台首页</h2>
   <div class="monitor">
     <div class="clearfix">
       <ul class="content">
-        <li class="first">数据统计</li>
-        <li class="imgs"><a href="">图片轮播</a><span class="count"><%= @slides_count %></span></li>
-        <li class="srvs"><a href="">服务项目</a><span class="count"><%= @services_count %></span></li>
-        <li class="news"><a href="">新闻</a><span class="count"><%= @news_count %></span></li>
-        <li class="categories"><a href="">员工活动</a><span class="count"><%= @activities_count %></span></li>
+        <li class="first">k 数据统计</li>
+        <li class="imgs"><a href="">b 图片轮播</a><span class="count"><%= @slides_count %></span></li>
+        <li class="srvs"><a href="">q 服务项目</a><span class="count"><%= @services_count %></span></li>
+        <li class="news"><a href="">d 资讯</a><span class="count"><%= @news_count %></span></li>
+        <li class="categories"><a href="">k 员工活动</a><span class="count"><%= @activities_count %></span></li>
         
       </ul>
     </div>
   </div>
 
   <div class="monitor">
+    <style type="text/css">
+      ul.content>li{
+        font-family:"icomoon";
+      }
+    </style>
     <div class="clearfix">
+
       <ul class="content">
-        <li class="first">常用链接</li>
+        <li class="first">t 常用链接</li>
         <li>
-          <%= link_to '发布快讯', new_cpanel_news_path, class:'submit',style:'display:block;padding:5px;border-radius:10px;text-decoration:none'%>
+          <%= link_to 'd 快速发布资讯', new_cpanel_news_path, class:'submit',style:'display:block;padding:5px;border-radius:10px;text-decoration:none'%>
+        </li>
+        <li>
+          <%= link_to 'h 快速发布员工活动', new_cpanel_activity_path, class:'submit',style:'display:block;padding:5px;border-radius:10px;text-decoration:none'%>
         </li>
       </ul>
     </div>

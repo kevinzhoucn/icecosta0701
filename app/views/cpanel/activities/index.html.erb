@@ -1,33 +1,28 @@
-<div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
-  <div class="ipacro-content-layout">
-    <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(http://tigermed.net/images/2_01.jpg);background-size:100%;" >
+<div>
+  <h2 class="header">h 员工园地管理</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <div style="min-height:40px;line-height:40px;"> 
+        <span style="margin-left:30px">公员工活动列表</span>
+        <span class="submitbutton" style="font-family: 'icomoon';margin-left:150px">
+        <%= link_to 'q新活动',new_cpanel_activity_path,style:'color:#fff;text-decoration:none;font-size:15px' %>
+        </span>
       </div>
-    </div>
-  </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;">
-    <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
-        <h3>搜索员工动态</h3>
-        <!-- <input type="search" placeholder="请输入关键字" size="16" />
-        <input class="ipacro-button" style="font-weight: bolder; zoom: 1;" type="submit" value="搜索"> -->
-        <%= form_tag activities_search_path, :method => 'get' do %>
-          <%= text_field_tag :key, params[:key], type:"search",placeholder:"请输入关键字",size:"20"%>
-          <%= submit_tag "搜索", :name => nil, class:"ipacro-button" %>
-        <% end %> 
-      </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
-        <div class="layout-item-2">
-          <h3>员工园地</h3>
-          <ul>
-            <% @activities.each do |activity| %>
-              <li style="font-size:1.1em">
-                <%= link_to activity.title, activity %>
-              </li>
-            <%end%>            
-          </ul>
-          <%= paginate @activities %>
-        </div>
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;heigh:auto;overflow:hidden">
+        <ul style="width:100%">
+        <% @activities.each do |activity| %>
+          <li>
+            <%= link_to activity.title, edit_cpanel_activity_path(activity) %>
+            <% if activity.created_at %>
+              <sub>&nbsp;&nbsp; <%= activity.created_at.strftime('%Y-%m-%d') %><sub>
+            <% end %>
+            <span style="position: absolute;right:340px">
+            <%= link_to 'X  删除', cpanel_activity_path(activity), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
+            </span>
+          </li>
+        <%end%>
+        </ul>
+        <%= paginate @activities %>
       </div>
     </div>
   </div>

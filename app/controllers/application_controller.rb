@@ -6,7 +6,12 @@ class ApplicationController < ActionController::Base
 
   private
     def layout
-      is_a?(Devise::SessionsController) ? "applogin" : "application"
+      # is_a?(Devise::SessionsController) ? "applogin" : "application"
       # devise_controller? || "application"
+      if devise_controller?
+        "applogin"
+      else
+        "application"
+      end
     end
 end

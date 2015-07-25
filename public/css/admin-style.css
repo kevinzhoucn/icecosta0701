@@ -28,7 +28,7 @@
     }
     .admin-panel {
       width: 990px;
-      margin: 50px auto;
+      margin: 30px auto;
     }
     /*slidebar²à±ßÀ¸*/
     .slidebar {
@@ -158,6 +158,8 @@
     }
     .monitor li.first {
       border-bottom: 1px dotted rgb(153,153,153);
+      color: #ea533f;
+      font-size: 1.125em;
       min-width: 280px;
     }
     .monitor .count {
