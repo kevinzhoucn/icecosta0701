@@ -17,7 +17,7 @@
 <div class="flicker-example" data-block-text="false" id="slideshow">
   <ul>
     <%= @slides.each do |slide| %>
-      <li data-background=" <%= slide.avatar.url %> ">
+      <li data-background=" <%= slide.picture.avatar.url %> ">
         <div class="flick-title"> <%= slide.title %> </div>
         <div class="flick-sub-text"> 如果能看到这段文字，说明图片轮播工作正常</div>
       </li>
