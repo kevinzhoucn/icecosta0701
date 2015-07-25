@@ -1,7 +1,5 @@
 Rails40Starter::Application.routes.draw do
-
   resources :partners
-
   resources :pictures
 
   get '/news/search' => 'news#search', as: :news_search
@@ -15,7 +13,7 @@ Rails40Starter::Application.routes.draw do
   resources :services
 
   namespace :cpanel do
-    get '/' => 'front#index', as: :front_index    
+    get '/' => 'front#index', as: :front_index
     get '/about'=> 'front#about', as: :front_about
     get '/contact' => 'front#contact_us', as: :front_contact
     resources :site_configs
