@@ -14,10 +14,13 @@ class Cpanel::SlidesController < Cpanel::ApplicationController
 
   def new
     @slide = Slide.new
+    @pictures_array = Picture.all.map { |item| [item.id, item.avatar.url(:tile)] }
+    @pictures = Picture.all
     respond_with(@slide)
   end
 
   def edit
+    @pictures = Picture.all
   end
 
   def create
@@ -45,6 +48,6 @@ class Cpanel::SlidesController < Cpanel::ApplicationController
     end
 
     def slide_params
-      params.require(:slide).permit(:title, :sub_title, :avatar)
+      params.require(:slide).permit(:title, :sub_title, :avatar, :picture_id)
     end
 end

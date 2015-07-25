@@ -5,8 +5,16 @@
     <%= f.input :title %>
     <%= f.input :sub_title %>
     <%#= f.input :image_url %>
-    <%= f.input :avatar, label: "上传图片：" %>
-
+    <%#= f.input :avatar, label: "上传图片：" %>    
+    <%#= f.collection_radio_buttons :avatar, @pictures_array, :first, :last %>
+    <div id="picture_group">
+      <% @pictures.each do |picture| %>
+        <li style="list-style:none">
+          <%= f.input_field :picture_id, type: :radio, value: picture.id %>
+          <%= image_tag picture.avatar.url(:tile) %>
+        </li>
+      <% end %>
+    </div>
   </div>
 
   <div class="form-actions">
