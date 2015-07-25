@@ -3,26 +3,30 @@
   <div class="monitor">
     <div class="clearfix">
       <div style="min-height:40px;line-height:40px;"> 
-        <span style="margin-left:30px">公司资讯列表</span>
-        <span class="submitbutton" style="font-family: 'icomoon';margin-left:150px">
-        <%= link_to 'q新资讯',new_cpanel_news_path,style:'color:#fff;text-decoration:none;font-size:15px' %>
-        </span>
+        <li style="margin:0 30px;float:left">公司资讯列表</li>
+        <li style="font-family: 'icomoon'">
+        <%= link_to 'q新资讯',new_cpanel_news_path,style:'color:#fff;text-decoration:none;font-size:14px;float:right;margin:0 30px;padding:1px 5px',class:'submitbutton' %>
+        </li>
       </div>
-      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;heigh:auto;overflow:hidden">
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;height:auto;overflow:hidden">
         <ul style="width:100%">
         <% @news.each do |news| %>
           <li>
-            <%= link_to news.title, edit_cpanel_news_path(news) %>
+            <%= link_to news.title.truncate(30), edit_cpanel_news_path(news) %>
             <% if news.created_at %>
-              <sub>&nbsp;&nbsp; <%= news.created_at.strftime('%Y-%m-%d') %><sub>
+              <sub>&nbsp;&nbsp; <%= news.created_at.strftime('%Y-%m-%d') %></sub>
             <% end %>
             <span style="position: absolute;right:340px">
             <%= link_to 'X  删除', cpanel_news_path(news), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
             </span>
           </li>
         <%end%>
+
+          <li>
+            <%= paginate @news %>
+          </li>
         </ul>
-        <%= paginate @news %>
+        
       </div>
     </div>
   </div>

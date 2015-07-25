@@ -9,10 +9,13 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="admin-panel clearfix">
-      <div class="main">
+    <div class="admin-panel clearfix" style="margin:10% auto">
+      <div class="main" style="float:none;width:75%;margin:0 auto;min-height:100px">
         <div class="mainContent clearfix">
-          <div>
+          <div class="logo">
+            <a style="color: rgb(234,83,63);"> </a>
+          </div>
+          <div style="text-align:center">
             <%= yield %>
           </div>
         </div>

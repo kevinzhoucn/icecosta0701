@@ -1,40 +1,9 @@
-<!-- <h1>Listing slides</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Image url</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @slides.each do |slide| %>
-      <tr>
-        <td><%= slide.title %></td>
-        <td><%= slide.image_url %></td>
-        <td><%#= slide.picture.avatar.url %></td>
-        <td><%= link_to 'Show', cpanel_slide_path(slide) %></td>
-        <td><%= link_to 'Edit', edit_cpanel_slide_path(slide) %></td>
-        <td><%= link_to 'Destroy', cpanel_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Slide', new_cpanel_slide_path %>
- -->
 <div>
   <h2 class="header">b 图片轮播管理</h2>
 
   <div class="monitor">
     <li style="font: 600 14px/30px icomoon; display:block">
-      <%= link_to '新增', new_cpanel_slide_path,class:'submitbutton',style:'position:relative;left:90%'%>
+      <%= link_to 'q 新增', new_cpanel_slide_path,class:'submitbutton',style:'position:relative;left:90%'%>
     </li>
     <div class="clearfix">
       <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;overflow:hidden">
@@ -42,8 +11,8 @@
           <% @slides.each do |slide| %>
             <li>
               <img src="<%= slide.picture.avatar.url(:thumb) %>">
-              <%= link_to '修改', edit_cpanel_slide_path(slide),class:'submitbutton' %>
-              <%= link_to '删除', cpanel_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } ,class:'submitbutton'%>
+              <%= link_to 'j 修改', edit_cpanel_slide_path(slide),class:'submitbutton',style:'font-family:icomoon' %>
+              <%= link_to 'X 删除', cpanel_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } ,class:'submitbutton',style:'font-family:icomoon' %>
             </li>
           <% end %>
         </ul>
