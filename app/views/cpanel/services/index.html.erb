@@ -1,32 +1,21 @@
-<div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
-  <div class="ipacro-content-layout">
-    <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width:100%;height:140px;background-image:url(/images/services.jpg);background-size:100%;" >
+<div >
+  <h2 class="header">q 服务项目管理</h2>
+  <div class="monitor quick-press">
+    <div class="clearfix">
+      <div style="min-height:40px;line-height:40px;"> 
+        <span style="margin-left:30px">服务项目列表</span>
+        <span class="submitbutton" style="font-family: 'icomoon';margin-left:150px">
+        <%= link_to 'q 添加服务',new_cpanel_service_path %>
+        </span>
       </div>
-    </div>
-  </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;">
-    <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
-        <h3 style="border-radius:10px;background:url('../images/nav.png');height:30px;line-height:30px;transform:skew(-12deg);text-align:justify">我们提供的服务</h3>
-          <div>
-            <ul>
-              <% @services.each do |service| %>
-                <li>
-                  <%= link_to service.title, service %>
-                  <td><%= link_to 'Show', cpanel_service_path(service) %></td>
-                  <td><%= link_to 'Edit', edit_cpanel_service_path(service) %></td>
-                  <td><%= link_to 'Destroy', cpanel_service_path(service), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                </li>
-              <%end%>
-            </ul>
-          </div>
-      </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
-        <div class="layout-item-2">
-          <%= @service.content %>
-        </div>
-      </div>
+        <ul>
+        <% @services.each do |service| %>
+          <li>
+            <%= link_to service.title, edit_cpanel_service_path(service) %>
+            <%= link_to 'X  删除', cpanel_service_path(service), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
+          </li>
+        <%end%>
+        </ul>
     </div>
   </div>
 </div>

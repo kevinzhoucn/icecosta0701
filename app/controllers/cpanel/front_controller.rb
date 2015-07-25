@@ -1,6 +1,12 @@
 class Cpanel::FrontController < Cpanel::ApplicationController
   def index
     @news = News.new
+    @activity = Activity.new
+
+    @slides_count = Slide.all.count
+    @news_count = News.all.count
+    @activities_count = Activity.all.count
+    @services_count = Service.all.count
   end
 
   # def about

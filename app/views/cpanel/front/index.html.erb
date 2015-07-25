@@ -4,25 +4,23 @@
     <div class="clearfix">
       <ul class="content">
         <li class="first">数据统计</li>
-        <li class="imgs"><a href="">图片轮播</a><span class="count">35</span></li>
-        <li class="srvs"><a href="">服务项目</a><span class="count">26</span></li>
-        <li class="news"><a href="">新闻</a><span class="count">13</span></li>
-        <li class="categories"><a href="">员工活动</a><span class="count">21</span></li>
+        <li class="imgs"><a href="">图片轮播</a><span class="count"><%= @slides_count %></span></li>
+        <li class="srvs"><a href="">服务项目</a><span class="count"><%= @services_count %></span></li>
+        <li class="news"><a href="">新闻</a><span class="count"><%= @news_count %></span></li>
+        <li class="categories"><a href="">员工活动</a><span class="count"><%= @activities_count %></span></li>
         
       </ul>
     </div>
   </div>
-  <div class="quick-press">
-    <h4>发布快讯</h4>
-    <%= simple_form_for([:cpanel, @news]) do |f| %>
-      <%= f.input_field :title, placeholder: "新闻标题" %>
-      <%= f.input_field :content, placeholder: "新闻内容" %>
-      <%= f.button :submit, "发布", class:"submit"%>
-    <% end %>
-    <form action="/cpanel/news" method="post">
-      <input type="text" name="title" placeholder="新闻标题"/>
-      <input type="text" name="content" placeholder="新闻内容"/>
-      <button type="submit" class="submit" name="submit">发布</button>
-    </form>
+
+  <div class="monitor">
+    <div class="clearfix">
+      <ul class="content">
+        <li class="first">常用链接</li>
+        <li>
+          <%= link_to '发布快讯', new_cpanel_news_path, class:'submit',style:'display:block;padding:5px;border-radius:10px;text-decoration:none'%>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
