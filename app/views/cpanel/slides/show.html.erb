@@ -7,8 +7,8 @@
 
 <p>
   <strong>Image url:</strong>
-  <%= image_tag @slide.avatar.url(:medium) %>
+  <%= image_tag @slide.picture.avatar.url(:medium) %>
 </p>
 
-<%= link_to 'Edit', edit_slide_path(@slide) %> |
-<%= link_to 'Back', slides_path %>
+<%= link_to 'Edit', edit_cpanel_slide_path(@slide) %> |
+<%= link_to 'Back', cpanel_slides_path %>

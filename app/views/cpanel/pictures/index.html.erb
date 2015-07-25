@@ -17,9 +17,14 @@
         <td><%= picture.key %></td>
         <td><%= picture.value %></td>
         <td><%= picture.avatar.url %></td>
+        <td><%= link_to 'Show', cpanel_picture_path(picture) %></td>
+        <td><%= link_to 'Edit', edit_cpanel_picture_path(picture) %></td>
+        <td><%= link_to 'Destroy', cpanel_picture_path(picture), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+
+<%= link_to 'New Picture', new_cpanel_picture_path %>

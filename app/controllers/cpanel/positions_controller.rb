@@ -23,21 +23,21 @@ class Cpanel::PositionsController < Cpanel::ApplicationController
   def create
     @position = Position.new(position_params)
     if @position.save
-      redirect_to cpanel_position_index_path
+      redirect_to cpanel_positions_path
     end
     # respond_with(@position)
   end
 
   def update
     if @position.update(position_params)
-      redirect_to cpanel_position_index_path
+      redirect_to cpanel_positions_path
     end
     # respond_with(@position)
   end
 
   def destroy
     @position.destroy
-    redirect_to cpanel_position_index_path
+    redirect_to cpanel_positions_path
     # respond_with(@position)
   end
 

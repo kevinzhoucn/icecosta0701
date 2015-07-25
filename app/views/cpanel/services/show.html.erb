@@ -6,7 +6,7 @@
             <ul>
               <% @services.each do |service| %>
                 <li>
-                  <%= link_to service.title, service %>
+                  <%= link_to service.title, cpanel_service_path(service) %>
                 </li>
               <%end%>
             </ul>

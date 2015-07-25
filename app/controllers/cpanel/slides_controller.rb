@@ -14,28 +14,31 @@ class Cpanel::SlidesController < Cpanel::ApplicationController
 
   def new
     @slide = Slide.new
+    @pictures_array = Picture.all.map { |item| [item.id, item.avatar.url(:tile)] }
+    @pictures = Picture.all
     respond_with(@slide)
   end
 
   def edit
+    @pictures = Picture.all
   end
 
   def create
     @slide = Slide.new(slide_params)
     @slide.save
-    redirect_to cpanel_slide_index_path
+    redirect_to cpanel_slides_path
     # respond_with(@slide)
   end
 
   def update
     @slide.update(slide_params)
-    redirect_to cpanel_slide_index_path
+    redirect_to cpanel_slides_path
     # respond_with(@slide)
   end
 
   def destroy
     @slide.destroy
-    redirect_to cpanel_slide_index_path
+    redirect_to cpanel_slides_path
     # respond_with(@slide)
   end
 
@@ -45,6 +48,6 @@ class Cpanel::SlidesController < Cpanel::ApplicationController
     end
 
     def slide_params
-      params.require(:slide).permit(:title, :sub_title, :avatar)
+      params.require(:slide).permit(:title, :sub_title, :avatar, :picture_id)
     end
 end

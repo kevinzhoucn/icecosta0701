@@ -1,35 +1,4 @@
-<!-- <h1>Listing positions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Position type</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @positions.each do |position| %>
-      <tr>
-        <td><%= position.title %></td>
-        <td><%= position.content %></td>
-        <td><%= position.position_type %></td>
-        <td><%= link_to 'Show', position %></td>
-        <td><%= link_to 'Edit', edit_position_path(position) %></td>
-        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Position', new_position_path %>
- -->
+<%= link_to 'New Position', new_cpanel_position_path %>
 
  <div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
   <div class="ipacro-content-layout">
@@ -53,7 +22,11 @@
           <ul>
           <% @positions.each do |position| %>
             <li><%= link_to position.title, position %> <%=position.position_type%></li>
-          <%end%>
+
+            <td><%= link_to 'Show', cpanel_position_path(position) %></td>
+          <td><%= link_to 'Edit', edit_cpanel_position_path(position) %></td>
+          <td><%= link_to 'Destroy', cpanel_position_path(position), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
           </ul>
         </div>
       </div>

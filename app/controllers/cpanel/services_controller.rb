@@ -25,19 +25,19 @@ class Cpanel::ServicesController < Cpanel::ApplicationController
   def create
     @service = Service.new(service_params)
     @service.save
-    redirect_to cpanel_service_index_path
+    redirect_to cpanel_services_path
     # respond_with(@service)
   end
 
   def update
     @service.update(service_params)
-    redirect_to cpanel_service_index_path
+    redirect_to cpanel_services_path
     # respond_with(@service)
   end
 
   def destroy
     @service.destroy
-    redirect_to cpanel_service_index_path
+    redirect_to cpanel_services_path
     # respond_with(@service)
   end
 

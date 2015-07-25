@@ -18,6 +18,7 @@ class FrontController < ApplicationController
     @about_en = SiteConfig.about_en
     @about_cn = SiteConfig.about_cn
     @site_logo = SiteConfig.site_logo
+    @about_image = Picture.where(:key => "about_image").first
   end
 
   def contact_us
