@@ -1041,7 +1041,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 }
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea
 {
-   width: 100%;
+   /*width: 100%;*/
    padding: 8px 0;
    color: #292929 !important;
    font-size: 14px;

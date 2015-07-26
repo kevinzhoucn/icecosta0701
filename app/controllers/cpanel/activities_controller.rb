@@ -23,21 +23,21 @@ class Cpanel::ActivitiesController < Cpanel::ApplicationController
   def create
     @activity = Activity.new(activity_params)
     if @activity.save
-      redirect_to cpanel_activities_index_path
+      redirect_to cpanel_activities_path
     end
     # respond_with(@activity)
   end
 
   def update
     if @activity.update(activity_params)
-      redirect_to cpanel_activities_index_path
+      redirect_to cpanel_activities_path
     end
     # respond_with(@activity)
   end
 
   def destroy
     if @activity.destroy
-      redirect_to cpanel_activities_index_path
+      redirect_to cpanel_activities_path
     end
     # respond_with(@activity)
   end

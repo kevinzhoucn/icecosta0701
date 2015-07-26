@@ -24,6 +24,9 @@
             <% @activities.each do |activity| %>
               <li style="font-size:1.1em">
                 <%= link_to activity.title, activity %>
+                <% if activity.created_at %>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<sub>发布时间：<%= activity.created_at.strftime('%Y-%m-%d') %></sub>
+                <% end %>
               </li>
             <%end%>            
           </ul>

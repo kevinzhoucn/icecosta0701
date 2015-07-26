@@ -7,6 +7,7 @@ Rails40Starter::Application.routes.draw do
   get '/news/search' => 'news#search', as: :news_search
   get '/activities/search' => 'activities#search', as: :activities_search
   get '/positions/search' => 'positions#search', as: :positions_search
+  get '/resumes/succeed' => 'resumes#succeed', as: :resumes_succeed
   # resources :slides
   
   resources :positions, only: [:index, :show] do

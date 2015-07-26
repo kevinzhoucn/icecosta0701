@@ -1,30 +1,20 @@
-<h1>Listing pictures</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= picture.key %></td>
-        <td><%= picture.value %></td>
-        <td><%= picture.avatar.url %></td>
-        <td><%= link_to 'Show', cpanel_picture_path(picture) %></td>
-        <td><%= link_to 'Edit', edit_cpanel_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', cpanel_picture_path(picture), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Picture', new_cpanel_picture_path %>
+<div>
+  <h2 class="header">b 图片库管理</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;height:400px;overflow-y:scroll">
+        <ul>
+          <% @pictures.each do |picture| %>
+          <li style="list-style:none;float:left;min-width:150px;margin:0 5px;text-align:center">
+            <%= image_tag picture.avatar.url(:tile) %>
+            <%= link_to 'X', cpanel_picture_path(picture), method: :delete, data: { confirm: '确定要删除图片吗' },class:'submitbutton',style:'position:relative;top:-70px;right:30px' %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+      <li style="text-align:center">
+        <%= link_to '上传新图片', new_cpanel_picture_path,class:'submitbutton' %>
+      </li>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,20 @@
       font-size: 16px;
       font-family: sans-serif;
     }
+    /*albert*/
+    .submitbutton {
+      border-radius: 5px;
+      text-align: center;
+      line-height: 30px;
+      padding: 5px 10px;
+      border: 1px solid rgb(238,85,64);
+      color: #fff !important;
+      /*font-size: 16px;*/
+      background: -webkit-linear-gradient(top,rgb(245,101,82),rgb(234,83,63));
+      background: -moz-linear-gradient(top,rgb(245,101,82),rgb(234,83,63));
+      background: -ms-linear-gradient(top,rgb(245,101,82),rgb(234,83,63));
+      background: linear-gradient(top,rgb(245,101,82),rgb(234,83,63));
+    }
     .clearfix:after {
       content: "";
       display: block;
@@ -14,7 +28,7 @@
     }
     .admin-panel {
       width: 990px;
-      margin: 50px auto;
+      margin: 30px auto;
     }
     /*slidebar²à±ßÀ¸*/
     .slidebar {
@@ -134,8 +148,9 @@
     }
     .monitor li {
       list-style:none;
-      font: 600 14px/28px helvetica,verdana,sans-serif;
+      font: 600 14px/40px helvetica,verdana,sans-serif;
       color: rgb(102,102,102);
+      height:auto;
     }
     .monitor li a {
       color: rgb(102,102,102);
@@ -143,6 +158,8 @@
     }
     .monitor li.first {
       border-bottom: 1px dotted rgb(153,153,153);
+      color: #ea533f;
+      font-size: 1.125em;
       min-width: 280px;
     }
     .monitor .count {

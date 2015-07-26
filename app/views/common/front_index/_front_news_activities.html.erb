@@ -1,4 +1,4 @@
-<div class="ipacro-layout-cell layout-item-0" style="width: 40%;" >
+<div class="ipacro-layout-cell layout-item-0" style="width: 50%;" >
   <h3>最新资讯</h3>
   <div class="image-caption-wrapper" style="float: left; width: 207px">
     <img alt="" width="100%" height="" src=" <%= @news_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:489px">
@@ -21,7 +21,7 @@
     </p>
   </div>
 </div>
-<div class="ipacro-layout-cell layout-item-0" style="width: 60%" >
+<div class="ipacro-layout-cell layout-item-0" style="width: 50%" >
   <h3>员工园地</h3>
   <div class="image-caption-wrapper" style="float: left; width: 340px">
     <img alt="" width="100%" height="" src=" <%= @activity_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:410px">
@@ -33,4 +33,7 @@
     </li>
   <% end %>
   </ul>
+  <p align="right" style="postion:absolute;bottom:0">
+      <a href="/activities" class="ipacro-button">查看全部...</a>
+    </p>
 </div>
