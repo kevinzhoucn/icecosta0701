@@ -1,0 +1,22 @@
+<div>
+  <h2 class="header">b 图片轮播管理</h2>
+
+  <div class="monitor">
+    <li style="font: 600 14px/30px icomoon; display:block">
+      <%= link_to 'q 新增', new_cpanel_slide_path,class:'submitbutton',style:'position:relative;left:90%'%>
+    </li>
+    <div class="clearfix">
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;overflow:hidden">
+        <ul>
+          <% @slides.each do |slide| %>
+            <li>
+              <img src="<%= slide.picture.avatar.url(:thumb) %>">
+              <%= link_to 'j 修改', edit_cpanel_slide_path(slide),class:'submitbutton',style:'font-family:icomoon' %>
+              <%= link_to 'X 删除', cpanel_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } ,class:'submitbutton',style:'font-family:icomoon' %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

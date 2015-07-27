@@ -1,38 +1,22 @@
-<h1>Listing cpanel_site_configs</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @cpanel_site_configs_other.each do |cpanel_site_config| %>
-      <tr>
-        <td><%= cpanel_site_config.key %></td>
-        <td><%= cpanel_site_config.value.truncate(20) %></td>
-        <td><%= link_to 'Show', cpanel_site_config_path(cpanel_site_config) %></td>
-        <td><%= link_to 'Edit', edit_cpanel_site_config_path(cpanel_site_config) %></td>
-        <td><%= link_to 'Destroy', cpanel_site_config_path(cpanel_site_config), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<%= link_to 'New Site config', new_cpanel_site_config_path %>
-
-<div id="about">
-  <h2 class="header">k 网站参数配</h2>
+<div>
+  <h2 class="header">k 网站参数配置</h2>
   <div class="monitor">
     <div class="clearfix">
-      <ul>
+      <div style="min-height:40px;line-height:40px;"> 
+        <li style="margin:0 30px;float:left;font-family:icomoon">k 网站参数列表</li>
+      </div>
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;height:auto;overflow:hidden">
+        <ul style="width:100%">
         <% @cpanel_site_configs_other.each do |cpanel_site_config| %>
-        <li></li>
+          <li>
+            <%= cpanel_site_config.key %>
+            <span style="position: absolute;right:340px">
+              <%= link_to '编辑', edit_cpanel_site_config_path(cpanel_site_config),class:'submitbutton' %>
+            </span>
+          </li>
         <%end%>
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

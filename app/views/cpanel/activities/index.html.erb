@@ -1,0 +1,29 @@
+<div>
+  <h2 class="header">h 员工园地管理</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <div style="min-height:40px;line-height:40px;"> 
+        <li style="margin:0 30px;float:left">员工活动列表</li>
+        <li style="font-family: 'icomoon'">
+          <%= link_to 'q新活动',new_cpanel_activity_path,style:'color:#fff;text-decoration:none;font-size:14px;float:right;margin:0 30px;padding:1px 5px',class:'submitbutton'%>
+        </li>
+      </div>
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;heigh:auto;overflow:hidden">
+        <ul style="width:100%">
+        <% @activities.each do |activity| %>
+          <li>
+            <%= link_to activity.title, edit_cpanel_activity_path(activity) %>
+            <% if activity.created_at %>
+              <sub>&nbsp;&nbsp; <%= activity.created_at.strftime('%Y-%m-%d') %><sub>
+            <% end %>
+            <span style="position: absolute;right:340px">
+            <%= link_to 'X  删除', cpanel_activity_path(activity), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
+            </span>
+          </li>
+        <%end%>
+        </ul>
+        <%= paginate @activities %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,12 @@
 class Cpanel::FrontController < Cpanel::ApplicationController
   def index
+    @news = News.new
+    @activity = Activity.new
 
+    @slides_count = Slide.all.count
+    @news_count = News.all.count
+    @activities_count = Activity.all.count
+    @services_count = Service.all.count
   end
 
   # def about
@@ -16,6 +22,7 @@ class Cpanel::FrontController < Cpanel::ApplicationController
   end
 
   def contact_us
-
+    @contact_cn = SiteConfig.where(key: 'contact_cn').first
+    @contact_en = SiteConfig.where(key: 'contact_en').first
   end
 end

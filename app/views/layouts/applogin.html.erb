@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>信必达-控制台</title>
+    <link rel="stylesheet" type="text/css" href="/css/admin-style.css">
+    <%= javascript_include_tag "application" %>
+    <script src="//cdn.ckeditor.com/4.5.1/full/ckeditor.js"></script>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="admin-panel clearfix" style="margin:10% auto">
+      <div class="main" style="float:none;width:75%;margin:0 auto;min-height:100px">
+        <div class="mainContent clearfix">
+          <div class="logo">
+            <a style="color: rgb(234,83,63);"> </a>
+          </div>
+          <div style="text-align:center">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

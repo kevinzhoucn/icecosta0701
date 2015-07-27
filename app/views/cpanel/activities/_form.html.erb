@@ -1,0 +1,18 @@
+<%= simple_form_for([:cpanel, @activity]) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs" style="margin:5px;font-size:12px;color:gray">
+    <%= f.input :title, label:"活动标题" %>
+    <br>
+    <%= f.input :content,label:'活动内容' %>
+    <%#= f.input :activity_type %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, " 发 布 ",class:"submitbutton",style:'padding:1px 5px'%>
+    <button class="submitbutton" style="padding:1px 10px;margin:0px 15px" onclick="window.history.go(-1);return false;">取 消</button>
+  </div>
+<% end %>
+<script>
+CKEDITOR.replace('activity_content');
+</script>

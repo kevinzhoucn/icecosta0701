@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @position.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @position.content %>
+</p>
+
+<p>
+  <strong>Position type:</strong>
+  <%= @position.position_type %>
+</p>
+
+<%= link_to 'Edit', edit_cpanel_position_path(@position) %> |
+<%= link_to 'Back', cpanel_positions_path %>

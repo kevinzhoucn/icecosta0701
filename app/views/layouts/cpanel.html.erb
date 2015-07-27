@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/css/admin-style.css">
     <%= javascript_include_tag "application" %>
     <script src="//cdn.ckeditor.com/4.5.1/full/ckeditor.js"></script>
+    <%= csrf_meta_tags %>
   </head>
   <body>
     <div class="admin-panel clearfix">
@@ -13,7 +14,10 @@
       <div class="main">
         <ul class="topbar clearfix">
           <li><a href="/" target="_blank">u 预览网站</a></li>
-          <li><a href="#">s 退出登录</a></li>
+          <li>
+            <%= link_to 's 退出登录', destroy_user_session_path, { method: :delete} %>
+          </li>
+          <li><%= link_to 'i 修改密码', edit_user_registration_path %></li>
         </ul>
         <div class="mainContent clearfix">
           <div>

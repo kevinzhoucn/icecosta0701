@@ -1,20 +1,33 @@
 Rails40Starter::Application.routes.draw do
 
+  # resources :partners, only: [:index]
+
+  resources :pictures, only: [:index, :show]
+
   get '/news/search' => 'news#search', as: :news_search
   get '/activities/search' => 'activities#search', as: :activities_search
-
-  resources :slides
-  resources :resumes
-  resources :positions
-  resources :activities
-  resources :news, except: [:search]  
-  resources :services
+  get '/positions/search' => 'positions#search', as: :positions_search
+  get '/resumes/succeed' => 'resumes#succeed', as: :resumes_succeed
+  # resources :slides
+  
+  resources :positions, only: [:index, :show] do
+    resources :resumes, only: [:new, :create]
+  end
+  resources :activities, only: [:index, :show]
+  resources :news, only: [:index, :show]
+  resources :services, only: [:index, :show]
 
   namespace :cpanel do
     get '/' => 'front#index', as: :front_index    
     get '/about'=> 'front#about', as: :front_about
     get '/contact' => 'front#contact_us', as: :front_contact
     resources :site_configs
+    resources :news
+    resources :activities
+    resources :services
+    resources :positions
+    resources :slides
+    resources :pictures
   end
 
   get '/about' => 'front#about', as: :front_about

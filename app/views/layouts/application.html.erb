@@ -9,6 +9,7 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
     <link rel="stylesheet" href="/css/additional.style.css">
+    <%= csrf_meta_tags %>
   </head>
   <body>
     <div id="ipacro-main">
@@ -20,7 +21,7 @@
             <div class="ipacro-content-layout-row">
               <div class="ipacro-layout-cell ipacro-content">
                 <article class="ipacro-post ipacro-article">
-                  <%=yield%>
+                  <%= yield %>
                 </article>
               </div>
             </div>

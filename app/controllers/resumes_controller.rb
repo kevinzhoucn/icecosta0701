@@ -28,7 +28,13 @@ class ResumesController < ApplicationController
       Notifier.resume_received(@resume).deliver 
     end
 
-    respond_with(@resume)
+    redirect_to resumes_succeed_path
+
+    # respond_with(@resume)
+  end
+
+  def succeed
+
   end
 
   def update

@@ -1,0 +1,25 @@
+<h1>Listing pictures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pictures.each do |picture| %>
+      <tr>
+        <td><%= picture.key %></td>
+        <td><%= picture.value %></td>
+        <td><%= picture.avatar.url %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
