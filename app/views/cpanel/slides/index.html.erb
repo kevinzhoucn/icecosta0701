@@ -10,7 +10,10 @@
         <ul>
           <% @slides.each do |slide| %>
             <li>
-              <img src="<%= slide.picture.avatar.url(:thumb) %>">
+              <% if slide.picture && slide.picture.avatar %>
+                <img src="<%= slide.picture.avatar.url(:thumb) %>">
+              <% end %>
+              
               <%= link_to 'j 修改', edit_cpanel_slide_path(slide),class:'submitbutton',style:'font-family:icomoon' %>
               <%= link_to 'X 删除', cpanel_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } ,class:'submitbutton',style:'font-family:icomoon' %>
             </li>
