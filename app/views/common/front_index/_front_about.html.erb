@@ -1,5 +1,7 @@
 <div class="ipacro-layout-cell layout-item-0" style="width: 42%" >
-  <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="margin-right: 10px; float: left;">
+  <% if @about_image && @about_image.avatar %>
+    <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="margin-right: 10px; float: left;">
+  <% end %>
 </div>
 <div class="ipacro-layout-cell layout-item-0" style="width: 58%" >
   <p>

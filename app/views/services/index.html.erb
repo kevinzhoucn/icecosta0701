@@ -13,7 +13,9 @@
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
         <div class="layout-item-2" style="min-height:300px">
-          <%= @service.content %>
+          <% if @service %>
+            <%= @service.content %>
+          <% end %>
         </div>
       </div>
     </div>

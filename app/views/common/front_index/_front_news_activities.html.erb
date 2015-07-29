@@ -1,7 +1,9 @@
 <div class="ipacro-layout-cell layout-item-0" style="width: 50%;" >
   <h3>最新资讯</h3>
   <div class="image-caption-wrapper" style="float: left; width: 207px">
-    <img alt="" width="100%" height="" src=" <%= @news_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:489px">
+    <% if @news_image && @news_image.avatar %>
+      <img alt="" width="100%" height="" src=" <%= @news_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:489px">
+    <% end %>
   </div>
   <div class="ipacro-postcontent" style="float:left">
     <style type="text/css">
@@ -24,7 +26,9 @@
 <div class="ipacro-layout-cell layout-item-0" style="width: 50%" >
   <h3>员工园地</h3>
   <div class="image-caption-wrapper" style="float: left; width: 340px">
-    <img alt="" width="100%" height="" src=" <%= @activity_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:410px">
+    <% if @activity_image && @activity_image.avatar %>
+      <img alt="" width="100%" height="" src=" <%= @activity_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:410px">
+    <% end %>
   </div>
   <ul class="theitem">
   <% @front_activites.each do |item| %>
