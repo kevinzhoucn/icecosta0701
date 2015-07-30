@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Key:</strong>
@@ -12,3 +12,18 @@
 
 <%= link_to 'Edit', edit_cpanel_site_config_path(@cpanel_site_config) %> |
 <%= link_to 'Back', cpanel_site_configs_path %>
+ -->
+
+<div>
+  <h2 class="header">k 网站参数详情</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <ul class="content" style="float:none">
+        <li>
+          <%= @cpanel_site_config.value.html_safe %>
+        </li>
+        <button class="submitbutton" onclick="window.history.go(-2);return false;">返 回</button>
+      </ul>
+    </div>
+  </div>
+</div>

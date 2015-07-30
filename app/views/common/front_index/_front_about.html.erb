@@ -5,7 +5,9 @@
 </div>
 <div class="ipacro-layout-cell layout-item-0" style="width: 58%" >
   <p>
+    <% if @about_cn %>
     <%= @about_cn.truncate(200).html_safe %>
+    <%end%>
   </p>
   <p align="right">
     <a href="/about" class="ipacro-button">查看全部...</a>
