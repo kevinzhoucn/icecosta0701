@@ -3,7 +3,7 @@
 
    <div class="form-inputs" style="margin:5px;font-size:12px;color:gray">
     <%= f.input :title,label:'服务名称：' %>
-    <%= f.input :content,label:'服务内容：' %>
+    <%= f.text_area :content,label:'服务内容：' %>
   </div>
 
   <div class="form-actions">
@@ -12,5 +12,5 @@
   </div>
 <% end %>
 <script>
-CKEDITOR.replace('service_content');
+ CKEDITOR.replace('service_content');
 </script>

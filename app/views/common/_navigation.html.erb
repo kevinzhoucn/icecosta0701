@@ -5,7 +5,7 @@
     <li>
       <a id="services" href="<%= services_path %>"><%= t('services') %></a>
       <ul class="">
-        <% @services.each do |service| %>
+        <% Service.all.each do |service| %>
         <li>
           <%= link_to service.title, service %>
         </li>
