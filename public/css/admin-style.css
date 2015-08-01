@@ -55,7 +55,7 @@
     .slidebar ul a {
       color: rgb(140,140,140);
       text-decoration: none;
-      font:15px/45px 'icomoon';
+      font:15px/42px 'icomoon';
       -moz-box-sizing:border-box;
       box-sizing:border-box;
       border-bottom: 1px solid rgb(235,235,235);
@@ -74,7 +74,7 @@
       float: left;
       width: 79%;
       height: auto;
-      min-height:690px;
+      min-height:705px;
       background-color: rgb(255,255,255);
       position: relative;
       font-family: helvetica,verdana,sans-serif;

@@ -1,13 +1,13 @@
-<script src="/js/flickerslider/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
+<!-- <script src="/js/flickerslider/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
 <script src="/js/flickerslider/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
 <link href="/css/flickerplate.css"  type="text/css" rel="stylesheet">
 <script src="/js/flickerslider/flickerplate.min.js" type="text/javascript"></script>
 <script>
   $(document).ready(function(){
-    $('.flicker-example').flicker({
-      dot_alignment: 'right',
-      flick_animation: 'jquery-slide'
-    });
+  $('.flicker-example').flicker({
+    dot_alignment: 'right',
+    flick_animation: 'jquery-slide'
+  });
   });
 </script>
 <style type="text/css">
@@ -16,13 +16,149 @@
 </style>
 <div class="flicker-example" data-block-text="false" id="slideshow">
   <ul>
-    <% @slides.each do |slide| %>
-      <% if slide.picture && slide.picture.avatar %>
-        <li data-background=" <%= slide.picture.avatar.url %> ">
-          <div class="flick-title"> <%= slide.title %> </div>
-          <div class="flick-sub-text">  <%= slide.sub_title %></div>
-        </li>
-      <% end %>
+  <% @slides.each do |slide| %>
+    <% if slide.picture && slide.picture.avatar %>
+    <li data-background=" <%= slide.picture.avatar.url %> ">
+      <div class="flick-title"> <%= slide.title %> </div>
+      <div class="flick-sub-text">  <%= slide.sub_title %></div>
+    </li>
     <% end %>
+  <% end %>
   </ul>
-</div>
+</div> -->
+
+<!-- newer version of slideshow -->
+<style>
+  .ipacro-postcontent ul>li:before, .ipacro-post ul>li:before, .ipacro-textblock ul>li:before{content:none; /*去掉li前面的小三角*/}
+  .ipacro-postcontent li, .ipacro-post li, .ipacro-textblock li{margin: 0;}/*去掉li外边距*/
+  .captionOrange, .captionBlack
+  {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .captionOrange
+  {
+    background: #EB5100;
+    background-color: rgba(235, 81, 0, 0.6);
+  }
+  .captionBlack
+  {
+  font-size:16px;
+    background: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+  {
+  color: #ffffff;
+  text-decoration: none;
+  }
+  a.captionOrange:hover
+  {
+    color: #eb5100;
+    text-decoration: underline;
+    background-color: #eeeeee;
+    background-color: rgba(238, 238, 238, 0.7);
+  }
+  .bricon
+  {
+    background: url(/images/browser-icons.png);
+  }
+
+  /* jssor slider arrow navigator skin 20 css */
+  /*
+  .jssora20l          (normal)
+  .jssora20r          (normal)
+  .jssora20l:hover      (normal mouseover)
+  .jssora20r:hover      (normal mouseover)
+  .jssora20l.jssora20ldn    (mousedown)
+  .jssora20r.jssora20rdn    (mousedown)
+  */
+  .jssora20l, .jssora20r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url(/images/a20.png) no-repeat;
+    overflow: hidden;
+  }
+  .jssora20l { background-position: -3px -33px; }
+  .jssora20r { background-position: -63px -33px; }
+  .jssora20l:hover { background-position: -123px -33px; }
+  .jssora20r:hover { background-position: -183px -33px; }
+  .jssora20l.jssora20ldn { background-position: -243px -33px; }
+  .jssora20r.jssora20rdn { background-position: -303px -33px; }
+
+    /* jssor slider bullet navigator skin 03 css */
+    /*
+  .jssorb03 div       (normal)
+  .jssorb03 div:hover   (normal mouseover)
+  .jssorb03 .av       (active)
+  .jssorb03 .av:hover   (active mouseover)
+  .jssorb03 .dn       (mousedown)
+  */
+  .jssorb03 {
+    position: absolute;
+  }
+  .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    line-height: 21px;
+    color: white;
+    font-size: 12px;
+    background: url(/images/b03.png) no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .jssorb03 div { background-position: -5px -4px; }
+  .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+  .jssorb03 .av { background-position: -65px -4px; }
+  .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
+</style>
+
+<script type="text/javascript" src="/js/jssor/jssor.js"></script>
+<script type="text/javascript" src="/js/jssor/jssor.slider.min.js"></script>
+<script type="text/javascript" src="/js/jssor/main.js"></script>
+
+<div id="slider1_container" style="position: relative; width: 980px;
+  height: 250px; overflow: hidden;">
+
+  <!-- Loading Screen --> 
+  <div u="loading" style="position:absolute;top:0px;left:0px;">
+    <div style="filter:alpha(opacity=70);opacity:0.7;position:absolute;display:block;background-color:#000; top:0px;left:0px;width:100%;height:100%;"> 
+    </div> 
+    <div style="position:absolute;display:block;background:url(/images/loading.gif) no-repeat center center;top:0px;left:0px;width:100%;height:100%;">
+    </div>
+  </div>
+
+  <div u="slides" style="cursor: move; position: absolute; left: 0px; top:0px;width:980px;height:250px;
+    overflow:hidden;">
+  <% @slides.each do |slide| %>
+  <% if slide.picture && slide.picture.avatar %>
+    <div id="theslide">
+      <img u="image" src="<%= slide.picture.avatar.url %>" />
+      <div u="caption" t="CLIP|LR" du="1500" class="captionBlack"  style="position:absolute; left:20px; top: 10px; width:300px; height:30px;"> 
+      <%= slide.title %>
+      </div>
+      <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-300 style="position:absolute;top: 10px;left:400px;width:500px;height:200px;text-align: left; line-height:30px;">
+        <%= slide.sub_title %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+  <div u="navigator" class="jssorb03" style="bottom: 16px; right: 6px;">
+    <div u="prototype"><div u="numbertemplate"></div></div>
+  </div>
+  <span u="arrowleft" class="jssora20l" style="top: 123px; left: 8px;">
+  </span>
+  <span u="arrowright" class="jssora20r" style="top: 123px; right: 8px;">
+  </span>
+</div> 

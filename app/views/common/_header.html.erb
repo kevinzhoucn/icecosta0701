@@ -1,9 +1,26 @@
 <header class="ipacro-header">
   <div class="ipacro-shapes">
   </div>
-  <h1 class="ipacro-headline" data-left="4.77%">
+  <h1 class="ipacro-headline" data-left="4.77%" style="top:5px">
     <a href="#"><%= t('site_title') %> </a>
   </h1>
-  <h2 class="ipacro-slogan" data-left="4.12%">公司的口号：</h2>
-  <span class="ipacro-postcontent" style="position:absolute;bottom:5%;right:5%;"><a href="#">中文版</a> | <a href="#">English</a></span>
+  <h2 class="ipacro-slogan" data-left="4.12%" style="top:55px">公司的口号：</h2>
+  <span style="position:absolute;bottom:40%;right:5px">
+    <%= form_tag front_search_path, :method => 'get' do %>
+    <%= text_field_tag :key, params[:key],type:"search", placeholder:"站内搜索", size:"20" %>
+    <%= submit_tag "搜索", :name => nil ,class:"ipacro-button"%>
+  <% end %>
+  </span>
+  <span class="ipacro-postcontent" style="position:absolute;bottom:10%;right:25%;">
+    <a id="glossaries" href="<%=front_glossary_path%>"><img src="/images/book-open-icon.png" style="margin-bottom:-3px">&nbsp;<%= t('glossary')%></a>
+  </span>
+  <span class="ipacro-postcontent" style="position:absolute;bottom:10%;right:5px;">
+    <a href="#" class="langcn">
+      <img src="/images/lang_cn.png" style="margin-bottom:-3px">&nbsp;中文版
+    </a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" class="langen">
+      <img src="/images/lang_en.png" style="margin-bottom:-3px">&nbsp;English
+    </a>
+  </span>
 </header>

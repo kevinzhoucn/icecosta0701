@@ -1,3 +1,15 @@
+<style type="text/css">
+  li.picthumb{
+    list-style:none;
+    float:left;
+    min-width:150px;
+    min-height:150px;
+    margin:5px 5px;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid silver;
+  }
+</style>
 <div>
   <h2 class="header">b 图片库管理</h2>
   <div class="monitor">
@@ -5,9 +17,8 @@
       <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;height:400px;overflow-y:scroll">
         <ul>
           <% @pictures.each do |picture| %>
-          <li style="list-style:none;float:left;min-width:150px;margin:0 5px;text-align:center">
-            <%= image_tag picture.avatar.url(:tile) %>
-            <%= link_to 'X', cpanel_picture_path(picture), method: :delete, data: { confirm: '确定要删除图片吗' },class:'submitbutton',style:'position:relative;top:-70px;right:30px' %>
+          <li class="picthumb" style="background-image:url('<%= picture.avatar.url(:tile)%>')">
+            <%= link_to 'X', cpanel_picture_path(picture), method: :delete, data: { confirm: '确定要删除图片吗' },class:'submitbutton',style:'float:right;padding:1px 10px'%>
           </li>
           <% end %>
         </ul>

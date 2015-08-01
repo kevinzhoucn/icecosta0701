@@ -1,5 +1,25 @@
-<p>
-  <%= link_to "Edit", edit_cpanel_site_config_path(@glossaries) %>
-</p>
-
-<%= @glossaries.value %>
+<style type="text/css">
+    ul.content >li.first{
+      font-family:icomoon
+    }
+    #dashboard .monitor{
+      float:none;
+      margin:5px 30px 7px 30px ;
+      display:block;
+    }
+  </style>
+<div id="dashboard">
+  <h2 class="header">n 缩略语集</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <ul class="content" style="float:none">
+        <li style="height:auto;overflow:hidden;font-family:icomoon">
+          <%= link_to "e 编 辑", edit_cpanel_site_config_path(@glossaries), class:'submitbutton',style:"text-decoration:none;position:relative;float:right;padding:2px 5px;margin-top:5px;font-size:14px" %>
+        </li>
+      </ul>
+      <div>
+        <%= @glossaries.value.truncate(160).html_safe %>
+      </div>
+    </div>
+  </div>
+</div>
