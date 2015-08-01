@@ -9,7 +9,9 @@
   <div class="ipacro-content-layout" style="margin-top:10px;min-height:400px;">
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width: 30%">
-        <img src="<%= @about_image.avatar.url %> " style="margin-right: 10px; float: left;" width="100%">
+        <% if @about_image && @about_image.avatar %>
+          <img src="<%= @about_image.avatar.url %> " style="margin-right: 10px; float: left;" width="100%">
+        <% end %>
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 70%">
         <div style="word-wrap:break-word">
