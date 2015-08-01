@@ -1,21 +1,38 @@
 Rails40Starter::Application.routes.draw do
-  resources :partners
-  # resources :partners, only: [:index]
-
-  resources :pictures, only: [:index, :show]
-
-  get '/news/search' => 'news#search', as: :news_search
-  get '/activities/search' => 'activities#search', as: :activities_search
-  get '/positions/search' => 'positions#search', as: :positions_search
-  get '/resumes/succeed' => 'resumes#succeed', as: :resumes_succeed
-  # resources :slides
-  
-  resources :positions, only: [:index, :show] do
-    resources :resumes, only: [:new, :create]
+  namespace :mobile do
+    get '/' => 'front#index'
   end
-  resources :activities, only: [:index, :show]
-  resources :news, only: [:index, :show]
-  resources :services, only: [:index, :show]
+
+  scope "(:locale)", :locale => /en|zh-CN/ do
+    resources :partners
+    # resources :partners, only: [:index]
+
+    resources :pictures, only: [:index, :show]
+
+    get '/news/search' => 'news#search', as: :news_search
+    get '/activities/search' => 'activities#search', as: :activities_search
+    get '/positions/search' => 'positions#search', as: :positions_search
+    get '/resumes/succeed' => 'resumes#succeed', as: :resumes_succeed
+    # resources :slides
+    
+    resources :positions, only: [:index, :show] do
+      resources :resumes, only: [:index, :new, :create]
+    end
+    resources :activities, only: [:index, :show]
+    resources :news, only: [:index, :show]
+    resources :services, only: [:index, :show]
+
+    get '/about' => 'front#about', as: :front_about
+    get '/contact' => 'front#contact_us', as: :front_contact
+    get '/search' => 'front#site_search', as: :front_search
+    get '/glossary' => 'front#glossaries', as: :front_glossary
+
+    devise_for :users
+
+    get '/' => 'front#index'
+  end
+
+  root 'front#index'
 
   namespace :cpanel do
     get '/' => 'front#index', as: :front_index
@@ -32,14 +49,7 @@ Rails40Starter::Application.routes.draw do
     resources :partners
   end
 
-  get '/about' => 'front#about', as: :front_about
-  get '/contact' => 'front#contact_us', as: :front_contact
-  get '/search' => 'front#site_search', as: :front_search
-  get '/glossary' => 'front#glossaries', as: :front_glossary
 
-  devise_for :users
-  
-  root 'front#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

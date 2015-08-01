@@ -48,6 +48,6 @@ class Cpanel::ActivitiesController < Cpanel::ApplicationController
     end
 
     def activity_params
-      params.require(:activity).permit(:title, :content, :activity_type)
+      params.require(:activity).permit(:title, :content, :lang)
     end
 end
