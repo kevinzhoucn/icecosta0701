@@ -25,4 +25,8 @@ class Cpanel::FrontController < Cpanel::ApplicationController
     @contact_cn = SiteConfig.where(key: 'contact_cn').first
     @contact_en = SiteConfig.where(key: 'contact_en').first
   end
+
+  def glossaries
+    @glossaries = SiteConfig.get_config('glossaries')
+  end
 end
