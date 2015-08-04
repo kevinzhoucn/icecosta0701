@@ -51,4 +51,10 @@ class SiteConfig
   def self.save_default(key, value)
     create(key: key, value: value.to_s) unless find_by_key(key)
   end
+
+  def self.get_config(key)
+    obj = find_by_key(key)
+    obj = create(key: key, value: "") unless obj
+    return obj
+  end
 end

@@ -48,6 +48,6 @@ class Cpanel::PartnersController < Cpanel::ApplicationController
     end
 
     def partner_params
-      params.require(:partner).permit(:name, :url)
+      params.require(:partner).permit(:name, :url, :avatar)
     end
 end

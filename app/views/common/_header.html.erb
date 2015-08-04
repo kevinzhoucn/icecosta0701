@@ -1,3 +1,11 @@
+<style type="text/css">
+  a.langcn:before{
+    content: url(/images/lang_cn.png);
+  }
+  a.langen:before{
+    content: url(/images/lang_en.png);
+  }
+</style>
 <header class="ipacro-header">
   <div class="ipacro-shapes">
   </div>
@@ -5,5 +13,8 @@
     <a href="#"><%= t('site_title') %> </a>
   </h1>
   <h2 class="ipacro-slogan" data-left="4.12%" style="top:55px">公司的口号：</h2>
-  <span class="ipacro-postcontent" style="position:absolute;bottom:5%;right:5%;"><a href="#">中文版</a> | <a href="#">English</a></span>
+  <span class="ipacro-postcontent" style="position:absolute;bottom:5%;right:25%;">
+    <a href="#">缩略语集</a>
+  </span>
+  <span class="ipacro-postcontent" style="position:absolute;bottom:5%;right:5%;"><a href="#" class="langcn">中文版</a> | <a href="#" class="langen">English</a></span>
 </header>

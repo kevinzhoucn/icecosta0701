@@ -1,4 +1,9 @@
 <nav class="ipacro-nav">
+  <%= form_tag front_search_path, :method => 'get' do %>
+    <%= text_field_tag :key, params[:key],type:"search", placeholder:"请输入关键字", size:"20" %>
+    <%= submit_tag "搜索", :name => nil ,class:"ipacro-button"%>
+  <% end %>
+  
   <ul class="ipacro-hmenu">
     <li><a id="home" href="<%= root_path %>">首&nbsp;&nbsp;页</a></li>
     <li><a id="about" href="<%=front_about_path%>"><%= t('about') %></a></li>
@@ -16,6 +21,7 @@
     <li><a id="activities" href="<%= activities_path %>"><%= t('activities') %></a></li>
     <li><a id="positions" href="<%= positions_path %>"><%= t('positions') %></a></li>
     <li><a id="contact" href="<%=front_contact_path%>"><%= t('contact_us')%></a></li>
+    <li><a id="glossaries" href="<%=front_glossary_path%>"><%= t('glossary')%></a></li>
   </ul> 
 </nav>
 <script type="text/javascript" src="/js/addmenuclass.js"></script>
