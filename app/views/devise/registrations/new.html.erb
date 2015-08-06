@@ -5,12 +5,12 @@
 
   <div class="form-inputs">
     <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
+    <%= f.input :password, required: true, hint: ("密码长度至少为 #{@minimum_password_length} 个字符" if @validatable) %>
     <%= f.input :password_confirmation, required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "注册" %>
   </div>
 <% end %>
 

@@ -1,18 +1,19 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>修改用户密码</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
-    <div class="form-inputs">
-      <%= f.input :current_password, label: "当前密码", required: true %>
+    <div class="form-inputs" style="text-align:right;margin-right: 35%;">
+      <%= f.input :current_password, label: "当前密码：", required: true %>
       <br>
-      <%= f.input :password, label: "输入新密码", autocomplete: "off", required: false %>
+      <%= f.input :password, label: "输入新密码：", autocomplete: "off", required: false %>
       <br>
-      <%= f.input :password_confirmation, label: "再次输入新密码", required: false, hint: "" %>
+      <%= f.input :password_confirmation, label: "再次输入新密码：", required: false, hint: "" %>
     </div>
 
     <div class="form-actions">
       <%= f.button :submit, "确定",class:'submitbutton',style:'margin:1px 5px;padding:1px 15px' %>
       <button class="submitbutton" style="margin:1px 5px;padding:1px 15px" onclick="window.history.go(-1);return false;">取消</button>
     </div>
+    <p>&nbsp;</p>
 <% end %>
