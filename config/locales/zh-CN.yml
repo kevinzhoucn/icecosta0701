@@ -1,4 +1,5 @@
 zh-CN:
+  OK: 确定
   home: "首&nbsp;&nbsp;&nbsp;页"
   glossary: 缩略语集
   site_title: 信必达
@@ -9,6 +10,24 @@ zh-CN:
   positions: 加入我们
   resumes: 简历
   contact_us: 联系我们
+  More: 查看全部
+  "Top News": 最新资讯
+  "Top Activities": 最新动态
+  "Search ipa-cro.com": 全站搜索
+  "Search for News": 搜索资讯
+  "Search for Activities": 搜索员工动态
+  Search_Positions: 搜索职位
+  Search: 搜索
+  Back: 返回
+  "Published On": 发布时间
+  "Searching Result": 搜索结果
+  "Site Search": 站内搜索
+  type: 类型
+  "Apply Now": 在线申请
+  name: 您的姓名
+  PS: 个人简介
+  resume_upload: 上传简历
+  submit: 提交
   front:
     index:
       services: 我们的服务

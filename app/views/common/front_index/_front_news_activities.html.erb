@@ -1,5 +1,5 @@
 <div class="ipacro-layout-cell layout-item-0" style="width: 50%;" >
-  <h3>最新资讯</h3>
+  <h3><%=t('Top News')%></h3>
   <div class="image-caption-wrapper" style="float: left; width: 207px">
     <% if @news_image && @news_image.avatar %>
       <img alt="" width="100%" height="" src=" <%= @news_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:489px">
@@ -19,12 +19,12 @@
     <% end %>
     </ul>
     <p align="right" style="postion:absolute;bottom:0">
-      <a href="/news" class="ipacro-button">查看全部...</a>
+      <a href="/news" class="ipacro-button"><%= t('More')%>...</a>
     </p>
   </div>
 </div>
 <div class="ipacro-layout-cell layout-item-0" style="width: 50%" >
-  <h3>员工园地</h3>
+  <h3><%=t('Top Activities')%></h3>
   <div class="image-caption-wrapper" style="float: left; width: 340px">
     <% if @activity_image && @activity_image.avatar %>
       <img alt="" width="100%" height="" src=" <%= @activity_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:410px">
@@ -38,6 +38,6 @@
   <% end %>
   </ul>
   <p align="right" style="postion:absolute;bottom:0">
-      <a href="/activities" class="ipacro-button">查看全部...</a>
+      <a href="/activities" class="ipacro-button"><%= t('More')%>...</a>
     </p>
 </div>

@@ -27,6 +27,16 @@ en:
   activities: "Activities"
   positions: "Join Us"
   resumes: "Resume"
+  Search: "Search"
+  "Search for News": "Search for News"
+  "Search for Activities": "Search for Activities"
+  "Site Search": "Search ipa-cro.com"
+  Search_Positions: Search for Positions
+  name: Your Name
+  PS: Brief yourself
+  resume_upload: Resume Upload
+  submit: Send
+  OK: OK
   
   views:
     pagination:
