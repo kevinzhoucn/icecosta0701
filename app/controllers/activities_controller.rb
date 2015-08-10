@@ -4,7 +4,11 @@ class ActivitiesController < ApplicationController
   respond_to :html
 
   def index
-    @activities = Activity.all.page params[:page]
+    if params[:locale] == 'en'
+      @activities = Activity.find_en.page params[:page] 
+    else
+      @activities = Activity.find_cn.page params[:page] 
+    end
     respond_with(@activities)
   end
 

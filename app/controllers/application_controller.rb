@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
    layout :layout
-  before_filter :set_locale
+  before_filter :set_locale, :set_services
 
   def default_url_options(options = {})
     { locale: I18n.locale }.merge options
@@ -21,6 +21,14 @@ class ApplicationController < ActionController::Base
     end
 
     def set_locale  
-      I18n.locale = params[:locale] || I18n.default_locale  
+      I18n.locale = params[:locale] || I18n.default_locale        
+    end
+
+    def set_services
+      if params[:locale] == 'en'
+        @services = Service.find_en.page params[:page] 
+      else
+        @services = Service.find_cn.page params[:page] 
+      end
     end
 end

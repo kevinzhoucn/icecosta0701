@@ -14,4 +14,11 @@ class Activity
       all
     end
   end
+  def self.find_en()
+    where(lang: 'en')
+  end
+
+  def self.find_cn()
+    where(lang: 'cn')
+  end
 end

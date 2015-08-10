@@ -4,14 +4,23 @@ class ServicesController < ApplicationController
   respond_to :html
 
   def index
-    @services = Service.all
-    @service = Service.first
+    if params[:locale] == 'en'
+      @services = Service.find_en.page params[:page] 
+      @service = Service.find_en.first
+    else
+      @services = Service.find_cn.page params[:page] 
+      @service = Service.find_cn.first
+    end
     respond_with(@services)
   end
 
   def show
-    @services = Service.all
-    respond_with(@service)
+    if params[:locale] == 'en'
+      @services = Service.find_en.page params[:page] 
+    else
+      @services = Service.find_cn.page params[:page] 
+    end
+    respond_with(@services)
   end
 
   def new

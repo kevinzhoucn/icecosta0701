@@ -6,10 +6,10 @@ class FrontController < ApplicationController
     @news_image = Picture.where(:key => "about_image").first
     @activity_image = Picture.where(:key => "activity_image").first
 
-    if params[:locale] == 'zh-CN'
-      @about_locale = SiteConfig.about_cn
-    else
+    if params[:locale] == 'en'
       @about_locale = SiteConfig.about_en
+    else
+      @about_locale = SiteConfig.about_cn
     end
 
     @front_news = News.all.limit(5)

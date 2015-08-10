@@ -4,7 +4,11 @@ class NewsController < ApplicationController
   respond_to :html
 
   def index
-    @news = News.all.page params[:page]
+    if params[:locale] == 'en'
+      @news = News.find_en.page params[:page] 
+    else
+      @news = News.find_cn.page params[:page] 
+    end
     respond_with(@news)
   end
 
