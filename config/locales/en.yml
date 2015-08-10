@@ -20,8 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  site_title: "IPA"
-  hello: "Hello world"
+  site_title: "IPA-CRO"
   services: "Our Services"
   about: "About Us"
   activities: "Activities"
@@ -37,7 +36,9 @@ en:
   resume_upload: Resume Upload
   submit: Send
   OK: OK
-  
+  More: More
+  partners: Partners
+  glossary: Glossary
   views:
     pagination:
       first: "&laquo; First"

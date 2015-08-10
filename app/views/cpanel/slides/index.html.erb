@@ -1,40 +1,5 @@
 <div>
   <h2 class="header">b 图片轮播管理</h2>
-
-<<<<<<< HEAD
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Image url</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @slides.each do |slide| %>
-      <tr>
-        <td><%= slide.title %></td>
-        <td><%= slide.image_url %></td>
-        <td>
-          <% if slide.picture %>
-            <%= slide.picture.avatar.url %>
-          <% end %>
-        </td>
-        <td><%= link_to 'Show', cpanel_slide_path(slide) %></td>
-        <td><%= link_to 'Edit', edit_cpanel_slide_path(slide) %></td>
-        <td><%= link_to 'Destroy', cpanel_slide_path(slide), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Slide', new_cpanel_slide_path %>
-=======
   <div class="monitor">
     <li style="font: 600 14px/30px icomoon; display:block">
       <%= link_to 'q 新增', new_cpanel_slide_path,class:'submitbutton',style:'position:relative;left:90%'%>
@@ -57,4 +22,3 @@
     </div>
   </div>
 </div>
->>>>>>> fcbabe514d65ef168774d4851563288d872bd05f

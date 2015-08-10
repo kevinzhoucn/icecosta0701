@@ -1,16 +1,16 @@
 <div class="ipacro-layout-cell layout-item-0" style="width: 50%;" >
+  <style type="text/css">
+    ul.theitem>li:before{
+      content:url('/images/postbullets.png');
+    }
+  </style>
   <h3><%=t('Top News')%></h3>
   <div class="image-caption-wrapper" style="float: left; width: 207px">
     <% if @news_image && @news_image.avatar %>
       <img alt="" width="100%" height="" src=" <%= @news_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:489px">
     <% end %>
   </div>
-  <div class="ipacro-postcontent" style="float:left">
-    <style type="text/css">
-      ul.theitem>li:before{
-        content:url('../images/postbullets.png');
-      }
-    </style>
+  <div class="ipacro-postcontent">
     <ul class="theitem">
     <% @front_news.each do |item| %>
       <li>
@@ -18,16 +18,16 @@
       </li>
     <% end %>
     </ul>
-    <p align="right" style="postion:absolute;bottom:0">
-      <a href="/news" class="ipacro-button"><%= t('More')%>...</a>
+    <p style="text-align:right">
+      <%=link_to t('More') + '...',news_index_path,class:'ipacro-button'%>
     </p>
   </div>
 </div>
 <div class="ipacro-layout-cell layout-item-0" style="width: 50%" >
   <h3><%=t('Top Activities')%></h3>
-  <div class="image-caption-wrapper" style="float: left; width: 340px">
+  <div class="image-caption-wrapper" style="float: left; width: 207px">
     <% if @activity_image && @activity_image.avatar %>
-      <img alt="" width="100%" height="" src=" <%= @activity_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:410px">
+      <img width="100%" height="" src=" <%= @activity_image.avatar.url(:medium) %> " style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;;max-width:410px">
     <% end %>
   </div>
   <ul class="theitem">
@@ -38,6 +38,6 @@
   <% end %>
   </ul>
   <p align="right" style="postion:absolute;bottom:0">
-      <a href="/activities" class="ipacro-button"><%= t('More')%>...</a>
-    </p>
+    <%=link_to t('More') + '...',activities_path,class:'ipacro-button'%>
+  </p>
 </div>

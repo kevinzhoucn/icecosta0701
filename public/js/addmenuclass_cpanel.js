@@ -41,6 +41,10 @@ $(document).ready(function(){
     {
       $("#glossary").addClass("active");
     }
+    else if(/partners/.test(url.toLowerCase()))
+    {
+      $("#partners").addClass("active");
+    }
     else
     {
       $("#cpanelhome").addClass("active");

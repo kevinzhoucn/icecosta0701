@@ -9,7 +9,7 @@
       <%= @about_locale.truncate(200).html_safe %>
     <%end%>
   </p>
-  <p align="right">
-    <a href="/about" class="ipacro-button"><%= t('More')%>...</a>
+  <p style="text-align:right">
+    <%=link_to t('More') + '...', front_about_path,class:'ipacro-button'%>
   </p>
 </div>
