@@ -8,12 +8,13 @@ class FrontController < ApplicationController
 
     if params[:locale] == 'en'
       @about_locale = SiteConfig.about_en
+      @front_news = News.find_en.limit(5)
+      @front_activites = Activity.find_en.limit(5)
     else
       @about_locale = SiteConfig.about_cn
+      @front_news = News.find_cn.limit(5)
+      @front_activites = Activity.find_cn.limit(5)
     end
-
-    @front_news = News.all.limit(5)
-    @front_activites = Activity.all.limit(5)
 
     @partner_urls = Partner.all
   end
