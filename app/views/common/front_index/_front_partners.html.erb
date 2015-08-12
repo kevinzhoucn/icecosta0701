@@ -1,10 +1,9 @@
 <div style="margin: 0px">
   <h3><%=t('partners')%></h3>
   <% Partner.all.each do |partner| %>
-    <span>
-      <a href="<%="http://"+partner.url%>" target="_blank" >
-        <img src="<%= partner.avatar.url(:tile) %>" alt="<%=partner.name%>">
+    <div style="width:150px;height:45px;overflow:hidden;float:left;background:url('<%= partner.avatar.url(:tile) %>') 50% 50% no-repeat;">
+      <a href="<%="http://"+partner.url%>" target="_blank" style="display:block;width:100%;height:100%">
       </a>
-    </span>
+    </div>
   <% end %>
 </div>

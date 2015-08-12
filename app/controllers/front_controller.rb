@@ -3,7 +3,7 @@ class FrontController < ApplicationController
     @slides = Slide.all
 
     @about_image = Picture.where(:key => "about_image").first
-    @news_image = Picture.where(:key => "about_image").first
+    @news_image = Picture.where(:key => "news_image").first
     @activity_image = Picture.where(:key => "activity_image").first
 
     if params[:locale] == 'en'

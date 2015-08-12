@@ -1,32 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
-    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basic mobile app</title> 
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
-
-  <div data-role="page" id="pageone">
-    <div data-role="header" data-theme="b">
-      <a href="#" data-role="button" data-icon="home">首页</a>
-      <h1>移动版</h1>
-    </div>
-
-    <div data-role="content">
-      <p>欢迎光临移动版!</p>
-      <a href="#pagetwo" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right">转到页面二</a>
-    </div>
-
-    <div data-role="footer" data-position="fixed">
-      <div data-role="controlgroup" data-type="horizontal">
-        <a href="#" data-role="button" data-icon="plus">转播到新浪微博</a>
-        <a href="#" data-role="button" data-icon="plus">转播到腾讯微博</a>
-        <a href="#" data-role="button" data-icon="plus">转播到QQ空间</a>
+    <div data-role="page" id="index" style="background:url('http://d.hiphotos.baidu.com/zhidao/pic/item/b3b7d0a20cf431adf06d423b4836acaf2edd9870.jpg') 50% 0 no-repeat">
+      <div data-role="panel" id="left" data-display="overlay">
+      <header data-role="header">
+        <h1>Top title bar</h1>
+      </header>
+        <!-- panel content goes here -->
+        <div class="ui-panel-inner">
+          <ul data-role="listview" data-theme="c">
+            <li><a href="#">First image</a></li>
+            <li><a href="#">Second image</a></li>
+            <li><a href="#">Third image</a></li>
+            <li><a href="#">Fourth image</a></li>
+          </ul>
+        </div>
+        <a href="#index" data-role="button" data-icon="delete" data-iconpos="right" data-rel="close">关闭</a>
+      </div><!-- /panel -->
+      <header data-role="header">
+      <a href="#left" data-icon="grid" data-display="inline" class="ui-btn-left" data-iconpos="notext">nav</a>
+        <h1>Top title bar</h1>
+      </header>
+  
+      <div data-role="content">
+        <h1>Title</h1>
+        <img src="sdf" width="100%" />
+        <ul data-role="button-group">
+          <li><a href="/">First image</a></li>
+          <li><a href="image.php?imgid=2">Second image</a></li>
+          <li><a href="image.php?imgid=3">Third image</a></li>
+          <li><a href="image.php?imgid=4">Fourth image</a></li>
+        </ul>
       </div>
+  
+      <footer data-role="footer" class="ui-body-b">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+            <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+            <li><a href="http://www.hongkiat.com/" data-rel="external">Hongkiat Blog</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
-  </div> 
+
+    <div data-role="page" id="about">
+      <header data-role="header">
+        <h1>Page 2 Here</h1>
+      </header>
+      
+      <div data-role="content">
+        <p>just some extra content as well.</p>
+        <p>I mean, you can <a data-rel="back" href="#index" data-role="button" data-theme="c">go back</a> at any time.</p>
+      </div>
+      <footer data-role="footer" class="ui-body-b">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
+            <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
+            <li><a href="http://www.hongkiat.com/" data-rel="external">Hongkiat Blog</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
