@@ -1,77 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Basic mobile app</title> 
-    <meta charset="utf-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
-
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panel fixed positioning - jQuery Mobile Demos</title>
+    <link rel="stylesheet" type="text/css" href="/css/mobile/Bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mobile/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
-    <div data-role="page" id="index" style="background:url('http://d.hiphotos.baidu.com/zhidao/pic/item/b3b7d0a20cf431adf06d423b4836acaf2edd9870.jpg') 50% 0 no-repeat">
-      <div data-role="panel" id="left" data-display="overlay">
-      <header data-role="header">
-        <h1>Top title bar</h1>
-      </header>
-        <!-- panel content goes here -->
-        <div class="ui-panel-inner">
-          <ul data-role="listview" data-theme="c">
-            <li><a href="#">First image</a></li>
-            <li><a href="#">Second image</a></li>
-            <li><a href="#">Third image</a></li>
-            <li><a href="#">Fourth image</a></li>
-          </ul>
-        </div>
-        <a href="#index" data-role="button" data-icon="delete" data-iconpos="right" data-rel="close">关闭</a>
-      </div><!-- /panel -->
-      <header data-role="header">
-      <a href="#left" data-icon="grid" data-display="inline" class="ui-btn-left" data-iconpos="notext">nav</a>
-        <h1>Top title bar</h1>
-      </header>
-  
-      <div data-role="content">
-        <h1>Title</h1>
-        <img src="sdf" width="100%" />
-        <ul data-role="button-group">
-          <li><a href="/">First image</a></li>
-          <li><a href="image.php?imgid=2">Second image</a></li>
-          <li><a href="image.php?imgid=3">Third image</a></li>
-          <li><a href="image.php?imgid=4">Fourth image</a></li>
-        </ul>
-      </div>
-  
-      <footer data-role="footer" class="ui-body-b">
-        <div data-role="navbar">
-          <ul>
-            <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
-            <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
-            <li><a href="http://www.hongkiat.com/" data-rel="external">Hongkiat Blog</a></li>
-          </ul>
-        </div>
-      </footer>
-    </div>
+    <div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="Panel fixed positioning" data-theme="e">
+      <div data-role="header" data-position="fixed">
+        <h1>IPA-CRO</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+      </div><!-- /header -->
 
-    <div data-role="page" id="about">
-      <header data-role="header">
-        <h1>Page 2 Here</h1>
-      </header>
-      
-      <div data-role="content">
-        <p>just some extra content as well.</p>
-        <p>I mean, you can <a data-rel="back" href="#index" data-role="button" data-theme="c">go back</a> at any time.</p>
-      </div>
-      <footer data-role="footer" class="ui-body-b">
-        <div data-role="navbar">
-          <ul>
-            <li><a href="#index" data-direction="reverse">App Homescreen!</a></li>
-            <li><a href="http://www.google.com/" data-rel="external">Google Me</a></li>
-            <li><a href="http://www.hongkiat.com/" data-rel="external">Hongkiat Blog</a></li>
-          </ul>
-        </div>
-      </footer>
-    </div>
+      <div role="main" class="ui-content jqm-content jqm-fullwidth">
+<!--         <h1>Panel fixed positioning</h1>
+
+          <p>This is a typical page that has two buttons in the header bar that open panels. The left panel has the push display mode. The right panel opens as overlay. For both panels we set <code>data-position-fixed="true"</code>. We also set position fixed for the header and footer on this page.</p>
+
+          <p>The left panel contains a long menu to demonstrate that the framework will check the panel contents height and unfixes the panel so its content can be scrolled. In the right panel there is a short form that shows the fixed positioning.</p>
+      <a href="../" data-rel="back" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-carat-l ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Back</a>
+
+      <p>We made the page a bit longer because you only see the panel fixed positioning if you can scroll the page :-)</p> -->
+      <%yield%>
+    </div><!-- /content -->
+
+      <div data-role="footer" data-position="fixed">
+        <h4>Fixed footer</h4>
+      </div><!-- /footer -->
+
+    <div data-role="panel" data#-position-fixed="true" data-display="overlay" id="nav-panel">
+      <h3 style="clear:both">site title</h3>
+      <ul data-role="listview">
+        <li data-icon="arrow-l"><a href="#" data-rel="close" style="text-align:center">隐藏菜单</a></li>
+        <li><a href="#" style="font-family:微软雅黑">Accordion</a></li>
+        <li><a href="#">Ajax Navigation</a></li>
+        <li><a href="#">Autocomplete</a></li>
+        <li><a href="#">Buttons</a></li>
+        <li><a href="#">Checkboxes</a></li>
+      </ul>
+    </div><!-- /panel -->
+
   </body>
 </html>
