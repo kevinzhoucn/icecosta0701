@@ -1,14 +1,13 @@
-<div class="ipacro-layout-cell layout-item-0" style="width: 40%" >
+
+<div class="ipacro-layout-cell layout-item-0" style="width:373px">
   <% if @about_image && @about_image.avatar %>
-    <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="margin-right: 10px; float: left;">
+    <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="float: left;margin-left:0">
   <% end %>
 </div>
-<div class="ipacro-layout-cell layout-item-0" style="width:60%; word-wrap: break-word;" >
-  <p>
-    <% if @about_locale %>
-      <%= @about_locale.truncate(200).html_safe %>
-    <%end%>
-  </p>
+<div class="ipacro-layout-cell layout-item-0" style="width:569px; word-wrap: break-word;padding-top:7px" >
+  <% if @about_locale %>
+    <%= @about_locale.html_safe %>
+  <%end%>
   <p style="text-align:right">
     <%=link_to t('More') + '...', front_about_path,class:'ipacro-button'%>
   </p>

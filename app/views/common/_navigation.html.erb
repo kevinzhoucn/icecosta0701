@@ -2,13 +2,18 @@
   <ul class="ipacro-hmenu">
     <li><a id="home" href="<%= root_path %>"><%= t('home').html_safe %></a></li>
     <li><a id="about" href="<%= front_about_path%>"><%= t('about') %></a></li>
-    <li>
+    <li id="hassub">
       <a id="services" href="<%= services_path %>"><%= t('services') %></a>
-      <ul class="">
+      <br>
+      <ul class="submenu">
         <% @services.each do |service| %>
         <li>
           <%= link_to service.title, service %>
         </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
         <%end%>
       </ul>
     </li>
@@ -19,3 +24,10 @@
   </ul> 
 </nav>
 <script type="text/javascript" src="/js/addmenuclass.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('#hassub').hover(function(){
+        $('.submenu').slideToggle(100);
+      });
+    });
+</script>

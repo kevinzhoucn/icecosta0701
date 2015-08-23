@@ -1,32 +1,3 @@
-<!-- <script src="/js/flickerslider/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
-<script src="/js/flickerslider/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
-<link href="/css/flickerplate.css"  type="text/css" rel="stylesheet">
-<script src="/js/flickerslider/flickerplate.min.js" type="text/javascript"></script>
-<script>
-  $(document).ready(function(){
-  $('.flicker-example').flicker({
-    dot_alignment: 'right',
-    flick_animation: 'jquery-slide'
-  });
-  });
-</script>
-<style type="text/css">
-  .ipacro-postcontent ul>li:before, .ipacro-post ul>li:before, .ipacro-textblock ul>li:before{content:none; /*去掉li前面的小三角*/}
-  .ipacro-postcontent li, .ipacro-post li, .ipacro-textblock li{margin: 0;}/*去掉li外边距*/
-</style>
-<div class="flicker-example" data-block-text="false" id="slideshow">
-  <ul>
-  <% @slides.each do |slide| %>
-    <% if slide.picture && slide.picture.avatar %>
-    <li data-background=" <%= slide.picture.avatar.url %> ">
-      <div class="flick-title"> <%= slide.title %> </div>
-      <div class="flick-sub-text">  <%= slide.sub_title %></div>
-    </li>
-    <% end %>
-  <% end %>
-  </ul>
-</div> -->
-
 <!-- newer version of slideshow -->
 <style>
   .ipacro-postcontent ul>li:before, .ipacro-post ul>li:before, .ipacro-textblock ul>li:before{content:none; /*去掉li前面的小三角*/}
@@ -143,11 +114,11 @@
   <% @slides.each do |slide| %>
   <% if slide.picture && slide.picture.avatar %>
     <div id="theslide">
-      <img u="image" src="<%= slide.picture.avatar.url %>" />
-      <div u="caption" t="CLIP|LR" du="1500" class="captionBlack"  style="position:absolute; left:20px; top: 10px; width:300px; height:30px;"> 
+      <img u="image" src="<%= slide.picture.avatar.url %>" style="margin-left:0" />
+      <div u="caption" t="*" du="1500" class="captionBlack"  style="position:absolute; left:20px; top: 10px; width:300px; height:30px;"> 
       <%= slide.title %>
       </div>
-      <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-300 style="position:absolute;top: 10px;left:400px;width:500px;height:200px;text-align: left; line-height:30px;">
+      <div u="caption" t="*" d=-300 style="position:absolute;top: 10px;left:400px;width:500px;height:200px;text-align: left; line-height:30px;">
         <%= slide.sub_title %>
       </div>
     </div>
@@ -161,4 +132,4 @@
   </span>
   <span u="arrowright" class="jssora20r" style="top: 123px; right: 8px;">
   </span>
-</div> 
+</div>
