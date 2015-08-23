@@ -19,6 +19,8 @@ class Cpanel::FrontController < Cpanel::ApplicationController
   def about
     @about_en = SiteConfig.where(key: 'about_en').first
     @about_cn = SiteConfig.where(key: 'about_cn').first
+    @about_abstract_en = SiteConfig.get_config('about_abstract_en')
+    @about_abstract_cn = SiteConfig.get_config('about_abstract_cn')
   end
 
   def contact_us
