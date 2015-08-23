@@ -23,11 +23,11 @@
         <li style="height:auto;overflow:hidden;font-family:icomoon">
           <%= link_to 'e 编辑', edit_cpanel_site_config_path(@about_cn),class:'submitbutton',style:"text-decoration:none;position:relative;float:right;padding:2px 5px;margin-top:5px;font-size:14px" %>
         </li>
-        <li>
+        <!-- <li>
           <% if @about_cn %>
           <%= @about_cn.value.html_safe%>
           <%end%>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -46,11 +46,11 @@
         <li style="height:auto;overflow:hidden;font-family:icomoon">
           <%= link_to 'e 编辑', edit_cpanel_site_config_path(@about_en),class:'submitbutton',style:"text-decoration:none;position:relative;float:right;padding:2px 5px;margin-top:5px" %>
         </li>
-        <li>
+        <!-- <li>
           <% if @about_en %>
           <%= @about_en.value.html_safe%>
           <%end%>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

@@ -39,9 +39,9 @@ class FrontController < ApplicationController
     @contact_cn = SiteConfig.contact_cn
     @contact_en = SiteConfig.contact_en
     if params[:locale] == 'zh-CN'
-      @contact_locale = SiteConfig.about_cn
+      @contact_locale = SiteConfig.contact_cn
     else
-      @contact_locale = SiteConfig.about_en
+      @contact_locale = SiteConfig.contact_en
     end
   end
 

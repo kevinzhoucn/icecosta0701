@@ -1,3 +1,4 @@
+/*modified 20150823*/
 #ipacro-main
 {
    background: #BBDDEC url('/images/page1080.png') top center scroll;
@@ -1518,8 +1519,8 @@ label.ipacro-radiobutton.hovered:before
    -webkit-border-radius:4px;
    -moz-border-radius:4px;
    border-radius:4px;
-   padding:3px;
-   margin:5px;
+   /*padding:3px;
+   margin:5px; 客户要求：不留边框不留空格*/
 }
 a img
 {
