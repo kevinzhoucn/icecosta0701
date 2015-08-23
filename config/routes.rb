@@ -33,6 +33,8 @@ Rails40Starter::Application.routes.draw do
   get '/about' => 'front#about', as: :front_about
   get '/contact' => 'front#contact_us', as: :front_contact
 
+  get '/ckeditor/pictures/image_list' => 'pictures#image_list'
+
   devise_for :users
   
   root 'front#index'

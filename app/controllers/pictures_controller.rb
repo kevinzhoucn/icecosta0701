@@ -36,6 +36,24 @@ class PicturesController < ApplicationController
     respond_with(@picture)
   end
 
+  def image_list
+    pictures = Picture.all
+    images_list = []
+    image_path = '/uploads/avatar'
+    if pictures.length > 1
+      pictures.each do |picture|
+        item = []
+        # item << picture.id
+        item << picture.avatar.url
+        # item[:thumb] = picture.avatar.url(:thumb)
+        # item[:folder] = "Picture"
+        images_list << item
+      end
+    end
+
+    render :json => images_list
+  end
+
   private
     def set_picture
       @picture = Picture.find(params[:id])
@@ -45,3 +63,5 @@ class PicturesController < ApplicationController
       params.require(:picture).permit(:key, :value, :avatar)
     end
 end
+
+item[:image] = picture.avatar.url
