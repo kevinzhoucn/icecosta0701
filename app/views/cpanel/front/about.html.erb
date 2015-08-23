@@ -16,6 +16,10 @@
         <li class="first">
           e 中文简介
         </li>
+        <li>
+          Abstract
+          <%= link_to 'e 编辑', edit_cpanel_site_config_path(@about_abstract_cn) %>
+        </li>
         <li style="height:auto;overflow:hidden;font-family:icomoon">
           <%= link_to 'e 编辑', edit_cpanel_site_config_path(@about_cn),class:'submitbutton',style:"text-decoration:none;position:relative;float:right;padding:2px 5px;margin-top:5px;font-size:14px" %>
         </li>
@@ -33,6 +37,11 @@
       <ul class="content" style="float:none">
         <li class="first">
           e 英文简介
+        </li>
+
+        <li>
+          Abstract
+          <%= link_to 'e 编辑', edit_cpanel_site_config_path(@about_abstract_en) %>
         </li>
         <li style="height:auto;overflow:hidden;font-family:icomoon">
           <%= link_to 'e 编辑', edit_cpanel_site_config_path(@about_en),class:'submitbutton',style:"text-decoration:none;position:relative;float:right;padding:2px 5px;margin-top:5px" %>

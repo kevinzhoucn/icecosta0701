@@ -7,9 +7,11 @@ class FrontController < ApplicationController
     @activity_image = Picture.where(:key => "activity_image").first
 
     if params[:locale] == 'zh-CN'
-      @about_locale = SiteConfig.about_cn
+      @about_locale = SiteConfig.about_cn      
+      @about_abstract_cn = SiteConfig.get_config_value("about_abstract_cn")      
     else
       @about_locale = SiteConfig.about_en
+      @about_abstract_en = SiteConfig.get_config_value("about_abstract_en")
     end
 
     @front_news = News.all.limit(5)

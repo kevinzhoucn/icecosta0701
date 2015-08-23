@@ -57,4 +57,10 @@ class SiteConfig
     obj = create(key: key, value: "") unless obj
     return obj
   end
+
+  def self.get_config_value(key)
+    obj = find_by_key(key)
+    obj = create(key: key, value: "") unless obj
+    return obj.value
+  end
 end
