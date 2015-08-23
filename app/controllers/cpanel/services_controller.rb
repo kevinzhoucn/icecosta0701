@@ -47,6 +47,6 @@ class Cpanel::ServicesController < Cpanel::ApplicationController
     end
 
     def service_params
-      params.require(:service).permit(:title, :content)
+      params.require(:service).permit(:title, :content, :lang)
     end
 end

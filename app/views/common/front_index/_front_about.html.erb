@@ -1,9 +1,13 @@
 <div class="ipacro-layout-cell layout-item-0" style="width: 42%" >
-  <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="margin-right: 10px; float: left;">
+  <% if @about_image && @about_image.avatar %>
+    <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="margin-right: 10px; float: left;">
+  <% end %>
 </div>
 <div class="ipacro-layout-cell layout-item-0" style="width: 58%" >
   <p>
-    <%= @about_cn.truncate(200).html_safe %>
+    <% if @about_locale %>
+      <%= @about_locale.truncate(200).html_safe %>
+    <%end%>
   </p>
   <p align="right">
     <a href="/about" class="ipacro-button">查看全部...</a>

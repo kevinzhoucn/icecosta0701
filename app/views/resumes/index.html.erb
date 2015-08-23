@@ -17,10 +17,10 @@
       <tr>
         <td><%= resume.title %></td>
         <td><%= resume.content %></td>
-        <td><%= resume.resume_type %></td>
-        <td><%= link_to 'Show', resume %></td>
-        <td><%= link_to 'Edit', edit_resume_path(resume) %></td>
-        <td><%= link_to 'Destroy', resume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= resume.avatar.url %></td>
+        <td><%#= link_to 'Show', resume %></td>
+        <td><%#= link_to 'Edit', edit_resume_path(resume) %></td>
+        <td><%#= link_to 'Destroy', resume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Resume', new_resume_path %>
+<%#= link_to 'New Resume', new_resume_path %>

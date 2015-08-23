@@ -21,7 +21,9 @@
         </li>
       </ul>
       <div>
+        <% if @about_cn %>
         <%= @about_cn.value.truncate(160).html_safe%>
+        <%end%>
       </div>
     </div>
   </div>
@@ -37,7 +39,9 @@
         </li>
       </ul>
       <div>
+        <% if @about_en %>
         <%= @about_en.value.truncate(160).html_safe%>
+        <%end%>
       </div>
     </div>
   </div>

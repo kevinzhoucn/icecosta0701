@@ -60,4 +60,7 @@ Service.create(title: "Service3", content: "Service3")
 Service.create(title: "Service4", content: "Service4")
 Service.create(title: "Service5", content: "Service5")
 
+<<<<<<< HEAD
+=======
 Slide.delete_all
+>>>>>>> fcbabe514d65ef168774d4851563288d872bd05f

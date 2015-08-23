@@ -1,0 +1,10 @@
+<div style="margin: 0px">
+  <h3>友情链接</h3>
+  <% Partner.all.each do |partner| %>
+    <span>
+      <a href="<%="http://"+partner.url%>" target="_blank" >
+        <img src="<%= partner.avatar.url(:tile) %>" alt="<%=partner.name%>">
+      </a>
+    </span>
+  <% end %>
+</div>

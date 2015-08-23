@@ -1,12 +1,25 @@
 <%= simple_form_for([:cpanel, @partner]) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+<!--   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :url %>
+    <%= f.input :avatar, label: "上传图片：" %>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
+  </div> -->
+  <div class="form-inputs" style="text-align:right;margin-right: 35%;">
+    <%= f.input :name ,label:'名 称：'%>
+    <br>
+    <%= f.input :url ,label:'网 址：http://'%>
+    <br>
+    <%= f.input :avatar, label: "上传图片：" %>
+    <p></p>
+    <div class="form-actions">
+      <%= f.button :submit, " 发 布 ",class:"submitbutton",style:'padding:1px 5px'%>
+      <button class="submitbutton" style="padding:1px 10px;margin:0px 15px" onclick="window.history.go(-1);return false;">取 消</button>
+    </div>
   </div>
 <% end %>

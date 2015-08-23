@@ -37,6 +37,10 @@ $(document).ready(function(){
     {
       $("#configs").addClass("active");
     }
+    else if(/glossary/.test(url.toLowerCase()))
+    {
+      $("#glossary").addClass("active");
+    }
     else
     {
       $("#cpanelhome").addClass("active");
