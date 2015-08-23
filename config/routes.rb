@@ -30,6 +30,7 @@ Rails40Starter::Application.routes.draw do
     devise_for :users
 
     get '/' => 'front#index'
+    get '/ckeditor/pictures/image_list' => 'pictures#image_list'
   end
 
   root 'front#index'
@@ -48,9 +49,6 @@ Rails40Starter::Application.routes.draw do
     resources :pictures
     resources :partners
   end
-
-
-  get '/ckeditor/pictures/image_list' => 'pictures#image_list'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

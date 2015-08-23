@@ -42,12 +42,14 @@ class PicturesController < ApplicationController
     image_path = '/uploads/avatar'
     if pictures.length > 1
       pictures.each do |picture|
-        item = []
-        # item << picture.id
-        item << picture.avatar.url
-        # item[:thumb] = picture.avatar.url(:thumb)
-        # item[:folder] = "Picture"
-        images_list << item
+        if picture.avatar.url
+          item = {}
+          # item << picture.id
+          item[:image] = picture.avatar.url
+          item[:thumb] = picture.avatar.url(:thumb)
+          item[:folder] = "Picture"
+          images_list << item
+        end
       end
     end
 
@@ -63,5 +65,3 @@ class PicturesController < ApplicationController
       params.require(:picture).permit(:key, :value, :avatar)
     end
 end
-
-item[:image] = picture.avatar.url

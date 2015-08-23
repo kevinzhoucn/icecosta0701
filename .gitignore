@@ -9,6 +9,7 @@
 /public/uploads/*
 /public/uploads/*.*
 /public/uploads/slide/*
+/public/uploads
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
