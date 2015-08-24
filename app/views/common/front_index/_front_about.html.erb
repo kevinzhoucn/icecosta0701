@@ -4,12 +4,12 @@
     <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="float: left;margin-left:0">
   <% end %>
 </div>
-<div class="ipacro-layout-cell layout-item-0" style="width:560px; word-wrap: break-word;padding:7px 5px" >
+<div class="ipacro-layout-cell layout-item-0" style="width:560px;word-wrap: break-word;padding:7px 7px;position:relative" >
   <% if @about_locale %>
     <%= @about_abstract_locale.html_safe %>
     <%#= @about_locale.html_safe %>
   <%end%>
-  <p style="text-align:right">
+  <span style="text-align:right;position:absolute;bottom:0;right:10px">
     <%=link_to t('More') + '...', front_about_path,class:'ipacro-button'%>
-  </p>
+  </span>
 </div>

@@ -16,13 +16,11 @@
         <li class="first">
           k 中文联系信息
         </li>
+        <li>&nbsp;</li>
         <li style="height:auto;overflow:hidden;font-family:icomoon">
-          <%= link_to 'e 编辑', edit_cpanel_site_config_path(@contact_cn),class:'submitbutton',style:"text-decoration:none;position:relative;float:right;padding:2px 5px;margin-top:5px;font-size:14px" %>
+          <%= link_to 'e 编辑', edit_cpanel_site_config_path(@contact_cn),class:'submitbutton',style:'padding:10px;margin:10px' %>
         </li>
       </ul>
-      <div>
-        <%= @contact_cn.value.truncate(160).html_safe%>
-      </div>
     </div>
   </div>
   
@@ -32,13 +30,11 @@
         <li class="first">
           k 英文联系信息
         </li>
+        <li>&nbsp;</li>
         <li style="height:auto;overflow:hidden;font-family:icomoon">
-          <%= link_to 'e 编辑', edit_cpanel_site_config_path(@contact_en),class:'submitbutton',style:"text-decoration:none;position:relative;float:right;padding:2px 5px;margin-top:5px" %>
+          <%= link_to 'e 编辑', edit_cpanel_site_config_path(@contact_en),class:'submitbutton',style:'padding:10px;margin:10px' %>
         </li>
       </ul>
-      <div>
-        <%= @contact_en.value.truncate(160).html_safe%>
-      </div>
     </div>
   </div>
 </div>

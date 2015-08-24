@@ -14,9 +14,9 @@ div {word-wrap:break-word;}
     position:absolute;
     text-align:center;
     height:auto;
-    width:880px;
+    width:730px;
     z-index:100;
-    left:-148px;
+    left:-1px;
     display: none;
 
   }

@@ -18,5 +18,8 @@
   </div>
 <% end %>
 <script>
-CKEDITOR.replace('news_content');
+CKEDITOR.replace('news_content',{
+  "extraPlugins": "imagebrowser",
+  "imageBrowser_listUrl": "/ckeditor/pictures/image_list.json"
+});
 </script>

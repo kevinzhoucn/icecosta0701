@@ -8,12 +8,12 @@
   </div>
   <div class="ipacro-content-layout" style="margin-top:10px;min-height:400px;">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width: 30%">
+      <div class="ipacro-layout-cell layout-item-0" style="width:303px;margin-right:2px">
         <% if @about_image && @about_image.avatar %>
-          <img src="<%= @about_image.avatar.url %> " style="margin-right: 10px; float: left;" width="100%">
+          <img src="<%= @about_image.avatar.url %> " style="margin-right: 10px; float: left;width:300px;padding:0;margin:0" >
         <% end %>
       </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 70%">
+      <div class="ipacro-layout-cell layout-item-0" style="width:687px;padding:5px">
         <div style="word-wrap:break-word">
           <% if @about_locale %>
             <%= @about_locale.html_safe %>
