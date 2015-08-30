@@ -1,15 +1,19 @@
-
+<style type="text/css">
+  #front_about_text p{
+    margin:0;
+  }
+</style>
 <div class="ipacro-layout-cell layout-item-0" style="width:365px">
   <% if @about_image && @about_image.avatar %>
-    <img alt="" width="350" height="250" src=" <%= @about_image.avatar.url %> " class="" style="float: left;margin-left:0">
+    <img width="350" height="250" src=" <%= @about_image.avatar.url %> " style="float: left;">
   <% end %>
 </div>
-<div class="ipacro-layout-cell layout-item-0" style="width:560px;word-wrap: break-word;padding:7px 7px;position:relative" >
+<div class="ipacro-layout-cell layout-item-0" id="front_about_text" style="word-wrap: break-word;padding:0;position:relative" >
   <% if @about_locale %>
     <%= @about_abstract_locale.html_safe %>
     <%#= @about_locale.html_safe %>
   <%end%>
-  <span style="text-align:right;position:absolute;bottom:0;right:10px">
+  <span style="position:absolute;right:10px;margin:10px">
     <%=link_to t('More') + '...', front_about_path,class:'ipacro-button'%>
   </span>
 </div>

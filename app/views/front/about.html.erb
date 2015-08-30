@@ -1,3 +1,7 @@
+<style type="text/css">
+  #aboutcontent{word-wrap:break-word;}
+  #aboutcontent p{margin:0;}
+</style>
 <div class="ipacro-postcontent ipacro-postcontent-0 clearfix">
   <div class="ipacro-content-layout">
     <div class="ipacro-content-layout-row">
@@ -6,21 +10,20 @@
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;min-height:400px;">
+  <div class="ipacro-content-layout" style="margin-top:10px;min-height:350px;">
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:303px;margin-right:2px">
         <% if @about_image && @about_image.avatar %>
           <img src="<%= @about_image.avatar.url %> " style="margin-right: 10px; float: left;width:300px;padding:0;margin:0" >
         <% end %>
       </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width:687px;padding:5px">
-        <div style="word-wrap:break-word">
-          <% if @about_locale %>
-            <%= @about_locale.html_safe %>
-          <%end%>
-        </div>
-        
+      <div class="ipacro-layout-cell layout-item-0" id="aboutcontent" style="width:687px;padding:0 5px">
+        <% if @about_locale %>
+          <%= @about_locale.html_safe %>
+        <%end%>
       </div>
     </div>
   </div>
+  <%= render partial:'common/misc/totop'%>
 </div>
+

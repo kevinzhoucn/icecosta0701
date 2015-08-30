@@ -12,10 +12,7 @@
   <body>
     <!--百度地图容器-->
     <div style="width:700px;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div>
-    <p style="color:red;font-weight:600">地图生成工具基于百度地图JS api v2.0版本开发，使用请申请密匙。
-      <a href="http://developer.baidu.com/map/index.php?title=jspopular/guide/introduction" style="color:#2f83c7" target="_blank">了解如何申请密匙</a>
-      <a href="http://lbsyun.baidu.com/apiconsole/key?application=key" style="color:#2f83c7" target="_blank">申请密匙</a>
-    </p>
+
   </body>
   <script type="text/javascript">
     //创建和初始化地图函数：
@@ -27,7 +24,7 @@
     }
     function createMap(){ 
       map = new BMap.Map("map"); 
-      map.centerAndZoom(new BMap.Point(116.38379,39.940578),14);
+      map.centerAndZoom(new BMap.Point(116.402474,39.939804),14);
     }
     function setMapEvent(){
       map.enableScrollWheelZoom();
@@ -41,7 +38,7 @@
     }
     function addMapOverlay(){
       var markers = [
-        {content:"北京市西城区地安门西大街189号<br>邮编：100035<br> 电话：+86 10 88366881<br>传真：+86 10 88366881<br> 邮箱：derek.yue@ipa-cro.com",title:"信必达（北京）医药科技开发有限公司",imageOffset: {width:-46,height:-21},position:{lat:39.940689,lng:116.381634}}
+        {content:"北京市西城区地安门西大街189号<br>邮编：100035<br> 电话：+86 10 88366881<br>传真：+86 10 88366881<br> 邮箱：derek.yue@ipa-cro.com",title:"<center>信必达（北京）<br>医药科技开发有限公司</center>",imageOffset: {width:-46,height:-21},position:{lat:39.940689,lng:116.381634}}
       ];
       for(var index = 0; index < markers.length; index++ ){
         var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);

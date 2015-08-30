@@ -10,12 +10,12 @@
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('../images/header.png');background-position:center" >
         <%= form_tag news_search_path, :method => 'get' do %>
-          <%= text_field_tag :key, params[:key],type:"search", placeholder: t('Search for News'), size:"18" %>
+          <%= text_field_tag :key, params[:key],type:"search", placeholder: t('Search for News'), size:"18",style:"margin-left:20px"%>
           <%= submit_tag t('Search'), :name => nil ,class:"ipacro-button"%>
         <% end %>
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
-        <div class="layout-item-2" style="min-height:300px">
+        <div class="layout-item-2" style="min-height:350px">
           <h3><%= t('news')%></h3>
           <ul>
             <% @news.each do |news| %>
@@ -32,4 +32,5 @@
       </div>
     </div>
   </div>
+  <%= render partial:'common/misc/totop'%>
 </div>

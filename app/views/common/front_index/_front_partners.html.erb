@@ -1,6 +1,6 @@
 <style type="text/css">
   .partners{
-    width:130px;
+    width:125px;
     height:50px;
     overflow:hidden;
     float:left;
@@ -10,13 +10,11 @@
     margin:5px 10px;
   }
 </style>
-<div style="margin: 0px">
-  <h3><%=t('partners')%></h3>
-  <% Partner.all.each do |partner| %>
-    <div class="partners">
-      <a href="<%="http://"+partner.url%>" target="_blank" style="display:block;">
-        <img src="<%= partner.avatar.url(:tile) %>" style="margin:0;padding:0;width:100%">
-      </a>
-    </div>
-  <% end %>
-</div>
+<span style="float:left;margin:18px 15px;font-size:1.2em"><%=t('partners')%></span>
+<% Partner.all.each do |partner| %>
+  <div class="partners">
+    <a href="<%="http://"+partner.url%>" target="_blank" style="display:block;">
+      <img src="<%= partner.avatar.url(:tile) %>" style="margin:0;padding:0;width:100%">
+    </a>
+  </div>
+<% end %>

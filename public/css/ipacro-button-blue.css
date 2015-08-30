@@ -1,0 +1,23 @@
+/*blue style button*/
+  .ipacro-button{
+    background: #e7f6f2;
+    background: linear-gradient(top, #c7e6e2 0, #9Bc9c4 100%) no-repeat;
+    background: -webkit-linear-gradient(top, #c7e6e2 0, #9Bc9c4 100%) no-repeat;
+    background: -moz-linear-gradient(top, #c7e6e2 0, #9Bc9c4 100%) no-repeat;
+    background: -o-linear-gradient(top, #c7e6e2 0, #9Bc9c4 100%) no-repeat;
+    background: -ms-linear-gradient(top, #c7e6e2 0, #9Bc9c4 100%) no-repeat;
+    background: linear-gradient(top, #c7e6e2 0, #9Bc9c4 100%) no-repeat;
+    -svg-background: linear-gradient(top, #c7e6e2 0, #9Bc9c4 100%) no-repeat;
+    color: #222 !important;
+  }
+  .ipacro-button:active{
+    color: #415D19 !important;
+    background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat !important;
+    background: -webkit-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat !important;
+    background: -moz-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat !important;
+    background: -o-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat !important;
+    background: -ms-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat !important;
+    background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat !important;
+    -svg-background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat !important;
+    color: #222 !important;
+  }
