@@ -5,22 +5,17 @@
   .captionOrange, .captionBlack
   {
     color: #fff;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 4em;
+    line-height: 60px;
     text-align: center;
-    border-radius: 4px;
+    font-style: italic;
   }
   .captionOrange
   {
     background: #EB5100;
     background-color: rgba(235, 81, 0, 0.6);
   }
-  .captionBlack
-  {
-  font-size:16px;
-    background: #000;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
+
   a.captionOrange, A.captionOrange:active, A.captionOrange:visited
   {
   color: #ffffff;
@@ -112,16 +107,16 @@
     </div>
   </div>
 
-  <div u="slides" style="cursor: move; position: absolute; left: 0px; top:0px;width:998px;height:250px;
+  <div u="slides" style="cursor:move; position:absolute; left:0px; top:0px;width:998px;height:250px;
     overflow:hidden;">
   <% @slides.each do |slide| %>
   <% if slide.picture && slide.picture.avatar %>
     <div id="theslide">
       <img u="image" src="<%= slide.picture.avatar.url %>" style="margin-left:0" />
-      <div u="caption" t="*" du="1500" class="captionBlack"  style="position:absolute; left:20px; top: 10px; width:300px; height:30px;"> 
+      <div u="caption" t="*" du="1500" class="captionBlack"  style="position:absolute; left:75px; top: 30px;padding:5px 15px;width:auto"> 
       <%= slide.title %>
       </div>
-      <div u="caption" t="*" d=-300 style="position:absolute;top: 10px;left:400px;width:500px;height:200px;text-align: left; line-height:30px;">
+      <div u="caption" t="*" d=-300 style="position:absolute;top: 110px;left:50px;width:500px;height:auto;line-height:30px;color:#548dd4;font-size:2em;font-family:'Goudy Old Style';font-style:italic;font-weight:bolder">
         <%= slide.sub_title %>
       </div>
     </div>

@@ -115,9 +115,9 @@ jQuery(document).ready(function ($) {
   //
   // new caption transitions
   var _CaptionTransitions = [
-    {$Duration:900,$Clip:15,$Opacity:1.7,$During:{$Clip:[0.5,0.5],$Opacity:[0,0.5]}},
-    {$Duration:900,$Clip:2,$Opacity:1.7,$During:{$Clip:[0.5,0.5],$Opacity:[0,0.5]}},
-    {$Duration:900,$Clip:12,$Opacity:1.7,$During:{$Clip:[0.5,0.5],$Opacity:[0,0.5]}},
+    {$Duration:900,$Clip:15,$Opacity:2,$During:{$Clip:[0.5,0.5],$Opacity:[0,0.5]}},
+    {$Duration:900,$Clip:2,$Opacity:2,$During:{$Clip:[0.5,0.5],$Opacity:[0,0.5]}},
+    {$Duration:900,$Clip:12,$Opacity:2,$During:{$Clip:[0.5,0.5],$Opacity:[0,0.5]}},
     {$Duration:900,x:0.6,y:-0.6,$Easing:{$Left:$JssorEasing$.$EaseLinear,$Top:$JssorEasing$.$EaseInCubic},$Opacity:2},
     { $Duration: 900, $Zoom: 11, $Easing: { $Zoom: $JssorEasing$.$EaseInExpo, $Opacity: $JssorEasing$.$EaseLinear }, $Opacity: 2 },
     ];
