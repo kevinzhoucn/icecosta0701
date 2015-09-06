@@ -9,6 +9,7 @@ class NewsController < ApplicationController
     else
       @news = News.find_cn.page params[:page] 
     end
+    @news_bar_image = Slide.get_bar_image("news_bar_image")
     respond_with(@news)
   end
 

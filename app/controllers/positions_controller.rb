@@ -5,6 +5,7 @@ class PositionsController < ApplicationController
 
   def index
     @positions = Position.all
+    @position_bar_image = Slide.get_bar_image("position_bar_image")
     respond_with(@positions)
   end
   def search

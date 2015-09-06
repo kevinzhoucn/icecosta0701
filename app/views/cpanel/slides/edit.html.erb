@@ -1,5 +1,9 @@
 <div>
-  <h2 class="header">b 修改图片轮播</h2>
+  <% if @slide.nav_type %>
+    <h2 class="header">b 修改图片</h2>
+  <% else %>
+    <h2 class="header">b 修改图片轮播</h2>
+  <% end %>
   <div class="monitor">
     <div class="clearfix">
       <%= render 'form' %>

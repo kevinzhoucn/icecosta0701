@@ -3,10 +3,18 @@ class Cpanel::FrontController < Cpanel::ApplicationController
     @news = News.new
     @activity = Activity.new
 
-    @slides_count = Slide.all.count
+    @slides_count = Slide.shows.all.count
     @news_count = News.all.count
     @activities_count = Activity.all.count
     @services_count = Service.all.count
+
+    # @about_bar_image = Picture.get_image("about_bar_image")
+    @about_bar_image = Slide.get_bar_image("about_bar_image")
+    @services_bar_image = Slide.get_bar_image("services_bar_image")
+    @news_bar_image = Slide.get_bar_image("news_bar_image")
+    @activity_bar_image = Slide.get_bar_image("activity_bar_image")
+    @position_bar_image = Slide.get_bar_image("position_bar_image")
+    
   end
 
   # def about

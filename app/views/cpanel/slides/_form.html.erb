@@ -2,8 +2,11 @@
   <%= f.error_notification %>
 
   <div class="form-inputs" style="margin:5px 30px;font-size:12px;color:gray">
-    <%= f.input :title ,label:'图片轮播大标题： '%><br>
-    <%= f.input :sub_title,label:'图片轮播小标题： ' %>
+    <% if @slide.nav_type %>
+    <% else %>
+      <%= f.input :title ,label:'图片轮播大标题： '%><br>
+      <%= f.input :sub_title,label:'图片轮播小标题： ' %>
+    <% end %>
     <%#= f.input :image_url %>
     <%#= f.input :avatar, label: "上传图片：" %>    
     <%#= f.collection_radio_buttons :avatar, @pictures_array, :first, :last %>

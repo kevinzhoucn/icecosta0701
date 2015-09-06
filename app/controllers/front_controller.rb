@@ -1,6 +1,6 @@
 class FrontController < ApplicationController
   def index
-    @slides = Slide.all
+    @slides = Slide.shows.all
 
     @about_image = Picture.where(:key => "about_image").first
     @news_image = Picture.where(:key => "news_image").first
@@ -33,6 +33,8 @@ class FrontController < ApplicationController
 
     @site_logo = SiteConfig.site_logo
     @about_image = Picture.where(:key => "about_image").first
+    # @about_bar_image = Picture.get_image("about_bar_image")
+    @about_bar_image = Slide.get_bar_image("about_bar_image")
   end
 
   def contact_us

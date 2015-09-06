@@ -9,6 +9,7 @@ class ActivitiesController < ApplicationController
     else
       @activities = Activity.find_cn.page params[:page] 
     end
+    @activity_bar_image = Slide.get_bar_image("activity_bar_image")
     respond_with(@activities)
   end
 

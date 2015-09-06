@@ -4,7 +4,8 @@ class Cpanel::SlidesController < Cpanel::ApplicationController
   respond_to :html
 
   def index
-    @slides = Slide.all
+    # @slides = Slide.all
+    @slides = Slide.where(:nav_type => nil).all
     respond_with(@slides)
   end
 
@@ -32,7 +33,11 @@ class Cpanel::SlidesController < Cpanel::ApplicationController
 
   def update
     @slide.update(slide_params)
-    redirect_to cpanel_slides_path
+    if not @slide.nav_type
+      redirect_to cpanel_slides_path
+    else
+      redirect_to cpanel_front_index_path
+    end
     # respond_with(@slide)
   end
 
