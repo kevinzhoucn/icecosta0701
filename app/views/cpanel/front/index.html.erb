@@ -37,34 +37,22 @@
         <li class="first">栏目横幅</li>
         <li>&nbsp;</li>
         <li>关于我们
-          <% if @about_bar_image && @about_bar_image.picture && @about_bar_image.picture.avatar %>
-              <%= image_tag @about_bar_image.picture.avatar.url, style:'width:200px;height:28.2px' %>
-          <% end %>
-          <%= link_to "编辑", edit_cpanel_slide_path(@about_bar_image)%>
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @about_bar_image} %>
         </li>
         <li>我们的服务
-          <% if @services_bar_image && @services_bar_image.picture && @services_bar_image.picture.avatar %>
-              <%= image_tag @services_bar_image.picture.avatar.url, style:'width:200px;height:28.2px' %>
-          <% end %>
-          <%= link_to "编辑", edit_cpanel_slide_path(@services_bar_image) %>
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @services_bar_image} %>
         </li>
         <li>资讯发布
-          <% if @news_bar_image && @news_bar_image.picture && @news_bar_image.picture.avatar %>
-              <%= image_tag @news_bar_image.picture.avatar.url, style:'width:200px;height:28.2px' %>
-          <% end %>
-          <%= link_to "编辑", edit_cpanel_slide_path(@news_bar_image) %>
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @news_bar_image} %>
         </li>
         <li>员工天地
-          <% if @activity_bar_image && @activity_bar_image.picture && @activity_bar_image.picture.avatar %>
-            <%= image_tag @activity_bar_image.picture.avatar.url, style:'width:200px;height:28.2px' %>
-          <% end %>
-          <%= link_to "编辑", edit_cpanel_slide_path(@activity_bar_image) %>
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @activity_bar_image} %>
         </li>
         <li>招贤纳士
-          <% if @position_bar_image && @position_bar_image.picture && @position_bar_image.picture.avatar %>
-            <%= image_tag @position_bar_image.picture.avatar.url, style:'width:200px;height:28.2px' %>
-          <% end %>
-          <%= link_to "编辑", edit_cpanel_slide_path(@position_bar_image) %>
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @position_bar_image} %>
+        </li>
+        <li>Glossary
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @glossary_image} %>
         </li>
       </ul>
     </div>

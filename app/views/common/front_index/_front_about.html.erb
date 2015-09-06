@@ -17,6 +17,14 @@
   </h3>
   <%=link_to t('More'), services_path,class:'ipacro-button',style:'position:absolute;right:0;top:3px'%>
   <hr>
+  <ul class="theitem">
+    <li>&nbsp;</li>
+    <% @front_services.each do |item| %>
+    <li style="margin-left:60px">
+      <%= link_to item.title, item %>
+    </li>
+  <% end %>
+  </ul>
   </div>
   <div style="position:relative">
     <h3>
@@ -25,5 +33,13 @@
   </h3>
   <%=link_to t('More'), positions_path,class:'ipacro-button',style:'position:absolute;right:0;top:2px'%>
   <hr>
+  <ul class="theitem">
+    <li>&nbsp;</li>
+    <% @front_positions.each do |item| %>
+    <li style="margin-left:60px">
+      <%= link_to item.title, item %>
+    </li>
+  <% end %>
+  </ul>
   </div>
 </div>

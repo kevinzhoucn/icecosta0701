@@ -14,7 +14,7 @@ class Cpanel::FrontController < Cpanel::ApplicationController
     @news_bar_image = Slide.get_bar_image("news_bar_image")
     @activity_bar_image = Slide.get_bar_image("activity_bar_image")
     @position_bar_image = Slide.get_bar_image("position_bar_image")
-    
+    @glossary_image = Slide.get_bar_image("glossary_bar_image")
   end
 
   # def about
