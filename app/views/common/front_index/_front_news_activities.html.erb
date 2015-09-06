@@ -1,8 +1,24 @@
-<div class="ipacro-layout-cell layout-item-0" style="width: 48%;position:relative;min-height:230px" >
-  <h3><img src="/images/text_green.png" style="margin:-10px 5px;"><%=t('Top News')%></h3>
-  <ul class="theitem" style="margin-left:35px">
+<style type="text/css">
+  .scroll{
+    width:50%;
+    background-image:url('/images/scroll.png');
+    background-size:90% 85%;
+    background-position:50% 90%;
+    background-repeat: no-repeat;
+  }
+</style>
+<div class="ipacro-layout-cell layout-item-0 scroll" style="border-right:1px solid #BBDDEC;padding:5px;" >
+  <h3 style="margin-bottom:5px">
+    <img src="/images/text_green.png" style="margin:-10px 5px;">
+    <%=t('Top News')%>
+    <%=link_to t('More'),news_index_path,class:'ipacro-button',style:'position:relative;margin-right:5px;float:right'%>
+  </h3>
+  
+  <hr>
+  <ul class="theitem">
+  <li>&nbsp;</li>
   <% @front_news.each do |item| %>
-    <li>
+    <li style="margin-left:60px">
       <% if item.created_at %>
       <span style="margin-right:40px"><%= item.created_at.strftime('%Y年%m月%d日') %></span>
       <% end %>
@@ -10,23 +26,24 @@
     </li>
   <% end %>
   </ul>
-  <span style="position:absolute;margin:10px;bottom:0;right:40px">
-    <%=link_to t('More') + '...',news_index_path,class:'ipacro-button'%>
-  </span>
 </div>
-<div class="ipacro-layout-cell layout-item-0" style="width: 48%;padding:0 5px;position:relative" >
-  <h3><img src="/images/text_green.png" style="margin:-10px 5px;"><%=t('Top Activities')%></h3>
-  <ul class="theitem" style="margin-left:35px">
-  <% @front_activites.each do |item| %>
-    <li>
-      <% if item.created_at %>
-        <span style="margin-right:40px"><%= item.created_at.strftime('%Y年%m月%d日') %>&nbsp;&nbsp;</span>
+<div class="ipacro-layout-cell layout-item-0 scroll" style="padding:5px" >
+  <h3>
+    <img src="/images/text_green.png" style="margin:-10px 5px;">
+    <%=t('Top Activities')%>
+    <%=link_to t('More'),activities_path,class:'ipacro-button',style:'position:relative;margin-right:5px;float:right'%>
+  </h3>
+  
+  <hr>
+    <ul>
+      <li>&nbsp;</li>
+      <% @front_activites.each do |item| %>
+        <li style="margin-left:60px">
+          <% if item.created_at %>
+            <span style="margin-right:40px"><%= item.created_at.strftime('%Y年%m月%d日') %>&nbsp;&nbsp;</span>
+          <% end %>
+          <%= link_to item.title, item %>
+        </li>
       <% end %>
-      <%= link_to item.title, item %>
-    </li>
-  <% end %>
-  </ul>
-  <span style="position:absolute;margin:10px;bottom:0;right:40px">
-    <%=link_to t('More') + '...',activities_path,class:'ipacro-button'%>
-  </span>
+    </ul>
 </div>

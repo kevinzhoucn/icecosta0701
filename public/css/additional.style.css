@@ -8,6 +8,17 @@
 table {width: auto!important;}
 td{table-layout: fixed !important;}
 div {word-wrap:break-word;}
+/*for header text*/
+.headerspan{
+    position:absolute;
+    bottom:7px;
+    color: #244061;
+    font:italic bold 1.125em/1.125em '微软雅黑',arial;
+  }
+/*hr 外观*/
+hr{
+  border-top:1px solid #BBDDEC;
+}
 
 /*this style is only for submenus*/
   ul.submenu{
