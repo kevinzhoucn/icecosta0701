@@ -39,6 +39,10 @@ en:
   submit: Send
   OK: OK
   More: More>>
+  corpaddress: "Company Address: 189 Di'anmen Ave, Xicheng Dist. Beijing"
+  corpmail: "Company Email: hr@ipa-cro.com"
+  corptel: "Company Tel: 010-88366881 010-88366879"
+  copyright: "Copyright: IPA-CRO (Beijing) Medical & Phamacy Tech Dev Ltd. ICP Record: 京ICP备15042016"
   partners: Partners
   glossary: Glossary
   views:

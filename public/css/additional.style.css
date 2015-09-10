@@ -16,9 +16,9 @@ div {word-wrap:break-word;}
     font:italic bold 1.25em/1.25em '楷体',arial;
   }
 /*hr 外观*/
-hr{border:1px solid #BBDDEC;margin:10px 0;}
+hr{border-top:1px solid #aaccEC;margin:10px 0;}
 /*更多*/
-  .morebutton{position:absolute;right:5px;top:7px;padding:0 15px;font-size: 1.1em}
+  .morebutton{position:absolute;right:10px;top:10px;padding:0 15px;font-size: 1.1em}
 
 /*this style is only for submenus*/
   ul.submenu{
