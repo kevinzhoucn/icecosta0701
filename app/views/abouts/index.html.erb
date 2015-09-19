@@ -1,0 +1,28 @@
+<h1>Listing abouts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Lang</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @abouts.each do |about| %>
+      <tr>
+        <td><%= about.title %></td>
+        <td><%= about.content %></td>
+        <td><%= about.lang %></td>
+        <td><%= link_to 'Show', about %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

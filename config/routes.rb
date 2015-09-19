@@ -1,4 +1,6 @@
 Rails40Starter::Application.routes.draw do
+  resources :abouts, only: [:index, :show]
+
   namespace :mobile do
     get '/' => 'front#index'
   end
@@ -48,6 +50,7 @@ Rails40Starter::Application.routes.draw do
     resources :slides
     resources :pictures
     resources :partners
+    resources :abouts
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
