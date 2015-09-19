@@ -13,7 +13,7 @@
   <div class="ipacro-content-layout">
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:100%">
-        <div class="layout-item-2" style="margin-top:1em;min-height:300px">
+        <div class="layout-item-2 page-curl" style="margin-top:1em;min-height:300px">
           <h3>
             <%=@news.title%>
           </h3>
@@ -24,7 +24,7 @@
     </div>
   </div>
   <p>
-    <a class="ipacro-button" onclick="window.history.go(-1)"><%=t('back')%></a>
+    <a class="ipacro-button" onclick="window.history.go(-1)"><%=t('Back')%></a>
   </p>
   <%= render partial:'common/misc/totop'%>
 </div>

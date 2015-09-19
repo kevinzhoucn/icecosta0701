@@ -1,4 +1,4 @@
-/*additional css*/
+/*additional css changed on 20150918*/
 .ipacro-content .ipacro-postcontent-0 .layout-item-0 { padding: 0;  }
 .ipacro-content .ipacro-postcontent-0 .layout-item-1 { margin-right: 0px;margin-left: 10px;  }
 .ipacro-content .ipacro-postcontent-0 .layout-item-2 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#C7C7C7;border-right-color:#C7C7C7;border-bottom-color:#C7C7C7;border-left-color:#C7C7C7; color: #1C1C1C; background: #F0F9FF; padding: 10px; }
@@ -13,8 +13,14 @@ div {word-wrap:break-word;}
     position:absolute;
     bottom:7px;
     color: #244061;
-    font:italic bold 1.25em/1.25em '楷体',arial;
+    font:normal bold 1.25em/1.25em '楷体',arial;
   }
+/*IPA-CRO 外观*/
+ .milky {
+  font-family:'Century Gothic','Microsoft YaHei',Arial;
+  text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+}
+
 /*hr 外观*/
 hr{border-top:1px solid #aaccEC;margin:10px 0;}
 /*更多*/
@@ -65,3 +71,61 @@ hr{border-top:1px solid #aaccEC;margin:10px 0;}
     -svg-background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
   }
   /*end of style is only for submenus*/
+
+  /*Footer and paper effect*/
+    .footnav{
+    height:auto;
+    overflow: hidden;
+    background: #C7E6E2;
+    background: linear-gradient(top, #ABD9D4 0, #E6F4F2 100%) no-repeat;
+    background: -webkit-linear-gradient(top, #ABD9D4 0, #E6F4F2 100%) no-repeat;
+    background: -moz-linear-gradient(top, #ABD9D4 0, #E6F4F2 100%) no-repeat;
+    background: -o-linear-gradient(top, #ABD9D4 0, #E6F4F2 100%) no-repeat;
+    background: -ms-linear-gradient(top, #ABD9D4 0, #E6F4F2 100%) no-repeat;
+    background: linear-gradient(top, #ABD9D4 0, #E6F4F2 100%) no-repeat;
+    -svg-background: linear-gradient(top, #ABD9D4 0, #E6F4F2 100%) no-repeat;
+  }
+  .footnav ul{
+    position: relative;
+    margin:1px auto;
+    width: 800px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .footnav ul li{
+    float:left;
+    width:100px;
+    padding: 0;
+    line-height: 25px;
+    height: 25px;
+  }
+  .footnav>ul>li>a,.footnav>ul>li>a:visited{text-decoration: none !important;font-size:1.1em !important;}
+
+  .page-curl {
+    background: linear-gradient(0deg, #F5F5F5 0%, #FFF 25%, #FFF 75%, #F5F5F5 100%);
+    border: 1px solid #777777;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    /*margin: 50px auto;*/
+    padding: 15px;
+    position: relative;
+    /*width: 70%;*/
+  }
+  .page-curl:after {
+    transform: skew(4deg) rotate(4deg);
+    left: auto;
+    right: 12px;
+  }
+  .page-curl:before, .page-curl:after {
+    bottom: 12px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+    content: "";
+    height: 10px;
+    left: 12px;
+    position: absolute;
+    width: 40%;
+    z-index: -1;
+    transform: skew(-4deg) rotate(-4deg);
+  }
+  /*end of Footer and paper effect*/

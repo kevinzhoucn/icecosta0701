@@ -8,7 +8,7 @@
   <ul class="theitem">
   <li>&nbsp;</li>
   <% @front_news.each do |item| %>
-    <li style="margin-left:60px">
+    <li style="margin-left:30px">
       <% if item.created_at %>
       <span style="margin-right:40px"><%= item.created_at.strftime('%Y年%m月%d日') %></span>
       <% end %>
@@ -30,7 +30,7 @@
     <ul>
       <li>&nbsp;</li>
       <% @front_activites.each do |item| %>
-        <li style="margin-left:60px">
+        <li style="margin-left:30px">
           <% if item.created_at %>
             <span style="margin-right:40px"><%= item.created_at.strftime('%Y年%m月%d日') %>&nbsp;&nbsp;</span>
           <% end %>

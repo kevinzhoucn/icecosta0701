@@ -1,4 +1,4 @@
-/*modified 20150823*/
+/*modified 20150916 per requested by cleint, remove table>td>border*/
 #ipacro-main
 {
    background: #BBDDEC url('/images/page1080.png') top center scroll;
@@ -1553,7 +1553,7 @@ a img
 .ipacro-article th, .ipacro-article td
 {
    padding: 2px;
-   border: solid 1px #A6A6A6;
+   /*border: solid 1px #A6A6A6;*/
    vertical-align: top;
    text-align: left;
 }
