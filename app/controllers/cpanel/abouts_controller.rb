@@ -14,8 +14,8 @@ class Cpanel::AboutsController < Cpanel::ApplicationController
 
   def new
     @about = About.new
-    redirect_to cpanel_abouts_path
-    # respond_with(@about)
+    # redirect_to cpanel_abouts_path
+    respond_with(@about)
   end
 
   def edit

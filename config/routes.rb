@@ -1,5 +1,6 @@
 Rails40Starter::Application.routes.draw do
-  resources :abouts, only: [:index, :show]
+  # resources :abouts, only: [:index, :show]
+
 
   namespace :mobile do
     get '/' => 'front#index'
@@ -33,6 +34,9 @@ Rails40Starter::Application.routes.draw do
 
     get '/' => 'front#index'
     get '/ckeditor/pictures/image_list' => 'pictures#image_list'
+
+    get '/aboutus' => 'abouts#index', as: :aboutus_index
+    get '/aboutus/:id' => 'abouts#show', as: :aboutus_show
   end
 
   root 'front#index'
