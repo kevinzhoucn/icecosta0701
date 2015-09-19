@@ -10,11 +10,13 @@ class FrontController < ApplicationController
       @about_locale = SiteConfig.about_en
       @front_news = News.find_en.limit(5)
       @front_activites = Activity.find_en.limit(5)
+      @front_services = Service.find_en.limit(5)
       @about_abstract_locale = SiteConfig.get_config_value("about_abstract_en")      
     else
       @about_locale = SiteConfig.about_cn
       @front_news = News.find_cn.limit(5)
       @front_activites = Activity.find_cn.limit(5)
+      @front_services = Service.find_cn.limit(5)
       @about_abstract_locale = SiteConfig.get_config_value("about_abstract_cn") 
     end
 
