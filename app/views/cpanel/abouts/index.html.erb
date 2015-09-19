@@ -1,31 +1,22 @@
-<h1>Listing abouts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Lang</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @abouts.each do |about| %>
-      <tr>
-        <td><%= about.title %></td>
-        <td><%= about.content %></td>
-        <td><%= about.lang %></td>
-        <td><%= link_to 'Show', cpanel_about_path(about) %></td>
-        <td><%= link_to 'Edit', edit_cpanel_about_path(about) %></td>
-        <td><%= link_to 'Destroy', cpanel_about_path(about), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New About', new_cpanel_about_path %>
+<div>
+  <h2 class="header">e 公司简介管理</h2>
+  <div class="monitor">
+    <div class="clearfix">
+      <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;height:auto;overflow:hidden">
+        <ul style="width:100%">
+        <li style="font-family: 'icomoon'">
+          <%= link_to 'q 添加简介类目',new_cpanel_about_path,style:'color:#fff;text-decoration:none;font-size:14px;padding:10px;',class:'submitbutton' %>
+        </li>
+        <% @abouts.each do |about| %>
+          <li>
+            <%= link_to about.title, edit_cpanel_about_path(about) %>
+            <span style="position: absolute;right:340px">
+            <%= link_to 'X  删除', cpanel_about_path(about), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
+            </span>
+          </li>
+        <%end%>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

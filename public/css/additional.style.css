@@ -20,6 +20,10 @@ div {word-wrap:break-word;}
   font-family:'Century Gothic','Microsoft YaHei',Arial;
   text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
 }
+/* toggle class unseen or visible for totop button*/
+  .unseen{visibility: hidden;}
+  .visible{visibility: visible;}
+  .go-top{transistion:all .5s;-webkit-transition:all .5s;}
 
 /*hr 外观*/
 hr{border-top:1px solid #aaccEC;margin:10px 0;}

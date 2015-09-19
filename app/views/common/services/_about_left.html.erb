@@ -1,0 +1,49 @@
+<style type="text/css">
+  .ipacro-postcontent ul#sidebar>li:before, .ipacro-post ul>li:before, .ipacro-textblock ul>li:before{content:none; /*去掉li前面的小三角*/}
+  .ipacro-postcontent li, .ipacro-post li, .ipacro-textblock li{margin: 0;}/*去掉li外边距*/
+  .ipacro-postcontent ul#sidebar>li.active:after{content:url('/images/postbullets.png')}
+  .ipacro-postcontent ul#sidebar>li :hover{
+    color: #415D19 !important;
+    background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: -webkit-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: -moz-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: -o-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: -ms-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    -svg-background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+  }
+  .ipacro-postcontent ul#sidebar>li.active a{
+    color: #415D19 !important;
+    background: #e7f6f2;;
+    background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: -webkit-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: -moz-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: -o-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: -ms-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    -svg-background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #949494;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+</style>
+<div>
+  <ul id="sidebar">
+    <% @abouts.each do |about| %>
+      <li style="margin-bottom:5px" id="<%=about.id%>">
+        <%= link_to about.title, aboutus_show_path(about), class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;" %>
+      </li>
+    <%end%>
+  </ul>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    var url = document.URL;
+    var aboutid = '#'+url.substr(url.length-24,24);
+    $(aboutid).addClass("active");
+  });
+</script>

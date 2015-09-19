@@ -4,11 +4,24 @@ class AboutsController < ApplicationController
   respond_to :html
 
   def index
-    @abouts = About.all
+    if params[:locale] == 'en'
+      @abouts = About.find_en.page params[:page] 
+      @about = About.find_en.first
+    else
+      @abouts = About.find_cn.page params[:page] 
+      @about = About.find_cn.first
+    end
+    @about_bar_image = Slide.get_bar_image("about_bar_image")
     respond_with(@abouts)
   end
 
   def show
+    if params[:locale] == 'en'
+      @abouts = About.find_en.page params[:page] 
+    else
+      @abouts = About.find_cn.page params[:page] 
+    end
+    @about_bar_image = Slide.get_bar_image("about_bar_image")
     respond_with(@about)
   end
 
