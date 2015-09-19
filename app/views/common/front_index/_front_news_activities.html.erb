@@ -1,19 +1,9 @@
-<style type="text/css">
-  .scroll{
-    width:50%;
-    background-image:url('/images/scroll.png');
-    background-size:90% 85%;
-    background-position:50% 90%;
-    background-repeat: no-repeat;
-  }
-</style>
-<div class="ipacro-layout-cell layout-item-0 scroll" style="border-right:1px solid #BBDDEC;padding:5px;" >
+<div class="ipacro-layout-cell layout-item-2 page-curl" style="width:475px;position:relative;" >
   <h3 style="margin-bottom:5px">
     <img src="/images/text_green.png" style="margin:-10px 5px;">
     <%=t('Top News')%>
-    <%=link_to t('More'),news_index_path,class:'ipacro-button',style:'position:relative;margin-right:5px;float:right'%>
   </h3>
-  
+  <%=link_to t('More'),news_index_path,class:'morebutton' %>
   <hr>
   <ul class="theitem">
   <li>&nbsp;</li>
@@ -27,13 +17,15 @@
   <% end %>
   </ul>
 </div>
-<div class="ipacro-layout-cell layout-item-0 scroll" style="padding:5px" >
+<div class="ipacro-layout-cell layout-item-0" style="background-image: url('/images/rings_.png');background-position-x: -6px;position: absolute;z-index: 200;height:250px;width:46px;left:481px">
+
+</div>
+<div class="ipacro-layout-cell layout-item-2 page-curl" style="position:relative;width:475px" >
   <h3>
     <img src="/images/text_green.png" style="margin:-10px 5px;">
     <%=t('Top Activities')%>
-    <%=link_to t('More'),activities_path,class:'ipacro-button',style:'position:relative;margin-right:5px;float:right'%>
   </h3>
-  
+  <%=link_to t('More'),activities_path,class:'morebutton'%>
   <hr>
     <ul>
       <li>&nbsp;</li>

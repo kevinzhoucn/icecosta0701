@@ -1,5 +1,52 @@
 <div id="dashboard">
   <h2 class="header">c 控制台首页</h2>
+  <div class="monitor" style="overflow:hidden;height:300px;">
+    <div class="clearfix">
+      <ul class="content">
+        <li class="first" style="margin-bottom:5px">栏目横幅管理</li>
+        <li>关于我们
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @about_bar_image} %>
+        </li>
+        <li>服务项目
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @services_bar_image} %>
+        </li>
+        <li>资讯发布
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @news_bar_image} %>
+        </li>
+        <li>员工天地
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @activity_bar_image} %>
+        </li>
+        <li>招贤纳士
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @position_bar_image} %>
+        </li>
+        <li>缩略语集
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @glossary_image} %>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="monitor" style="height:300px">
+    <ul class="content">
+      <li class="first" style="margin-bottom:5px">
+      首页区块管理
+      </li>
+      <li>
+      关于我们: &nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to 'e 中文版', edit_cpanel_site_config_path(@about_abstract_cn),class:'submitbutton',style:'padding:8px' %> | <%= link_to 'e 英文版', edit_cpanel_site_config_path(@about_cn),class:'submitbutton',style:'padding:8px' %>
+      <li>
+         我们的服务: &nbsp;<%= link_to "e 中文版", edit_cpanel_site_config_path(@service_abstract_cn),class:'submitbutton',style:'padding: 8px' %>
+         |
+         <%= link_to "e 英文版", edit_cpanel_site_config_path(@service_abstract_en),class:'submitbutton',style:'padding: 8px' %>
+      </li>
+      <li>
+        招贤纳士: &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "e 中文版", edit_cpanel_site_config_path(@position_abstract_en),class:'submitbutton',style:'padding: 8px' %>
+         | 
+        <%= link_to "e 英文版", edit_cpanel_site_config_path(@position_abstract_cn),class:'submitbutton',style:'padding: 8px' %>
+      </li>
+    </ul>
+
+  </div>
   <div class="monitor">
     <div class="clearfix">
       <ul class="content">
@@ -19,7 +66,6 @@
       }
     </style>
     <div class="clearfix">
-
       <ul class="content">
         <li class="first">t 常用链接</li>
         <li>
@@ -31,12 +77,5 @@
       </ul>
     </div>
   </div>
-  <div>
-    <p>图片</p>
-    <%= link_to "about image", edit_cpanel_slide_path(@about_bar_image) %>    
-    <%= link_to "service image", edit_cpanel_slide_path(@services_bar_image) %>
-    <%= link_to "news image", edit_cpanel_slide_path(@news_bar_image) %>    
-    <%= link_to "activity image", edit_cpanel_slide_path(@activity_bar_image) %>
-    <%= link_to "position image", edit_cpanel_slide_path(@position_bar_image) %>
-  </div>
+
 </div>

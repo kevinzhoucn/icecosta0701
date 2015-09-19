@@ -21,6 +21,7 @@ class ServicesController < ApplicationController
     else
       @services = Service.find_cn.page params[:page] 
     end
+    @services_bar_image = Slide.get_bar_image("services_bar_image")
     respond_with(@services)
   end
 

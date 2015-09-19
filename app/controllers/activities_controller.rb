@@ -16,11 +16,13 @@ class ActivitiesController < ApplicationController
   def search
     @key_words = params[:key]
     @activities = Activity.search(params[:key]).page params[:page]
+    @activity_bar_image = Slide.get_bar_image("activity_bar_image")
     respond_with(@activities)
   end
   
   def show
     respond_with(@activity)
+    @activity_bar_image = Slide.get_bar_image("activity_bar_image")
   end
 
   def new

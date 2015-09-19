@@ -11,13 +11,19 @@ class FrontController < ApplicationController
       @front_news = News.find_en.limit(5)
       @front_activites = Activity.find_en.limit(5)
       @front_services = Service.find_en.limit(5)
+      @front_positions = Position.limit(5)
       @about_abstract_locale = SiteConfig.get_config_value("about_abstract_en")      
+      @service_abstract_en = SiteConfig.get_config('service_abstract_en')
+      @position_abstract_en = SiteConfig.get_config('position_abstract_en')      
     else
       @about_locale = SiteConfig.about_cn
       @front_news = News.find_cn.limit(5)
       @front_activites = Activity.find_cn.limit(5)
       @front_services = Service.find_cn.limit(5)
+      @front_positions = Position.limit(5)
       @about_abstract_locale = SiteConfig.get_config_value("about_abstract_cn") 
+      @service_abstract_cn = SiteConfig.get_config('service_abstract_cn')
+      @position_abstract_cn = SiteConfig.get_config('position_abstract_cn')
     end
 
     @partner_urls = Partner.all
@@ -63,6 +69,7 @@ class FrontController < ApplicationController
 
   def glossaries
     @glossaries = SiteConfig.get_config('glossaries')
+    @item_image = Slide.get_bar_image("glossary_bar_image")
   end
 
   private

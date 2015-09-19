@@ -13,19 +13,19 @@ div {word-wrap:break-word;}
     position:absolute;
     bottom:7px;
     color: #244061;
-    font:italic bold 1.125em/1.125em '微软雅黑',arial;
+    font:italic bold 1.25em/1.25em '楷体',arial;
   }
 /*hr 外观*/
-hr{
-  border-top:1px solid #BBDDEC;
-}
+hr{border-top:1px solid #aaccEC;margin:10px 0;}
+/*更多*/
+  .morebutton{position:absolute;right:10px;top:10px;padding:0 15px;font-size: 1.1em}
 
 /*this style is only for submenus*/
   ul.submenu{
     position:absolute;
     text-align:center;
     height:auto;
-    width:100%;
+    width:130%;
     z-index:100;
     display: none;
 
@@ -38,7 +38,9 @@ hr{
   }
   ul.submenu li{
     width: 100%;
-    height: 24px;
+    min-height: 24px;
+    overflow: hidden;
+    text-align: justify;
     line-height: 24px;
     padding-bottom: 1px;
     display: inline-block;

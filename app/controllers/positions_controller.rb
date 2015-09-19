@@ -11,9 +11,11 @@ class PositionsController < ApplicationController
   def search
     @key_words = params[:key]
     @positions = Position.search(params[:key]).page params[:page]
+    @position_bar_image = Slide.get_bar_image("position_bar_image")
     respond_with(@positions)
   end
   def show
+    @position_bar_image = Slide.get_bar_image("position_bar_image")
     respond_with(@position)
   end
 

@@ -14,7 +14,19 @@ class Cpanel::FrontController < Cpanel::ApplicationController
     @news_bar_image = Slide.get_bar_image("news_bar_image")
     @activity_bar_image = Slide.get_bar_image("activity_bar_image")
     @position_bar_image = Slide.get_bar_image("position_bar_image")
-    
+    @glossary_image = Slide.get_bar_image("glossary_bar_image")
+
+    # 从Positions controller 挪到cpanel index
+    @position_abstract_en = SiteConfig.get_config('position_abstract_en')
+    @position_abstract_cn = SiteConfig.get_config('position_abstract_cn')
+
+    # 从Services controller 挪到cpanel index
+    @service_abstract_en = SiteConfig.get_config('service_abstract_en')
+    @service_abstract_cn = SiteConfig.get_config('service_abstract_cn')
+
+    #从Cpanel about里面挪到 cpanel index
+    @about_abstract_cn = SiteConfig.get_config('about_abstract_cn')
+    @about_abstract_en = SiteConfig.get_config('about_abstract_en')
   end
 
   # def about

@@ -14,6 +14,7 @@ class ResumesController < ApplicationController
 
   def new
     @resume = Resume.new
+    @position_bar_image = Slide.get_bar_image("position_bar_image")
     respond_with(@resume)
   end
 
@@ -34,7 +35,7 @@ class ResumesController < ApplicationController
   end
 
   def succeed
-
+    @position_bar_image = Slide.get_bar_image("position_bar_image")
   end
 
   def update

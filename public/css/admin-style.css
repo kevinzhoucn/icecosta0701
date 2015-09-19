@@ -138,12 +138,13 @@ div {word-wrap:break-word;}
 
     #dashboard>div {
       border: 1px solid rgb(235,235,235);
-      margin-left: 30px;
+      margin-left: 20px;
       float: left;
       border-radius: 5px;
       min-width: 345px;
-      height: 262px;
+      height: auto;
       display: inline-block;
+      margin-bottom: 20px;
     }
     .monitor ul {
       float: left;
