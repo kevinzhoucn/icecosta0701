@@ -34,7 +34,7 @@
   <ul id="sidebar">
     <% @services.each do |service| %>
       <li style="margin-bottom:5px" id="<%=service.id%>">
-        <%= link_to service.title, service, class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;" %>
+        <%= link_to service.title, service, class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;text-align:left !important" %>
       </li>
     <%end%>
   </ul>
