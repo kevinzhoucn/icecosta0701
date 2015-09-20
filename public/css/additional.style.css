@@ -11,7 +11,7 @@ div {word-wrap:break-word;}
 /*for header text*/
 .headerspan{
     position:absolute;
-    bottom:7px;
+    bottom:11px;
     color: #244061;
     font:normal bold 1.25em/1.25em '楷体',arial;
   }
@@ -19,6 +19,13 @@ div {word-wrap:break-word;}
  .milky {
   font-family:'Century Gothic','Microsoft YaHei',Arial;
   text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+}
+.ipacro-head{
+  background-image: linear-gradient(-45deg,navy,blue,navy,blue);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip:text;
+  -ms-linear-gradient:(lefttop,-45deg,navy,blue);
 }
 /* toggle class unseen or visible for totop button*/
   .unseen{visibility: hidden;}
