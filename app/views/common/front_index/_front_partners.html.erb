@@ -14,7 +14,7 @@
   font-size:1.3em;
   line-height: 1.3em;
   font-weight: bold;
-
+  padding-bottom: 5px
 }
   .sha:hover{
   /* CSS3 Transform Effect */
@@ -24,7 +24,7 @@
 
 }
 </style>
-<div style="display:table-row">
+<div style="display:table-row;">
 <span style="font-size:1.25em;line-height:1.25em;float:left;margin-right:20px;vertical-align:middle"><%=t('partners')%></span>
 <% Partner.all.each do |partner| %>
   <a href="<%="http://"+partner.url%>" target="_blank" class="sha">
