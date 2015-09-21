@@ -5,9 +5,9 @@
     <li id="hassub">
       <a id="services" href="<%= services_path %>"><%= t('services') %></a>
       <br>
-      <ul class="submenu">
+      <ul class="submenu" style="">
         <% @services.each do |service| %>
-        <li>
+        <li style="width:auto;float:none;display:block;min-width:100%">
           <%= link_to service.title, service %>
         </li>
         <%end%>
