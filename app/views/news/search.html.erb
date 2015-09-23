@@ -15,16 +15,22 @@
       <div class="layout-item-2 page-curl" style="min-height:300px">
         <h3><%=t('Searching Result')%></h3>
         <hr>
-        <ul>
+        <table style="margin-top:10px">
           <% @news.each do |news| %>
-            <li style="font-size:1.1em">
-              <%= link_to news.title, news %>
+            <tr class="list">
+              <td  style="width:450px;word-break:break-all;">
+                <%= link_to news.title, news %>
+              </td>
+              <td>
               <% if news.created_at %>
-                <sub><%=t('Published On')%>:&nbsp;<%= news.created_at.strftime('%Y-%m-%d') %></sub>
+                <%=t('Published On')%>:&nbsp;<%= news.created_at.strftime('%Y-%m-%d') %>
+                <%else%>
+                &nbsp;
               <% end %>
-            </li>
-          <%end%>
-        </ul>
+              </td>
+            </tr>
+          <% end %>
+        </table>
         <%= paginate @news %>
       </div>
         <p>

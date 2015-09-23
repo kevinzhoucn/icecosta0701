@@ -27,8 +27,11 @@ class ApplicationController < ActionController::Base
     def set_services
       if params[:locale] == 'en'
         @services = Service.find_en.page params[:page] 
+        @abouts = About.find_en
+        @english = true
       else
         @services = Service.find_cn.page params[:page] 
+        @abouts = About.find_cn
       end
     end
 end

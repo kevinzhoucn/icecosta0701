@@ -6,17 +6,26 @@
         <%= @about_bar_image.picture.avatar.url %>
       <% end %>
       );background-size:100%;" >
-        <h1 class="ipacro-headline" style="left:20px;position:relative;border-radius:10px;background:url('../images/nav.png');width:95%;transform:skew(-12deg);line-height:51px;text-indent:15px"><%=t('about')%></h1>
+        <h1 class="ipacro-headline" style="left:20px;position:relative;border-radius:10px;background:url('/images/nav.png');width:95%;transform:skew(-12deg);line-height:51px;text-indent:15px"><%=t('about')%></h1>
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;min-height:350px;">
+  <div class="ipacro-content-layout" style="min-height:300px;margin-top:5px">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width: 25%;background:url('../images/header.png');background-position:center">
+      <div class="ipacro-layout-cell layout-item-0" style="width: 
+      <% if @english %>
+        25%;
+      <%else%>
+        22%;
+      <%end%>
+      background:url('../images/header.png');background-position:center">
         <%= render partial:'common/services/about_left'%>
       </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
+      <div class="ipacro-layout-cell layout-item-0">
         <div class="layout-item-2 page-curl" style="min-height:300px">
+          <h5 style="margin:2px 0 2px 0">
+            <%=t('urhere')%><a href="/"><%=t('home')%></a> ><a href="../aboutus"><%=t('about')%></a> > <%=@about.title%>
+          </h5>
           <%= @about.content.html_safe %>
         </div>
       </div>

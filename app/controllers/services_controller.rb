@@ -7,6 +7,7 @@ class ServicesController < ApplicationController
     if params[:locale] == 'en'
       @services = Service.find_en.page params[:page] 
       @service = Service.find_en.first
+      @english = true
     else
       @services = Service.find_cn.page params[:page] 
       @service = Service.find_cn.first
@@ -18,6 +19,7 @@ class ServicesController < ApplicationController
   def show
     if params[:locale] == 'en'
       @services = Service.find_en.page params[:page] 
+      @english = true
     else
       @services = Service.find_cn.page params[:page] 
     end

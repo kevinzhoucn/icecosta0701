@@ -10,7 +10,7 @@
         <% @abouts.each do |about| %>
           <li>
             <%= link_to about.title, edit_cpanel_about_path(about) %>
-            <span style="position: absolute;right:340px">
+            <span style="position: absolute;right:60px">
             <%= link_to 'X  删除', cpanel_about_path(about), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
             </span>
           </li>

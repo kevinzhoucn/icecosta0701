@@ -10,7 +10,7 @@
         <% @services.each do |service| %>
           <li>
             <%= link_to service.title, edit_cpanel_service_path(service) %>
-            <span style="position: absolute;right:340px">
+            <span style="position: absolute;right:60px">
             <%= link_to 'X  删除', cpanel_service_path(service), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
             </span>
           </li>

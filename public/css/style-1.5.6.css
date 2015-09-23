@@ -1,4 +1,4 @@
-/*modified 20150916 per requested by cleint, remove table>td>border*/
+/*modified 20150923 per requested by cleint, removed a:none*/
 #ipacro-main
 {
    background: #BBDDEC url('/images/page1080.png') top center scroll;
@@ -114,14 +114,14 @@ ul.ipacro-vmenu a
 .ipacro-postcontent a, .ipacro-postcontent a:link
 {
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
    color: #5E8523;
 }
 
 .ipacro-postcontent a:visited, .ipacro-postcontent a.visited
 {
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
    color: #6E6E6E;
 }
 
@@ -844,14 +844,14 @@ div.ipacro-block img
 {
    color: #7AAD2E;
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
 }
 
 .ipacro-blockcontent a:visited, .ipacro-blockcontent a.visited
 {
    color: #878787;
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
 }
 
 .ipacro-blockcontent a:hover, .ipacro-blockcontent a.hover
@@ -1688,14 +1688,14 @@ pre
 .ipacro-postheadericons a, .ipacro-postheadericons a:link
 {
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
    color: #171717;
 }
 
 .ipacro-postheadericons a:visited, .ipacro-postheadericons a.visited
 {
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
    color: #474747;
 }
 
@@ -1840,7 +1840,8 @@ pre
 
 .ipacro-postcontent ul>li, .ipacro-post ul>li, .ipacro-textblock ul>li
 {
-   padding-left: 13px;
+   /*padding-left: 13px;*/
+   padding-left: 3px;
 }
 
 .ipacro-postcontent ul>li:before,  .ipacro-post ul>li:before,  .ipacro-textblock ul>li:before
@@ -1850,7 +1851,7 @@ pre
 
 .ipacro-postcontent ol, .ipacro-post ol, .ipacro-textblock ol, .ipacro-postcontent ul, .ipacro-post ul, .ipacro-textblock ul
 {
-   margin: 1em 0 1em 9px;
+   margin: 1em 0 1em 2px;
 }
 
 .ipacro-postcontent li ol, .ipacro-post li ol, .ipacro-textblock li ol, .ipacro-postcontent li ul, .ipacro-post li ul, .ipacro-textblock li ul
@@ -1945,14 +1946,14 @@ blockquote p,
 .ipacro-postfootericons a, .ipacro-postfootericons a:link
 {
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
    color: #171717;
 }
 
 .ipacro-postfootericons a:visited, .ipacro-postfootericons a.visited
 {
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
    color: #454545;
 }
 
@@ -2051,14 +2052,14 @@ blockquote p,
 {
    color: #5E8523;
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
 }
 
 .ipacro-footer a:visited
 {
    color: #6B6B6B;
    font-family: '微软雅黑', Arial;
-   text-decoration: underline;
+   text-decoration: none;
 }
 
 .ipacro-footer a:hover
@@ -2187,7 +2188,7 @@ blockquote p,
    word-spacing: normal;
    font-style: normal;
    font-weight: normal;
-   text-decoration: underline;
+   text-decoration: none;
    color: #787878;
 }
 

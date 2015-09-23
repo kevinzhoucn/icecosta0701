@@ -4,7 +4,11 @@ class PositionsController < ApplicationController
   respond_to :html
 
   def index
-    @positions = Position.all
+    if params[:locale] == 'en'
+      @positions = Position.find_en.page params[:page] 
+    else
+      @positions = Position.find_cn.page params[:page] 
+    end
     @position_bar_image = Slide.get_bar_image("position_bar_image")
     respond_with(@positions)
   end
@@ -16,6 +20,7 @@ class PositionsController < ApplicationController
   end
   def show
     @position_bar_image = Slide.get_bar_image("position_bar_image")
+    
     respond_with(@position)
   end
 

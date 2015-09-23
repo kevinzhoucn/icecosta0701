@@ -2,12 +2,9 @@ class FrontController < ApplicationController
   def index
     @slides = Slide.shows.all
 
-    @about_image = Picture.where(:key => "about_image").first
-    @news_image = Picture.where(:key => "news_image").first
-    @activity_image = Picture.where(:key => "activity_image").first
+
 
     if params[:locale] == 'en'
-      @about_locale = SiteConfig.about_en
       @front_news = News.find_en.limit(5)
       @front_activites = Activity.find_en.limit(5)
       @front_services = Service.find_en.limit(5)
@@ -15,8 +12,8 @@ class FrontController < ApplicationController
       @about_abstract_locale = SiteConfig.get_config_value("about_abstract_en")
       @service_abstract_locale = SiteConfig.get_config_value("service_abstract_en")
       @position_abstract_locale = SiteConfig.get_config_value("position_abstract_en")
+      @english = true
     else
-      @about_locale = SiteConfig.about_cn
       @front_news = News.find_cn.limit(5)
       @front_activites = Activity.find_cn.limit(5)
       @front_services = Service.find_cn.limit(5)

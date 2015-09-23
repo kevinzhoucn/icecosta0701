@@ -7,6 +7,7 @@ class AboutsController < ApplicationController
     if params[:locale] == 'en'
       @abouts = About.find_en.page params[:page] 
       @about = About.find_en.first
+      @english = true
     else
       @abouts = About.find_cn.page params[:page] 
       @about = About.find_cn.first
@@ -18,6 +19,7 @@ class AboutsController < ApplicationController
   def show
     if params[:locale] == 'en'
       @abouts = About.find_en.page params[:page] 
+      @english = true
     else
       @abouts = About.find_cn.page params[:page] 
     end

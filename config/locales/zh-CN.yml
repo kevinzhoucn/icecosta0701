@@ -4,7 +4,7 @@ zh-CN:
   partners: 友情链接
   OK: 确定
   totop: "↑ 返回顶部"
-  home: "首&nbsp;&nbsp;&nbsp;页"
+  home: "首    页"
   glossary: 缩略语集
   site_title: 信必达
   services: 我们的服务
@@ -31,6 +31,7 @@ zh-CN:
   PS: 个人简介
   resume_upload: 上传简历
   submit: 提交
+  urhere: "当前位置："
   front:
     index:
       services: 我们的服务

@@ -10,13 +10,22 @@
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;">
+  <div class="ipacro-content-layout">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width: 25%" >
+      <div class="ipacro-layout-cell layout-item-0" style="width: 
+      <% if @english %>
+        30%;
+      <%else%>
+        25%;
+      <%end%>
+      background:url('../images/header.png');background-position:center">
         <%= render partial:'common/services/service_left'%>
       </div>
-      <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
-        <div class="layout-item-2 page-curl" style="min-height:300px">
+      <div class="ipacro-layout-cell layout-item-0">
+        <div class="layout-item-2 page-curl" style="min-height:300px;margin-top:5px">
+          <h5 style="margin:2px 0 2px 0">
+            <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <a href="../services"><%=t('services')%></a>><%= @service.title%>
+          </h5>
           <%= @service.content.html_safe %>
         </div>
       </div>

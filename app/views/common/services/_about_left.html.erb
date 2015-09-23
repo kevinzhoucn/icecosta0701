@@ -34,7 +34,11 @@
   <ul id="sidebar">
     <% @abouts.each do |about| %>
       <li style="margin-bottom:5px" id="<%=about.id%>">
+      <%if @english %>
         <%= link_to about.title, aboutus_show_path(about), class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;text-align:left !important" %>
+      <%else%>
+        <%= link_to about.title, aboutus_show_path(about), class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;text-align:center !important" %>
+      <%end%>
       </li>
     <%end%>
   </ul>

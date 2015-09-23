@@ -14,16 +14,23 @@
     <div class="ipacro-content-layout-row">
       <div class="layout-item-2 page-curl" style="min-height:300px">
         <h3><%=t('Searching Result')%></h3>
-        <ul>
-        <% @activities.each do |activity| %>
-          <li style="font-size:1.1em">
-            <%= link_to activity.title, activity %>
-            <% if activity.created_at %>
-              <sub><%=t('Published On')%>：<%= activity.created_at.strftime('%Y-%m-%d') %></sub>
-            <% end %>
-          </li>
-        <%end%>
-      </ul>
+        <hr>
+        <table style="margin-top:10px">
+          <% @activities.each do |activity| %>
+            <tr class="list">
+              <td  style="width:400px;word-break:break-all;">
+                <%= link_to activity.title, activity %>
+              </td>
+              <td>
+              <% if activity.created_at %>
+                <%=t('Published On')%>:&nbsp;<%= activity.created_at.strftime('%Y-%m-%d') %>
+                <%else%>
+                &nbsp;
+              <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
       <%= paginate @activities %>
       </div>
         <p>

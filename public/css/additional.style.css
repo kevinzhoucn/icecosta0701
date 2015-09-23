@@ -1,4 +1,4 @@
-/*additional css changed on 20150918*/
+/*additional css changed on 20150924 removed submenu ul width*/
 .ipacro-content .ipacro-postcontent-0 .layout-item-0 { padding: 0;  }
 .ipacro-content .ipacro-postcontent-0 .layout-item-1 { margin-right: 0px;margin-left: 10px;  }
 .ipacro-content .ipacro-postcontent-0 .layout-item-2 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#C7C7C7;border-right-color:#C7C7C7;border-bottom-color:#C7C7C7;border-left-color:#C7C7C7; color: #1C1C1C; background: #F0F9FF; padding: 10px; }
@@ -7,6 +7,15 @@
 
 table {width: auto!important;}
 td{table-layout: fixed !important;}
+tr.list:before{
+  content: url('/images/postbullets.png');
+  margin-right: 6px;
+  margin-left:10px;
+  bottom: -1px;
+  position: relative;
+
+
+}
 div {word-wrap:break-word;}
 /*for header text*/
 .headerspan{
@@ -40,9 +49,9 @@ hr{border-top:1px solid #aaccEC;margin:10px 0;}
 /*this style is only for submenus*/
   ul.submenu{
     position:absolute;
-    text-align:center;
+    /*text-align:center;*/
     height:auto;
-    width:130%;
+/*    width:130%;*/
     z-index:100;
     display: none;
 
@@ -51,14 +60,14 @@ hr{border-top:1px solid #aaccEC;margin:10px 0;}
     color: #415D19;
     display: block;
     width: 100%;
-    /*text-align:center !important;*/
-    padding-left:15px;
+
+
   }
   ul.submenu li{
     width: 100%;
     min-height: 24px;
     overflow: hidden;
-    text-align: justify;
+/*    text-align: justify;*/
     line-height: 24px;
     padding-bottom: 1px;
     display: inline-block;

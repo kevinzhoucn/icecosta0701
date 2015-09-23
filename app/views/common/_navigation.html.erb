@@ -1,14 +1,44 @@
 <nav class="ipacro-nav">
   <ul class="ipacro-hmenu">
     <li><a id="home" href="<%= root_path %>"><%= t('home').html_safe %></a></li>
-    <li><a id="about" href="<%= aboutus_index_path%>"><%= t('about') %></a></li>
-    <li id="hassub">
+    <li id="hassub1">
+      <a id="about" href="<%= aboutus_index_path%>"><%= t('about') %></a>
+      <br>
+      <ul class="submenu" id="menu1" style="
+        <%if @english%>
+          width:130%;
+        <%else%>
+          width:100%;
+        <%end%>
+      ">
+        <% @abouts.each do |about| %>
+        <li style="width:auto;float:none;display:block;min-width:100%;">
+          <%if @english%>
+            <%= link_to about.title, aboutus_show_path(about),style:'text-align:left;padding-left:5px'%>
+          <%else%>
+            <%= link_to about.title, aboutus_show_path(about),style:'text-align:center'%>
+          <%end%>
+        </li>
+        <%end%>
+      </ul>
+    </li>
+    <li id="hassub2">
       <a id="services" href="<%= services_path %>"><%= t('services') %></a>
       <br>
-      <ul class="submenu" style="">
+      <ul class="submenu" id="menu2" style="
+        <%if @english%>
+          width:130%;
+        <%else%>
+          width:100%;
+        <%end%>
+      ">
         <% @services.each do |service| %>
         <li style="width:auto;float:none;display:block;min-width:100%">
-          <%= link_to service.title, service %>
+          <%if @english%>
+            <%= link_to service.title, service,style:'text-align:left;padding-left:5px'%>
+          <%else%>
+            <%= link_to service.title, service,style:'text-align:center'%>
+          <%end%>
         </li>
         <%end%>
       </ul>
@@ -22,8 +52,11 @@
 <script type="text/javascript" src="/js/addmenuclass.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-      $('#hassub').hover(function(){
-        $('.submenu').slideToggle(100);
+      $('#hassub1').hover(function(){
+        $('#menu1').slideToggle(100);
+      });
+      $('#hassub2').hover(function(){
+        $('#menu2').slideToggle(100);
       });
     });
 </script>

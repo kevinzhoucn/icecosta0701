@@ -5,17 +5,22 @@
   </h3>
   <%=link_to t('More'),news_index_path,class:'morebutton' %>
   <hr>
-  <ul class="theitem">
-  <li>&nbsp;</li>
-  <% @front_news.each do |item| %>
-    <li style="margin-left:30px">
-      <% if item.created_at %>
-      <span style="margin-right:40px"><%= item.created_at.strftime('%Y年%m月%d日') %></span>
+    <table>
+      <% @front_news.each do |item| %>
+        <tr>
+          <td style="padding-left:45px;width:110px">
+          <% if item.created_at %>
+            <%= item.created_at.strftime('%Y年%m月%d日') %>
+            <%else%>
+            &nbsp;
+          <% end %>
+          </td>
+          <td style="width:288px;word-break:break-all;">
+            <%= link_to item.title, item %>
+          </td>
+        </tr>
       <% end %>
-      <%= link_to item.title, item %>
-    </li>
-  <% end %>
-  </ul>
+    </table>
 </div>
 <div class="ipacro-layout-cell layout-item-0" style="background-image: url('/images/rings_.png');background-position-x: -6px;position: absolute;z-index: 200;height:250px;width:46px;left:481px">
 
@@ -27,15 +32,20 @@
   </h3>
   <%=link_to t('More'),activities_path,class:'morebutton'%>
   <hr>
-    <ul>
-      <li>&nbsp;</li>
+    <table>
       <% @front_activites.each do |item| %>
-        <li style="margin-left:30px">
+        <tr>
+          <td style="padding-left:45px;width:110px">
           <% if item.created_at %>
-            <span style="margin-right:40px"><%= item.created_at.strftime('%Y年%m月%d日') %>&nbsp;&nbsp;</span>
+            <%= item.created_at.strftime('%Y年%m月%d日') %>
+            <%else%>
+            &nbsp;
           <% end %>
-          <%= link_to item.title, item %>
-        </li>
+          </td>
+          <td style="width:288px;word-break: break-all;">
+            <%= link_to item.title, item %>
+          </td>
+        </tr>
       <% end %>
-    </ul>
+    </table>
 </div>

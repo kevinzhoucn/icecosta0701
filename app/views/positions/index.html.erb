@@ -20,16 +20,30 @@
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width:75%">
         <div class="layout-item-2 page-curl" style="min-height:350px">
-          <ul>
-          <% @positions.each do |position| %>
-            <li>
-              <%= link_to position.title, position %>&nbsp;&nbsp;
-              <% if position.created_at %>
-                  &nbsp;&nbsp;<sub><%=t('type')%>: <%=position.position_type%>&nbsp;&nbsp;<%=t('Published On')%><%= position.created_at.strftime('%Y-%m-%d') %></sub>
-              <% end %>
-            </li>
-          <%end%>
-          </ul>
+          <h3><%=t('positions')%></h3>
+          <hr>
+          <table style="margin-top:10px">
+            <% @positions.each do |position| %>
+              <tr class="list">
+                <td  style="width:200px;word-break:break-all;">
+                  <%= link_to position.title, position %>
+                </td>
+                <td width="150">
+                <%=t('type')%>: <%=position.position_type%>
+                </td>
+                <td>
+                <% if position.created_at %>
+                  <% if position.created_at %>
+                    <%=t('Published On')%><%= position.created_at.strftime('%Y-%m-%d') %>
+                <% end %>
+                  <%else%>
+                  &nbsp;
+                <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+          <%= paginate @positions %>
         </div>
       </div>
     </div>

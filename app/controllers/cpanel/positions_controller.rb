@@ -47,6 +47,6 @@ class Cpanel::PositionsController < Cpanel::ApplicationController
     end
 
     def position_params
-      params.require(:position).permit(:title, :content, :position_type)
+      params.require(:position).permit(:title, :content, :position_type, :lang)
     end
 end
