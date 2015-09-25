@@ -23,9 +23,10 @@
       </div>
       <div class="ipacro-layout-cell layout-item-0">
         <div class="layout-item-2 page-curl" style="min-height:300px">
-          <h5 style="margin:2px 0 2px 0">
-            <%=t('urhere')%><a href="/"><%=t('home')%></a> ><a href="../aboutus"><%=t('about')%></a> > <%=@about.title%>
-          </h5>
+          <h6 style="margin:2px 0 2px 0">
+            <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <%=t('about')%>>
+          <hr>
+          </h6>
           <%= @about.content.html_safe %>
         </div>
       </div>

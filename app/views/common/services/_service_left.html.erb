@@ -35,9 +35,9 @@
     <% @services.each do |service| %>
       <li style="margin-bottom:5px" id="<%=service.id%>">
         <%if @english %>
-        <%= link_to service.title, service, class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;text-align:left !important" %>
+        <%= link_to service.title, service, class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;font-size:15px;text-align:left !important" %>
         <%else%>
-          <%= link_to service.title, service, class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;text-align:center !important" %>
+          <%= link_to service.title, service, class:"ipacro-button", style:"width:82%;height:30px;font-size:15px;line-height:30px;text-align:center !important" %>
         <%end%>
       </li>
     <%end%>

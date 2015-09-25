@@ -10,9 +10,9 @@
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;min-height:400px;">
+  <div class="ipacro-content-layout" style="margin-top:10px;min-height:300px;">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('../images/header.png');background-position:center" >
+      <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('/images/header.png');background-position:center" >
         <%= form_tag activities_search_path, :method => 'get' do %>
           <%= text_field_tag :key, params[:key], type:"search",placeholder:t('Search for Activities'),size:"18",style:"margin-left:20px"%>
           <%= submit_tag t('Search'), :name => nil, class:"ipacro-button" %>
@@ -20,8 +20,10 @@
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
         <div class="layout-item-2 page-curl" style="min-height:300px;">
-          <h3><%=t('activities')%></h3>
+          <h6 style="margin:2px 0 2px 0">
+            <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <%=t('activities')%> > 
           <hr>
+          </h6>
           <table style="margin-top:10px">
             <% @activities.each do |activity| %>
               <tr class="list">
@@ -43,5 +45,4 @@
       </div>
     </div>
   </div>
-  <%= render partial:'common/misc/totop'%>
 </div>

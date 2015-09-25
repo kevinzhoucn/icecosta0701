@@ -10,21 +10,25 @@
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout">
+  <div class="ipacro-content-layout" style="margin-top:10px;min-height:300px;">
     <div class="ipacro-content-layout-row">
-      <div class="ipacro-layout-cell layout-item-0" style="width:100%">
-        <div class="layout-item-2 page-curl" style="margin-top:1em;min-height:300px">
-          <h3>
-            <%=@news.title%>
-          </h3>
+      <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('../images/header.png');background-position:center" >
+        <%= form_tag news_search_path, :method => 'get' do %>
+          <%= text_field_tag :key, params[:key],type:"search", placeholder: t('Search for News'), size:"18",style:"margin-left:20px"%>
+          <%= submit_tag t('Search'), :name => nil ,class:"ipacro-button"%>
+        <% end %>
+      </div>
+      <div class="ipacro-layout-cell layout-item-0" >
+        <div class="layout-item-2 page-curl" style="min-height:300px">
+          <h6 style="margin:2px 0 2px 0">
+            <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <a href="../news"><%=t('news')%></a> > <%=@news.title%>
           <hr>
+          </h6>
           <%=@news.content.html_safe%>
         </div>
+
       </div>
     </div>
   </div>
-  <p>
-    <a class="ipacro-button" onclick="window.history.go(-1)"><%=t('Back')%></a>
-  </p>
   <%= render partial:'common/misc/totop'%>
 </div>

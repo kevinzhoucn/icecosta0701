@@ -10,33 +10,38 @@
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;min-height:400px";>
+  <div class="ipacro-content-layout" style="margin-top:10px;min-height:300px;">
     <div class="ipacro-content-layout-row">
-      <div class="layout-item-2 page-curl" style="min-height:300px">
-        <h3><%=t('Searching Result')%></h3>
-        <hr>
-        <table style="margin-top:10px">
-          <% @activities.each do |activity| %>
-            <tr class="list">
-              <td  style="width:400px;word-break:break-all;">
-                <%= link_to activity.title, activity %>
-              </td>
-              <td>
-              <% if activity.created_at %>
-                <%=t('Published On')%>:&nbsp;<%= activity.created_at.strftime('%Y-%m-%d') %>
-                <%else%>
-                &nbsp;
-              <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </table>
-      <%= paginate @activities %>
+      <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('/images/header.png');background-position:center" >
+        <%= form_tag activities_search_path, :method => 'get' do %>
+          <%= text_field_tag :key, params[:key], type:"search",placeholder:t('Search for Activities'),size:"18",style:"margin-left:20px"%>
+          <%= submit_tag t('Search'), :name => nil, class:"ipacro-button" %>
+        <% end %> 
       </div>
-        <p>
-    <a class="ipacro-button" onclick="window.history.go(-1)"><%=t('Back')%></a>
-  </p>
-  <%= render partial:'common/misc/totop'%>
+      <div class="ipacro-layout-cell layout-item-0">
+        <div class="layout-item-2 page-curl" style="min-height:300px;">
+          <h3><%=t('activities')%></h3>
+          <hr>
+          <table style="margin-top:10px">
+            <% @activities.each do |activity| %>
+              <tr class="list">
+                <td  style="width:400px;word-break:break-all;">
+                  <%= link_to activity.title, activity %>
+                </td>
+                <td>
+                <% if activity.created_at %>
+                  <%=t('Published On')%>:&nbsp;<%= activity.created_at.strftime('%Y-%m-%d') %>
+                  <%else%>
+                  &nbsp;
+                <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+          <%= paginate @activities %>
+        </div>
+      </div>
     </div>
   </div>
+  <%= render partial:'common/misc/totop'%>
 </div>

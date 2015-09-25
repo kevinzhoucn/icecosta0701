@@ -21,8 +21,8 @@ class ActivitiesController < ApplicationController
   end
   
   def show
-    respond_with(@activity)
     @activity_bar_image = Slide.get_bar_image("activity_bar_image")
+    respond_with(@activity)
   end
 
   def new

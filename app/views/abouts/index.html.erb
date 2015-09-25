@@ -17,16 +17,18 @@
       <% if @english %>
         25%;
       <%else%>
-        18%;
+        22%;
       <%end%>
       background:url('../images/header.png');background-position:center">
         <%= render partial:'common/services/about_left'%>
       </div>
       <div class="ipacro-layout-cell layout-item-0">
         <div class="layout-item-2 page-curl" style="min-height:300px">
-          <h5 style="margin:2px 0 2px 0">
+          <h6 style="margin:2px 0 2px 0">
             <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <%=t('about')%>>
-          </h5>
+          <hr>
+          </h6>
+
           <% if @about %>
             <%= @about.content.html_safe %>
           <% end %>

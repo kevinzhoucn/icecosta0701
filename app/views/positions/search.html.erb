@@ -10,38 +10,43 @@
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;min-height:400px";>
+  <div class="ipacro-content-layout" style="margin-top:10px;min-height:300px";>
     <div class="ipacro-content-layout-row">
-      <div class="layout-item-2 page-curl" style="min-height:300px">
-        <h3><%=t('Searching Result')%></h3>
-        <hr>
-        <table style="margin-top:10px">
-          <% @positions.each do |position| %>
-            <tr class="list">
-              <td  style="width:200px;word-break:break-all;">
-                <%= link_to position.title, position %>
-              </td>
-              <td width="150">
-              <%=t('type')%>: <%=position.position_type%>
-              </td>
-              <td>
-              <% if position.created_at %>
-                <% if position.created_at %>
-                  <%=t('Published On')%><%= position.created_at.strftime('%Y-%m-%d') %>
-              <% end %>
-                <%else%>
-                &nbsp;
-              <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </table>
-      <%= paginate @positions %>
+      <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('/images/header.png');background-position:center">
+        <%= form_tag positions_search_path, :method => 'get' do %>
+          <%= text_field_tag :key, params[:key],type:"search", placeholder:t('Search_Positions'), size:"18",style:"margin-left:20px" %>
+          <%= submit_tag t('Search'), :name => nil ,class:"ipacro-button"%>
+        <% end %>
       </div>
-      <p>
-        <a class="ipacro-button" onclick="window.history.go(-1)"><%=t('Back')%></a>
-      </p>
-      <%= render partial:'common/misc/totop'%>
+      <div class="ipacro-layout-cell layout-item-0">
+        <div class="layout-item-2 page-curl" style="min-height:300px;">
+          <h3><%=t('Searching Result')%></h3>
+          <hr>
+          <table style="margin-top:10px">
+            <% @positions.each do |position| %>
+              <tr class="list">
+                <td  style="width:200px;word-break:break-all;">
+                  <%= link_to position.title, position %>
+                </td>
+                <td width="150">
+                <%=t('type')%>: <%=position.position_type%>
+                </td>
+                <td>
+                <% if position.created_at %>
+                  <% if position.created_at %>
+                    <%=t('Published On')%><%= position.created_at.strftime('%Y-%m-%d') %>
+                <% end %>
+                  <%else%>
+                  &nbsp;
+                <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+          <%= paginate @positions %>
+        </div>
+      </div>
     </div>
   </div>
+    <%= render partial:'common/misc/totop'%>
 </div>

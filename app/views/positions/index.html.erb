@@ -10,7 +10,7 @@
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout" style="margin-top:10px;min-height:400px;">
+  <div class="ipacro-content-layout" style="margin-top:10px;min-height:300px;">
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('/images/header.png');background-position:center">
         <%= form_tag positions_search_path, :method => 'get' do %>
@@ -19,9 +19,11 @@
         <% end %>
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width:75%">
-        <div class="layout-item-2 page-curl" style="min-height:350px">
-          <h3><%=t('positions')%></h3>
+        <div class="layout-item-2 page-curl" style="min-height:300px">
+          <h6 style="margin:2px 0 2px 0">
+            <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <%=t('positions')%></a> > 
           <hr>
+          </h6>
           <table style="margin-top:10px">
             <% @positions.each do |position| %>
               <tr class="list">
@@ -48,5 +50,4 @@
       </div>
     </div>
   </div>
-  <%= render partial:'common/misc/totop'%>
 </div>
