@@ -17,6 +17,12 @@
           <%= text_field_tag :key, params[:key],type:"search", placeholder: t('Search for News'), size:"18",style:"margin-left:20px"%>
           <%= submit_tag t('Search'), :name => nil ,class:"ipacro-button"%>
         <% end %>
+        <div style="width:100%;height:140px;background-image:url(
+          <% if @news_content_image && @news_content_image.picture && @news_content_image.picture.avatar %>
+            <%= @news_content_image.picture.avatar.url %>
+          <% end %>
+          );background-size:100%;" >
+        </div>
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
         <div class="layout-item-2 page-curl" style="min-height:300px">

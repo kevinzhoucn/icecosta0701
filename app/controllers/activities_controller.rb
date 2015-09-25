@@ -10,6 +10,7 @@ class ActivitiesController < ApplicationController
       @activities = Activity.find_cn.page params[:page] 
     end
     @activity_bar_image = Slide.get_bar_image("activity_bar_image")
+    @activity_content_image = Slide.get_bar_image("activity_content_image")
     respond_with(@activities)
   end
 
@@ -22,6 +23,7 @@ class ActivitiesController < ApplicationController
   
   def show
     @activity_bar_image = Slide.get_bar_image("activity_bar_image")
+    @activity_content_image = Slide.get_bar_image("activity_content_image")
     respond_with(@activity)
   end
 

@@ -22,6 +22,8 @@
         <li>缩略语集
           <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @glossary_image} %>
         </li>
+
+
       </ul>
     </div>
   </div>
@@ -76,6 +78,29 @@
         </li>
       </ul>
     </div>
+  </div>
+
+  <div>
+    <ul>
+      <li>news
+        <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @news_content_image} %>
+      </li>
+      <li>activity
+        <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @activity_content_image} %>
+      </li>
+      <li>position
+        <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @position_content_image} %>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      <li>Service page
+        <%= link_to "e EN", edit_cpanel_site_config_path(@service_content_en),class:'submitbutton',style:'padding: 8px' %>
+        <%= link_to "e CN", edit_cpanel_site_config_path(@service_content_cn),class:'submitbutton',style:'padding: 8px' %>
+      </li>
+    </ul>
   </div>
 
 </div>
