@@ -13,16 +13,17 @@
   <div class="ipacro-content-layout" style="margin-top:10px;min-height:300px;">
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('../images/header.png');background-position:center" >
-        <%= form_tag news_search_path, :method => 'get' do %>
-          <%= text_field_tag :key, params[:key],type:"search", placeholder: t('Search for News'), size:"18",style:"margin-left:20px"%>
-          <%= submit_tag t('Search'), :name => nil ,class:"ipacro-button"%>
-        <% end %>
         <div style="width:100%;height:140px;background-image:url(
           <% if @news_content_image && @news_content_image.picture && @news_content_image.picture.avatar %>
             <%= @news_content_image.picture.avatar.url %>
           <% end %>
           );background-size:100%;" >
         </div>
+        <%= form_tag news_search_path, :method => 'get' do %>
+          <%= text_field_tag :key, params[:key],type:"search", placeholder: t('Search for News'), size:"18",style:"margin-left:20px"%>
+          <%= submit_tag t('Search'), :name => nil ,class:"ipacro-button"%>
+        <% end %>
+
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
         <div class="layout-item-2 page-curl" style="min-height:300px">
