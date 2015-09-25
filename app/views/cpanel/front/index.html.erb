@@ -1,3 +1,8 @@
+<style type="text/css">
+  ul.content>li{
+    font-family:"icomoon";
+  }
+</style>
 <div id="dashboard">
   <h2 class="header">c 控制台首页</h2>
   <div class="monitor" style="overflow:hidden;height:300px;">
@@ -46,10 +51,23 @@
          | 
         <%= link_to "e 英文版", edit_cpanel_site_config_path(@position_abstract_en),class:'submitbutton',style:'padding: 8px' %>
       </li>
+      <li class="first" style="margin-bottom:5px">
+        单页面编辑
+      </li>
+      <li>关 于 我 们
+        <%= link_to "e 英文版", edit_cpanel_site_config_path(@abount_content_en),class:'submitbutton',style:'padding: 8px' %>
+        |
+        <%= link_to "e 中文版", edit_cpanel_site_config_path(@abount_content_cn),class:'submitbutton',style:'padding: 8px' %>
+      </li>
+      <li>我们的服务
+        <%= link_to "e 英文版", edit_cpanel_site_config_path(@service_content_en),class:'submitbutton',style:'padding: 8px' %>
+        |
+        <%= link_to "e 中文版", edit_cpanel_site_config_path(@service_content_cn),class:'submitbutton',style:'padding: 8px' %>
+      </li>
     </ul>
 
   </div>
-  <div class="monitor">
+<!--   <div class="monitor">
     <div class="clearfix">
       <ul class="content">
         <li class="first">k 数据统计</li>
@@ -60,13 +78,26 @@
       </ul>
     </div>
   </div>
-
+ -->
   <div class="monitor">
-    <style type="text/css">
-      ul.content>li{
-        font-family:"icomoon";
-      }
-    </style>
+    <div class="clearfix">
+      <ul class="content">
+        <li class="first" style="margin-bottom:5px">
+          搜索框图片设置
+        </li>
+        <li>最新资讯
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @news_content_image} %>
+        </li>
+        <li>员工天地
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @activity_content_image} %>
+        </li>
+        <li>招贤纳士
+          <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @position_content_image} %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="monitor">
     <div class="clearfix">
       <ul class="content">
         <li class="first">t 常用链接</li>
@@ -79,28 +110,4 @@
       </ul>
     </div>
   </div>
-
-  <div>
-    <ul>
-      <li>news
-        <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @news_content_image} %>
-      </li>
-      <li>activity
-        <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @activity_content_image} %>
-      </li>
-      <li>position
-        <%= render partial: 'common/front_index/cpanel_bar_image', locals: { bar_image: @position_content_image} %>
-      </li>
-    </ul>
-  </div>
-
-  <div>
-    <ul>
-      <li>Service page
-        <%= link_to "e EN", edit_cpanel_site_config_path(@service_content_en),class:'submitbutton',style:'padding: 8px' %>
-        <%= link_to "e CN", edit_cpanel_site_config_path(@service_content_cn),class:'submitbutton',style:'padding: 8px' %>
-      </li>
-    </ul>
-  </div>
-
 </div>

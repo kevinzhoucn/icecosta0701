@@ -1,4 +1,5 @@
+
 <% if bar_image && bar_image.picture && bar_image.picture.avatar %>
-  <%= image_tag bar_image.picture.avatar.url, style:'width:200px;height:28.2px' %>
+  <%= image_tag bar_image.picture.avatar.url, style:'width:150px;height:28.2px' %>
 <% end %>
 <%= link_to "e 编辑", edit_cpanel_slide_path(bar_image),class:'submitbutton',style:'padding:5px;font-size:13px'%>
