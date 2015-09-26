@@ -150,3 +150,11 @@ hr{border-top:1px solid #aaccEC;margin:10px 0;}
     transform: skew(-4deg) rotate(-4deg);
   }
   /*end of Footer and paper effect*/
+
+  /*fixed div for left menus, to ba called by togglefix.js*/
+.left_fixed_div{
+  position:fixed;
+  top:0;
+  width: 219px;
+  z-index: 1000;
+  }

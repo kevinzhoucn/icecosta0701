@@ -20,10 +20,7 @@
         <% end %>
         );background-size:100%;" >
         </div>
-        <%= form_tag positions_search_path, :method => 'get' do %>
-          <%= text_field_tag :key, params[:key],type:"search", placeholder:t('Search_Positions'), size:"18",style:"margin-left:20px" %>
-          <%= submit_tag t('Search'), :name => nil ,class:"ipacro-button"%>
-        <% end %>
+        <%= render partial:'common/leftnav/position_left'%>
       </div>
       <div class="ipacro-layout-cell layout-item-0">
         <div class="layout-item-2 page-curl" style="min-height:300px">
@@ -31,7 +28,7 @@
             <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <a href="../positions"><%=t('positions')%></a> > <%=@position.title%>, <%=t('region')%>: <%=@position.position_type%>
           <hr>
           </h6>
-          <%=@position.content.html_safe%>
+          <%= @position.content.html_safe %>
           <span style="position:absolute;bottom:10px;left:310px">
             <%= link_to t('Apply Now'), new_position_resume_path(@position),class:"ipacro-button" %>
           </span>
