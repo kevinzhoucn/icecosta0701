@@ -40,12 +40,13 @@ en:
   resume_upload: Resume Upload
   submit: Send
   OK: OK
+  region: Region
   More: More>>
   urhere: "You are here: "
-  corpaddress: "Company Address: 189 Di'anmen Ave, Xicheng Dist. Beijing"
-  corpmail: "Company Email: hr@ipa-cro.com"
-  corptel: "Company Tel: 010-88366881 010-88366879"
-  copyright: "Copyright: IPA-CRO (Beijing) Medical & Phamacy Tech Dev Ltd. ICP Record: 京ICP备15042016"
+  corpaddress: "Add: NO.189 DiAnMenXi Road, XichengDistrict,Beijing 100035, China"
+  corpmail: "Email: hr@ipa-cro.com"
+  corptel: "Tel:(8610) 88366881 (8610) 88366879"
+  copyright: "© 2015 IPA-CRO Co., LTD. All Rights Reserved. ICP Record: 京ICP备15042016"
   partners: Partners
   glossary: Glossary
   views:

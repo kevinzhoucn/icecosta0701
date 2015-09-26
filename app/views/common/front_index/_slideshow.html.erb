@@ -9,8 +9,6 @@
     line-height: 60px;
     text-align: center;
     font-style: italic;
-    -webkit-text-stroke: 0.3px #ddd;
-
   }
   .bricon
   {
@@ -81,7 +79,7 @@
 <script type="text/javascript" src="/js/jssor/main.js"></script>
 
 <div id="slider1_container" style="position: relative; width: 998px;
-  height: 310px; overflow: hidden;">
+  height: 320px; overflow: hidden;">
 
   <!-- Loading Screen --> 
   <div u="loading" style="position:absolute;top:0px;left:0px;">
@@ -91,7 +89,7 @@
     </div>
   </div>
 
-  <div u="slides" style="cursor:move; position:absolute; left:0px; top:0px;width:998px;height:310px;
+  <div u="slides" style="cursor:move; position:absolute; left:0px; top:0px;width:998px;height:320px;
     overflow:hidden;">
   <% @slides.each do |slide| %>
   <% if slide.picture && slide.picture.avatar %>

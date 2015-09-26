@@ -20,6 +20,11 @@ class PositionsController < ApplicationController
     respond_with(@positions)
   end
   def show
+    if params[:locale] == 'en'
+      @positions = Position.find_en.page params[:page] 
+    else
+      @positions = Position.find_cn.page params[:page] 
+    end
     @position_bar_image = Slide.get_bar_image("position_bar_image")
     @position_content_image = Slide.get_bar_image("position_content_image")
     respond_with(@position)

@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="ipacro-content-layout">
+  <div class="ipacro-content-layout" style="margin-top:10px;min-height:300px">
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('/images/header.png');background-position:center">
         <div style="width:100%;background-image:url(
@@ -28,7 +28,7 @@
       <div class="ipacro-layout-cell layout-item-0">
         <div class="layout-item-2 page-curl" style="min-height:300px">
           <h6 style="margin:2px 0 2px 0">
-            <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <a href="../positions"><%=t('positions')%></a> > <%=@position.title%>, <%=t('type')%>: <%=@position.position_type%>
+            <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <a href="../positions"><%=t('positions')%></a> > <%=@position.title%>, <%=t('region')%>: <%=@position.position_type%>
           <hr>
           </h6>
           <%=@position.content.html_safe%>

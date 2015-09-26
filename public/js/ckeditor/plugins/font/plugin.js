@@ -224,7 +224,7 @@ CKEDITOR.config.font_names = 'Arial/Arial, Helvetica, sans-serif;' +
 	'Times New Roman/Times New Roman, Times, serif;' +
 	'Trebuchet MS/Trebuchet MS, Helvetica, sans-serif;' +
 	'Verdana/Verdana, Geneva, sans-serif;'+
-
+	'Calibri/Calibri;'+
 	'宋体/SimSun;新宋体/NSimSun;仿宋/FangSong;楷体/KaiTi;仿宋_GB2312/FangSong_GB2312;'+
 	'楷体_GB2312/KaiTi_GB2312;黑体/SimHei;华文细黑/STXihei;华文楷体/STKaiti;华文宋体/STSong;z'+
 	'华文仿宋/STFangsong;华文彩云/STCaiyun;华文琥珀/STHupo;华文隶书/STLiti;华文行楷/STXingkai;华文新魏/STXinwei;'+

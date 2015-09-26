@@ -27,7 +27,7 @@
 </div>
 <div class="ipacro-layout-cell layout-item-2 page-curl" style="position:relative;width:475px;background-color:rgba(222, 222, 239, 0.117647)" >
   <h3>
-    <img src="/images/text_green.png" style="margin:-10px 5px;">
+    <img src="/images/text_green.png" style="margin:-10px 15px;">
     <%=t('Top Activities')%>
   </h3>
   <%=link_to t('More'),activities_path,class:'morebutton'%>
@@ -35,7 +35,7 @@
     <table>
       <% @front_activites.each do |item| %>
         <tr>
-          <td style="padding-left:45px;width:110px">
+          <td style="padding-left:65px;width:100px">
           <% if item.created_at %>
             <%= item.created_at.strftime('%Y-%m-%d') %>
             <%else%>
