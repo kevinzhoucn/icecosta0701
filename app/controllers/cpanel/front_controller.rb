@@ -16,6 +16,10 @@ class Cpanel::FrontController < Cpanel::ApplicationController
     @position_bar_image = Slide.get_bar_image("position_bar_image")
     @glossary_image = Slide.get_bar_image("glossary_bar_image")
 
+    @news_content_image = Slide.get_bar_image("news_content_image")
+    @activity_content_image = Slide.get_bar_image("activity_content_image")
+    @position_content_image = Slide.get_bar_image("position_content_image")
+
     # 从Positions controller 挪到cpanel index
     @position_abstract_en = SiteConfig.get_config('position_abstract_en')
     @position_abstract_cn = SiteConfig.get_config('position_abstract_cn')
@@ -23,6 +27,12 @@ class Cpanel::FrontController < Cpanel::ApplicationController
     # 从Services controller 挪到cpanel index
     @service_abstract_en = SiteConfig.get_config('service_abstract_en')
     @service_abstract_cn = SiteConfig.get_config('service_abstract_cn')
+
+    @service_content_en = SiteConfig.get_config('service_content_en')
+    @service_content_cn = SiteConfig.get_config('service_content_cn')
+
+    @abount_content_en = SiteConfig.get_config('abount_content_en')
+    @abount_content_cn = SiteConfig.get_config('abount_content_cn')
 
     #从Cpanel about里面挪到 cpanel index
     @about_abstract_cn = SiteConfig.get_config('about_abstract_cn')

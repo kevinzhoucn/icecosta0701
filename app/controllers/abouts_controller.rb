@@ -5,6 +5,7 @@ class AboutsController < ApplicationController
 
   def index
     @abouts = About.all
+    @about_content = SiteConfig.get_config('about_content')
     respond_with(@abouts)
   end
 

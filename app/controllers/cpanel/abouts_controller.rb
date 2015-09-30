@@ -4,7 +4,7 @@ class Cpanel::AboutsController < Cpanel::ApplicationController
   respond_to :html
 
   def index
-    @abouts = About.all
+    @abouts = About.all    
     respond_with(@abouts)
   end
 

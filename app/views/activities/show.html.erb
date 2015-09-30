@@ -11,6 +11,13 @@
     </div>
   </div>
   <div class="ipacro-content-layout">
+      <div style="width:100%;height:140px;background-image:url(
+        <% if @activity_content_image && @activity_content_image.picture && @activity_content_image.picture.avatar %>
+          <%= @activity_content_image.picture.avatar.url %>
+        <% end %>
+        );background-size:100%;" >
+      </div>
+
     <div class="ipacro-content-layout-row">
       <div class="ipacro-layout-cell layout-item-0" style="width:100%">
         <div class="layout-item-2 page-curl" style="margin-top:1em;min-height:300px">

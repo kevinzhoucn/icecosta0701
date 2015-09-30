@@ -7,9 +7,11 @@ class ServicesController < ApplicationController
     if params[:locale] == 'en'
       @services = Service.find_en.page params[:page] 
       @service = Service.find_en.first
+      @service_content = SiteConfig.get_config('service_content_en')
     else
       @services = Service.find_cn.page params[:page] 
       @service = Service.find_cn.first
+      @service_content = SiteConfig.get_config('service_content_cn')
     end
     @services_bar_image = Slide.get_bar_image("services_bar_image")
     respond_with(@services)

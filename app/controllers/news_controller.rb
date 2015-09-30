@@ -10,6 +10,7 @@ class NewsController < ApplicationController
       @news = News.find_cn.page params[:page] 
     end
     @news_bar_image = Slide.get_bar_image("news_bar_image")
+    @news_content_image = Slide.get_bar_image("news_content_image")
     respond_with(@news)
   end
 
@@ -17,11 +18,13 @@ class NewsController < ApplicationController
     @key_words = params[:key]
     @news = News.search(params[:key]).page params[:page]
     @news_bar_image = Slide.get_bar_image("news_bar_image")
+    @news_content_image = Slide.get_bar_image("news_content_image")
     respond_with(@news)
   end
 
   def show
     @news_bar_image = Slide.get_bar_image("news_bar_image")
+    @news_content_image = Slide.get_bar_image("news_content_image")
     respond_with(@news)
   end
 

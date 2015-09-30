@@ -17,8 +17,8 @@
       </div>
       <div class="ipacro-layout-cell layout-item-0" style="width: 75%" >
         <div class="layout-item-2 page-curl" style="min-height:300px">
-          <% if @service %>
-            <%= @service.content.html_safe %>
+          <% if @service_content %>
+            <%= @service_content.value.html_safe %>
           <% end %>
         </div>
       </div>
