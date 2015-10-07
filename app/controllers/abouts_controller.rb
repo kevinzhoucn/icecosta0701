@@ -14,11 +14,14 @@ class AboutsController < ApplicationController
     #   @about = About.find_cn.first
     # end
     @about_bar_image = Slide.get_bar_image("about_bar_image")
-    @abouts = About.all
     if params[:locale] == 'en'
       @about_content = SiteConfig.get_config('about_content_en').value
+      @abouts = About.find_en.page params[:page] 
+      @english = true
     else
       @about_content = SiteConfig.get_config('about_content_cn').value
+      @abouts = About.find_cn.page params[:page] 
+
     end
     respond_with(@abouts)
   end

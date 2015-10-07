@@ -24,7 +24,7 @@
       <div class="ipacro-layout-cell layout-item-0">
         <div class="layout-item-2 page-curl" style="min-height:300px;margin-top:5px">
           <h6 style="margin:2px 0 2px 0">
-            <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <%=t('services')%>>
+            <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <a href="<%= services_path %>"><%=t('services')%></a> > <%=@service.title%>
             <hr>
           </h6>
           <%= @service.content.html_safe %>
