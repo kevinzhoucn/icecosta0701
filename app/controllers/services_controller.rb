@@ -8,11 +8,11 @@ class ServicesController < ApplicationController
       @services = Service.find_en.page params[:page] 
       @service = Service.find_en.first
       @english = true
-      @service_content = SiteConfig.get_config('service_content_en')
+      @service_content = SiteConfig.get_config('service_content_en').value
     else
       @services = Service.find_cn.page params[:page] 
       @service = Service.find_cn.first
-      @service_content = SiteConfig.get_config('service_content_cn')
+      @service_content = SiteConfig.get_config('service_content_cn').value
     end
     @services_bar_image = Slide.get_bar_image("services_bar_image")
     respond_with(@services)

@@ -31,8 +31,8 @@ class Cpanel::FrontController < Cpanel::ApplicationController
     @service_content_en = SiteConfig.get_config('service_content_en')
     @service_content_cn = SiteConfig.get_config('service_content_cn')
 
-    @abount_content_en = SiteConfig.get_config('abount_content_en')
-    @abount_content_cn = SiteConfig.get_config('abount_content_cn')
+    @about_content_en = SiteConfig.get_config('about_content_en')
+    @about_content_cn = SiteConfig.get_config('about_content_cn')
 
     #从Cpanel about里面挪到 cpanel index
     @about_abstract_cn = SiteConfig.get_config('about_abstract_cn')

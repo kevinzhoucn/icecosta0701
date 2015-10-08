@@ -27,8 +27,8 @@
             <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <%=t('services')%>>
             <hr>
           </h6>
-          <% if @service %>
-            <%= @service.content.html_safe %>
+          <% if @service_content %>
+            <%= @service_content.content.html_safe %>
           <% end %>
         </div>
       </div>
