@@ -9,6 +9,8 @@
     line-height: 60px;
     text-align: center;
     font-style: italic;
+    -webkit-text-stroke: 0.3px #ddd;
+
   }
   .bricon
   {
@@ -79,7 +81,7 @@
 <script type="text/javascript" src="/js/jssor/main.js"></script>
 
 <div id="slider1_container" style="position: relative; width: 998px;
-  height: 250px; overflow: hidden;">
+  height: 310px; overflow: hidden;">
 
   <!-- Loading Screen --> 
   <div u="loading" style="position:absolute;top:0px;left:0px;">
@@ -89,7 +91,7 @@
     </div>
   </div>
 
-  <div u="slides" style="cursor:move; position:absolute; left:0px; top:0px;width:998px;height:250px;
+  <div u="slides" style="cursor:move; position:absolute; left:0px; top:0px;width:998px;height:310px;
     overflow:hidden;">
   <% @slides.each do |slide| %>
   <% if slide.picture && slide.picture.avatar %>
@@ -98,7 +100,7 @@
       <div u="caption" t="*" du="1500" class="captionBlack"  style="position:absolute; left:60px; top: 30px;padding:5px 0;width:auto"> 
       <%= slide.title %>
       </div>
-      <div u="caption" t="*" d=-300 style="position:absolute;top:110px;left:60px;width:220px;height:auto;line-height:26px;color:#5E8523;font-size:1.6em;font-family:'Goudy Old Style';font-style:italic;font-weight:bolder">
+      <div u="caption" t="*" d=-300  style="position:absolute;top:110px;left:60px;width:350px;height:auto;line-height:26px;font-size:1.9em;font-family:'Goudy Old Style';font-style:italic;font-weight:bolder;text-align:left;color:#5E8523">
         <%= slide.sub_title %>
       </div>
     </div>

@@ -10,7 +10,7 @@
         <tr>
           <td style="padding-left:45px;width:110px">
           <% if item.created_at %>
-            <%= item.created_at.strftime('%Y年%m月%d日') %>
+            <%= item.created_at.strftime('%Y-%m-%d') %>
             <%else%>
             &nbsp;
           <% end %>
@@ -22,7 +22,7 @@
       <% end %>
     </table>
 </div>
-<div class="ipacro-layout-cell layout-item-0" style="background-image: url('/images/rings_.png');background-position-x: -6px;position: absolute;z-index: 200;height:250px;width:46px;left:481px">
+<div class="ipacro-layout-cell layout-item-0" style="background-image: url('/images/rings_.png');background-position-x: -6px;position: absolute;z-index: 200;height:210px;width:46px;left:481px">
 
 </div>
 <div class="ipacro-layout-cell layout-item-2 page-curl" style="position:relative;width:475px;background-color:rgba(222, 222, 239, 0.117647)" >
@@ -37,7 +37,7 @@
         <tr>
           <td style="padding-left:45px;width:110px">
           <% if item.created_at %>
-            <%= item.created_at.strftime('%Y年%m月%d日') %>
+            <%= item.created_at.strftime('%Y-%m-%d') %>
             <%else%>
             &nbsp;
           <% end %>

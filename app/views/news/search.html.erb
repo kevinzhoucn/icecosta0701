@@ -10,8 +10,14 @@
       </div>
     </div>
   </div>
-  <div class="ipacro-content-layout">
+  <div class="ipacro-content-layout" style="margin-top:10px;min-height:300px;">
     <div class="ipacro-content-layout-row">
+      <div class="ipacro-layout-cell layout-item-0" style="width:25%;background:url('/images/header.png');background-position:center">
+        <%= form_tag news_search_path, :method => 'get' do %>
+          <%= text_field_tag :key, params[:key],type:"search", placeholder: t('Search for News'), size:"18",style:"margin-left:20px"%>
+          <%= submit_tag t('Search'), :name => nil ,class:"ipacro-button"%>
+        <% end %>
+      </div>
       <div class="layout-item-2 page-curl" style="min-height:300px">
         <h3><%=t('Searching Result')%></h3>
         <hr>
@@ -33,7 +39,8 @@
         </table>
         <%= paginate @news %>
       </div>
-  <%= render partial:'common/misc/totop'%>
+      
     </div>
   </div>
+  <%= render partial:'common/misc/totop'%>
 </div>
