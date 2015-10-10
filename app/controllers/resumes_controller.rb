@@ -23,10 +23,12 @@ class ResumesController < ApplicationController
 
   def create
     @resume = Resume.new(resume_params)
+    @resume.position_id = params[:position_id]
+    position = Position.find(@resume.position_id)
 
     if @resume.save
       flash[:notice] = ''
-      Notifier.resume_received(@resume).deliver 
+      Notifier.resume_received(@resume, position).deliver 
     end
 
     redirect_to resumes_succeed_path

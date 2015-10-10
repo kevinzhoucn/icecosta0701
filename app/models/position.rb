@@ -6,6 +6,7 @@ class Position
   field :content, type: String
   field :position_type, type: String
   field :lang, type: String
+  has_many :resumes
 
   def self.search(search)
     if search
