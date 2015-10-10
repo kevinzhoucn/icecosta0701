@@ -5,6 +5,7 @@ class Position
   field :title, type: String
   field :content, type: String
   field :position_type, type: String
+  has_many :resumes
 
   def self.search(search)
     if search

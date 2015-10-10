@@ -1,0 +1,14 @@
+您好:
+
+收到一份新的简历!
+
+应聘职位:<%= @position.title %>
+
+介绍: <%= @resume.content %>
+类型: <%= @resume.resume_type %>
+
+<% if @resume and @resume.avatar %>
+  <%= link_to "download", "#{@resume.avatar.url}" %>
+<% end %>
+
+十分感谢!
