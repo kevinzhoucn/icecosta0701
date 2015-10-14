@@ -72,4 +72,4 @@ production:
     default:
       database: icecosta_0701_production
       hosts:
-        - localhost:27017
+        - 127.0.0.1:27017
