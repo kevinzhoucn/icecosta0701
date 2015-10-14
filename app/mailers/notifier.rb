@@ -7,8 +7,9 @@ class Notifier < ActionMailer::Base
   #
   #   en.n_otifier.resume_received.subject
   #
-  def resume_received(resume)
+  def resume_received(resume, position)
     @resume = resume
-    mail :to => 'zzpf@163.com', :subject => '收到一份新简历'
+    @position = position
+    mail :to => 'li_changchen@126.com', :subject => '收到一份新简历'
   end
 end

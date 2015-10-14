@@ -2,7 +2,7 @@
   .ipacro-postcontent ul#sidebar>li:before, .ipacro-post ul>li:before, .ipacro-textblock ul>li:before{content:none; /*去掉li前面的小三角*/}
   .ipacro-postcontent li, .ipacro-post li, .ipacro-textblock li{margin: 0;}/*去掉li外边距*/
   .ipacro-postcontent ul#sidebar>li.active:after{content:url('/images/postbullets.png')}
-/*  .ipacro-postcontent ul#sidebar>li :hover{
+ /* .ipacro-postcontent ul#sidebar>li :hover{
     color: #415D19 !important;
     background: linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
     background: -webkit-linear-gradient(top, #E6F4F2 0, #ABD9D4 100%) no-repeat;
@@ -29,6 +29,7 @@
     padding: 0 10px;
     margin: 0 auto;
   }
+
   .ipacro-postcontent ul#sidebar>li a{
     background: #BBDDEC url('/images/nav.png') scroll;
     background: linear-gradient(top, rgba(116, 185, 217, 0.04) 0, rgba(254, 254, 255, 0.11) 100%) no-repeat, url('/images/nav.png'), linear-gradient(top, #8BC5DF 0, #E7F3F8 100%) no-repeat;
@@ -40,24 +41,24 @@
     -svg-background: linear-gradient(top, rgba(116, 185, 217, 0.04) 0, rgba(254, 254, 255, 0.11) 100%) no-repeat, url('/images/nav.png'), linear-gradient(top, #8BC5DF 0, #E7F3F8 100%) no-repeat;
   }
 </style>
-<div>
+<div id="tobstick">
   <ul id="sidebar">
-    <% @abouts.each do |about| %>
-      <li style="margin-bottom:5px" id="<%=about.id%>">
-      <%if @english %>
-        <%= link_to about.title, aboutus_show_path(about), class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;font-size:15px;text-align:left !important" %>
-      <%else%>
-        <%= link_to about.title, aboutus_show_path(about), class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;font-size:15px;text-align:center !important" %>
-      <%end%>
+    <% @services.each do |service| %>
+      <li style="margin-bottom:5px" id="<%=service.id%>">
+        <%if @english %>
+        <%= link_to service.title, service, class:"ipacro-button", style:"width:82%;height:30px;line-height:30px;font-size:15px;text-align:left !important" %>
+        <%else%>
+          <%= link_to service.title, service, class:"ipacro-button", style:"width:82%;height:30px;font-size:15px;line-height:30px;text-align:center !important" %>
+        <%end%>
       </li>
     <%end%>
   </ul>
 </div>
-
+<script type="text/javascript" src="/js/togglefix.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     var url = document.URL;
-    var aboutid = '#'+url.substr(url.length-24,24);
-    $(aboutid).addClass("active");
+    var serviceid = '#'+url.substr(url.length-24,24);
+    $(serviceid).addClass("active");
   });
 </script>

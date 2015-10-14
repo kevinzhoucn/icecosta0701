@@ -6,7 +6,7 @@
         <%= @services_bar_image.picture.avatar.url %>
       <% end %>
       );background-size:100%;" >
-      <h1 class="ipacro-headline" style="left:20px;position:relative;border-radius:10px;background:url('../images/nav.png');width:95%;transform:skew(-12deg);line-height:51px;text-indent:15px"><%=t('services')%></h1>
+      <h1 class="ipacro-headline" style="left:20px;position:relative;border-radius:10px;background:url('/images/nav.png');width:95%;transform:skew(-12deg);line-height:51px;text-indent:15px"><%=t('services')%></h1>
       </div>
     </div>
   </div>
@@ -18,8 +18,8 @@
       <%else%>
         22%;
       <%end%>
-      background:url('../images/header.png');background-position:center">
-        <%= render partial:'common/services/service_left'%>
+      background:url('/images/header.png');background-position:center">
+        <%= render partial:'common/leftnav/service_left'%>
       </div>
       <div class="ipacro-layout-cell layout-item-0">
         <div class="layout-item-2 page-curl" style="min-height:300px;margin-top:5px">

@@ -1,0 +1,32 @@
+<h3>收到一份新简历</h3>
+
+<table width="300">
+  <tr>
+    <td width="100">应聘者姓名</td>
+    <td>
+      <%=@resume.title%>
+    </td>
+  </tr>
+  <tr>
+    <td width="100">应聘职位</td>
+    <td>
+      <%= @position.title %>
+    </td>
+  </tr>
+  <tr>
+    <td width="100">个人简介</td>
+    <td>
+      <%= @resume.content%>
+    </td>
+  </tr>
+  <tr>
+    <td width="100">简历</td>
+    <td>
+      <% if @resume.avatar.url %>
+        <%= link_to "下载", "http://www.ipa-cro.com#{@resume.avatar.url}" %>
+      <% else %>
+        <p>无</p>
+      <% end %>
+    </td>
+  </tr>
+</table>
