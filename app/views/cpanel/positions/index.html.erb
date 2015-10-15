@@ -16,7 +16,7 @@
             <% if position.created_at %>
               <sub>&nbsp;&nbsp; <%= position.created_at.strftime('%Y-%m-%d') %><sub>
             <% end %>
-            <span style="position: absolute;right:340px">
+            <span style="position: absolute;right:60px">
             <%= link_to 'X  删除', cpanel_position_path(position), method: :delete, data: { confirm: '确定要删除这条记录吗？' }, class:'submitbutton' %>
             </span>
           </li>

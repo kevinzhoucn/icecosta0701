@@ -12,9 +12,9 @@
         <ul style="width:100%">
         <% @partners.each do |partner| %>
           <li>
-            <%= image_tag(partner.avatar.url(:tile)) %>
+            <%#= image_tag(partner.avatar.url(:tile)) %>
             <%= link_to partner.name + " http://" + partner.url, edit_cpanel_partner_path(partner) %>
-            <span style="right:350px">
+            <span style="position: absolute;right:260px">
             <%= link_to 'X  删除', cpanel_partner_path(partner), method: :delete, data: { confirm: '确认要删除这条链接吗？' }, class:'submitbutton' %>
             </span>
           </li>
