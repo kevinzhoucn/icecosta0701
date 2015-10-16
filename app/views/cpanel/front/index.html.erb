@@ -67,18 +67,6 @@
     </ul>
 
   </div>
-<!--   <div class="monitor">
-    <div class="clearfix">
-      <ul class="content">
-        <li class="first">k 数据统计</li>
-        <li class="imgs"><a href="/cpanel/slides">b 图片轮播</a><span class="count"><%= @slides_count %></span></li>
-        <li class="srvs"><a href="/cpanel/services">q 服务项目</a><span class="count"><%= @services_count %></span></li>
-        <li class="news"><a href="/cpanel/news">d 公司资讯</a><span class="count"><%= @news_count %></span></li>
-        <li class="categories"><a href="/cpanel/activities">k 员工活动</a><span class="count"><%= @activities_count %></span></li>
-      </ul>
-    </div>
-  </div>
- -->
   <div class="monitor">
     <div class="clearfix">
       <ul class="content">
@@ -107,15 +95,10 @@
         <li>
           <%= link_to 'h 快速发布员工活动', new_cpanel_activity_path, class:'submit',style:'display:block;padding:5px;border-radius:10px;text-decoration:none'%>
         </li>
+        <li>
+            <%= link_to "u 发布维护公告", edit_cpanel_site_config_path(@site_maintenace_notice),class:'submit',style:'display:block;padding:5px;border-radius:10px;text-decoration:none'%>
+        </li>
       </ul>
     </div>
-  </div>
-  <div>
-    <ul>
-      <li>
-        <%#= link_to "maintenance", edit_cpanel_site_config_path(@site_maintenace), class:'submitbutton',style:'padding: 8px' %>
-        <%= link_to "maintenance notice", edit_cpanel_site_config_path(@site_maintenace_notice), class:'submitbutton',style:'padding: 8px' %>
-      </li>
-    </ul>
   </div>
 </div>
