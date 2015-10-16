@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
       layout_str = "application"
       layout_str = "applogin" if devise_controller?
-      layout_str = "app_maintenance" if SiteConfig.maintenance.to_s =~ /(.*)on(.*)/
+      layout_str = "app_maintenance" if SiteConfig.maintenance_notice.length > 5
       # layout_str = "app_maintenance" if true
     end
 
