@@ -28,10 +28,12 @@
             <%=t('urhere')%><a href="<%= root_path%>"><%=t('home')%></a> > <a href="../positions"><%=t('positions')%></a> > <%=@position.title%>, <%=t('region')%>: <%=@position.position_type%>
           <hr>
           </h6>
-          <%= @position.content.html_safe %>
-          <span style="position:absolute;bottom:10px;left:310px">
+          <div style="padding:15px">
+            <%= @position.content.html_safe %>
+          </div>
+          <div style="width:auto;text-align:center;margin-top:15px">
             <%= link_to t('Apply Now'), new_position_resume_path(@position),class:"ipacro-button" %>
-          </span>
+          </div>
         </div>
       </div>
     </div>

@@ -10,6 +10,6 @@ class Notifier < ActionMailer::Base
   def resume_received(resume, position)
     @resume = resume
     @position = position
-    mail :to => 'li_changchen@126.com', :subject => '收到一份新简历'
+    mail :to => 'hr@ipa-cro.com', :subject => '收到一份来自本公司官网的简历'
   end
 end

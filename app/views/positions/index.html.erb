@@ -39,7 +39,7 @@
                 <td>
                 <% if position.created_at %>
                   <% if position.created_at %>
-                    <%=t('Published On')%><%= position.created_at.strftime('%Y-%m-%d') %>
+                    <%=t('Published On')%>: <%= position.created_at.strftime('%Y-%m-%d') %>
                 <% end %>
                   <%else%>
                   &nbsp;

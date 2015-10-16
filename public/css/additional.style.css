@@ -158,3 +158,12 @@ hr{border-top:1px solid #aaccEC;margin:10px 0;}
   width: 219px;
   z-index: 1000;
   }
+
+
+@font-face {
+    font-family: 'stxingkairegular';
+    src: url('fonts/xingkai.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
