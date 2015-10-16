@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-   layout :layout
+  layout :layout
   before_filter :set_locale, :set_services
 
   def default_url_options(options = {})
@@ -13,11 +13,11 @@ class ApplicationController < ActionController::Base
     def layout
       # is_a?(Devise::SessionsController) ? "applogin" : "application"
       # devise_controller? || "application"
-      if devise_controller?
-        "applogin"
-      else
-        "application"
-      end
+
+      layout_str = "application"
+      layout_str = "applogin" if devise_controller?
+      layout_str = "app_maintenance" if SiteConfig.maintenance.to_s =~ /(.*)on(.*)/
+      # layout_str = "app_maintenance" if true
     end
 
     def set_locale  

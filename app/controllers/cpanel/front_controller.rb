@@ -37,6 +37,9 @@ class Cpanel::FrontController < Cpanel::ApplicationController
     #从Cpanel about里面挪到 cpanel index
     @about_abstract_cn = SiteConfig.get_config('about_abstract_cn')
     @about_abstract_en = SiteConfig.get_config('about_abstract_en')
+
+    @site_maintenace = SiteConfig.get_config('maintenance')
+    @site_maintenace_notice = SiteConfig.get_config('maintenance_notice')
   end
 
   # def about
