@@ -2,8 +2,6 @@ class FrontController < ApplicationController
   def index
     @slides = Slide.shows.all
 
-
-
     if params[:locale] == 'en'
       @front_news = News.find_en.limit(5)
       @front_activites = Activity.find_en.limit(5)
