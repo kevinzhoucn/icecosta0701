@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>IPA-CRO Mobile Version</title>
+    <meta name="keywords" content="IPA-CRO,CRO" />
+    <meta name="description" content="CRO" />
+    <link rel="stylesheet" href="/css/mobile/common.css">
+    <link rel="stylesheet" href="/css/mobile/index.css">
+    <script src="/js/mobile/jquery-1.11.0.min.js"></script>
+    <script src="/js/mobile/idangerous.swiper-2.1.min.js"></script>
+    <script>
+    //图片轮播脚本
+      $(function(){
+        var mySwiper = new Swiper('#hot-img',{
+        pagination: '.hot-btn-box',
+        autoplay : 5000,
+        loop:true,
+        grabCursor: true,
+        paginationClickable: true,
+        onTouchEnd : function(){
+          mySwiper.startAutoplay();
+        }
+        })
+      })
+    </script>

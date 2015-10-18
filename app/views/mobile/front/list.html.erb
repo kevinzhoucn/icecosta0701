@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<title>游戏资讯网手机网站模板 列表页</title>
+<meta name="keywords" content="游戏攻略,游戏攻略,游戏秘籍" />
+<meta name="description" content="斗蟹单机游戏攻略秘籍频道免费给大家提供:游戏攻略,最专业的各种游戏攻略秘籍,第一时间提供最新的单机游戏攻略以及各种电脑单机游戏秘籍" />
+
+<link rel="stylesheet" href="css/common.css">
+<script src="js/jquery-1.11.0.min.js"></script>
+<script>
+  $(function () {
+    //绑定加载更多
+    $('.more-box').click(function (event) {
+      event.preventDefault();
+      
+      var $_this = $(this);
+      
+      if ($_this.isShutdown()) {
+        return false;
+      }
+      
+      var getPage = $('.list-box').data('page');
+      
+      AjAjax(
+        'ajax/article/more_article_list',
+        {
+          type : 'game_guide',
+          page : getPage
+        },
+        {
+          async     : true,
+          onStart   : function () {
+            $_this.shutdown();
+            $_this.html('加载中……');
+          },
+          onSuccess : function (info, data) {
+            if (data.html) {
+              $_this.before(data.html);
+              $('.list-box').data('page', getPage + 1);
+            }
+            
+            if (data.no_more) {
+              $_this.remove();
+            }
+          },
+          onEnd     : function () {
+            $_this.unShutdown();
+            $_this.html('点击加载更多<span class="more_ico"></span>');
+          }
+        }
+      );
+    });
+  });
+</script>
+</head>
+<body>
+      <!-- 公用头部 -->
+
+<div class="common-header">
+
+    <div class="header-box">
+
+        <a href="index.html" class="header-left">◀</a>
+
+        <h1 class="header-center">
+
+            <a href="index.html">斗蟹游戏网</a>　
+
+            <span class="yuan"></span>　
+
+            <span class="cate-name">攻略</span>
+
+        </h1>
+
+        <div class="header-right"><a href="javascript:;" id="nav-btn" is-show="0">导航 <span>▼</span></a></div>
+
+    </div>
+
+    <div class="common-nav" id="common-nav">
+
+        
+
+        <a href="list.html" class="first">攻略</a>
+
+        
+
+        <a href="list.html">问答</a>
+
+        
+
+        <a href="list.html">资讯</a>
+
+        
+
+            </div>
+
+</div>
+
+<script>
+
+$(function(){
+
+    //返回上一页按钮
+
+    $('.common-header .header-left').click(function (event) {
+
+        if(window.history.length > 2) {
+
+            event.preventDefault();
+
+            window.history.go(-1);
+
+        }
+
+    });
+
+    
+
+    $("#nav-btn").click(function(){
+
+        var isShow = $(this).attr('is-show');
+
+        if( isShow == 0 ){
+
+            $(this).find('span').html('▲');
+
+            $("#common-nav").show();
+
+            $(this).attr('is-show',1);
+
+        }else{
+
+            $(this).find('span').html('▼');
+
+            $("#common-nav").hide();  
+
+            $(this).attr('is-show',0);
+
+        }
+
+        return false;
+
+    })
+
+})
+
+</script>
+
+<!-- 公用头部 完 --> 
+  <div class="list-box" data-page="2">
+                            <div class="list-wrap">
+                                        
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域搏击俱乐部怎么玩 搏击俱乐部玩法新手小技巧</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域幽冥妖刀怎么得 幽冥妖刀获取方法详解</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域战弓PVP怎么打 战弓PVP打法走位技巧指南</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域游戏技巧有哪些 游戏技巧新手100条分享</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                                <div class="hr"></div>
+                            </div>
+                                                <div class="list-wrap">
+                                        
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域怎么在商城买东西 商城购物流程图文攻略</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域怎么操作 操作手法与键盘操作指南</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域世界BOSS刷新位置在哪 世界BOSS刷新位置详解</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>侠盗飞车4Easy Fare任务介绍</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                                <div class="hr"></div>
+                            </div>
+                                                <div class="list-wrap">
+                                        
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域世界BOSS刷新时间是多久 世界BOSS刷新时间详解</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域世界BOSS都有哪些 世界BOSS一览</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>星球探险家尖刺制作的方法</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域属性都有哪些类型 属性类型详解</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                                <div class="hr"></div>
+                            </div>
+                                                <div class="list-wrap">
+                                        
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域副手武器怎么选择 副手武器三大选择技巧分享</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>收获日2商场破碎者任务介绍</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>炉石传说冒险模式瘟疫区肮脏的希尔盖英雄难度打法攻略</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>恶魔城暗影之王2紫水晶的提醒介绍</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                                <div class="hr"></div>
+                            </div>
+                                                <div class="list-wrap">
+                                        
+                    <a href="detail.html" class="list-row">
+                        <p>恶魔城暗影之王2红宝石的回忆介绍</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域必做隐藏任务指南 必做隐藏任务有哪些</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>幻想神域怎么快速去副本门口 快速通往副本门口方法详解</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                    
+                    <a href="detail.html" class="list-row">
+                        <p>看门狗后座车手攻略分享</p>
+                        <span class="list-row-more">&gt;</span>
+                    </a>
+                    
+                                            </div>
+                                
+    <a href="#" class="more-box">
+      点击加载更多<span class="more_ico"></span>
+    </a>
+  </div>
+    
+    <div class="mt20"></div>
+    
+      <!-- 公用底部 -->
+<div class="bottom-nav">
+    <div class="nav-box">
+        <a href="index.html" title="首页">首页</a>
+    </div>
+    <div class="nav-box">
+        <a href="list.html" title="攻略">攻略</a>
+    </div>
+    <div class="nav-box">
+        <a href="list.html" title="问答">问答</a>
+    </div>
+    <div class="nav-box">
+        <a href="list.html" title="资讯">资讯</a>
+    </div>
+    </div>
+<div class="footer">
+    <a onClick="createCookie('no_auto_fit', 'on', 0.04, 'douxie.com')" href="index.html" class="pc">电脑版</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#">返回顶部<span class="totop"></span></a>
+</div>
+<!-- 公用底部 完 -->
+
+</body>
+</html>

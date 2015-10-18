@@ -1,50 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Panel fixed positioning - jQuery Mobile Demos</title>
-    <link rel="stylesheet" type="text/css" href="/css/mobile/Bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/mobile/jquery.mobile.icons.min.css">
-    <link rel="stylesheet" href="/css/jquery.mobile-1.4.5.css">
-    <link rel="shortcut icon" href="../favicon.ico">
-    <script src="/js/jquery.js"></script>
-    <script src="/js/jquery.mobile-1.4.5.min.js"></script>
+    <%= render partial:'common/mobile/mob_head' %>
   </head>
-  <body>
-    <div data-role="page" class="jqm-demos" id="panel-fixed-page1" data-title="Panel fixed positioning" data-theme="e">
-      <div data-role="header" data-position="fixed">
-        <h1>IPA-CRO</h1>
-        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
-      </div><!-- /header -->
+<body>
+  <!-- 公用头部 -->
+  <%= render partial:'common/mobile/mob_header' %>
+  <!-- 公用头部 完 -->
 
-      <div role="main" class="ui-content jqm-content jqm-fullwidth">
-<!--         <h1>Panel fixed positioning</h1>
+  <!-- 主体部分 -->
+    <%=yield%>
+  <!-- 主体部分 完 -->
 
-          <p>This is a typical page that has two buttons in the header bar that open panels. The left panel has the push display mode. The right panel opens as overlay. For both panels we set <code>data-position-fixed="true"</code>. We also set position fixed for the header and footer on this page.</p>
-
-          <p>The left panel contains a long menu to demonstrate that the framework will check the panel contents height and unfixes the panel so its content can be scrolled. In the right panel there is a short form that shows the fixed positioning.</p>
-      <a href="../" data-rel="back" data-ajax="false" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-icon-carat-l ui-btn-icon-left ui-alt-icon ui-nodisc-icon">Back</a>
-
-      <p>We made the page a bit longer because you only see the panel fixed positioning if you can scroll the page :-)</p> -->
-      <%yield%>
-    </div><!-- /content -->
-
-      <div data-role="footer" data-position="fixed">
-        <h4>Fixed footer</h4>
-      </div><!-- /footer -->
-
-    <div data-role="panel" data#-position-fixed="true" data-display="overlay" id="nav-panel">
-      <h3 style="clear:both">site title</h3>
-      <ul data-role="listview">
-        <li data-icon="arrow-l"><a href="#" data-rel="close" style="text-align:center">隐藏菜单</a></li>
-        <li><a href="#" style="font-family:微软雅黑">Accordion</a></li>
-        <li><a href="#">Ajax Navigation</a></li>
-        <li><a href="#">Autocomplete</a></li>
-        <li><a href="#">Buttons</a></li>
-        <li><a href="#">Checkboxes</a></li>
-      </ul>
-    </div><!-- /panel -->
+  <!-- 公用底部 -->
+  <%= render partial:'common/mobile/mob_footer' %>
+  <!-- 公用底部 完 -->
 
   </body>
 </html>
