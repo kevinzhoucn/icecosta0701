@@ -1,9 +1,17 @@
-<ul data-role="listview">
-  <li data-role="divider">最新资讯</li>
+  <ul data-role="listview">
+    <li>
+      <%=t('news')%>
+    </li>
     <% @items.each do |item| %>
-        <li><%= link_to item.title, mobile_news_show_path(item) %></li>
-      <% end %>
-    </table>
-    <%= paginate @items %>
-</ul>
-
+      <li>
+        <a href="<%=mobile_news_show_path(item)%>"><%=item.title%>
+          <% if item.created_at %>
+            &nbsp;&nbsp;<%= item.created_at.strftime('%Y-%m-%d') %>
+          <%else%>
+            &nbsp;
+          <% end %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+<%= paginate @items %>

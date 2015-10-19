@@ -5,11 +5,9 @@
   <!-- 列表 -->
 
   <!-- 最新资讯 -->
-  <li><%= link_to 'EN', mobile_path(:locale => 'en') %></li>
-  <li><%= link_to 'CN', mobile_path(:locale => 'zh-CN') %></li>
     <ul data-role="listview" data-inset="true" data-icon="false">
       <li data-role="divider" data-icon="carat-r">
-        <%= link_to "最新资讯", mobile_news_path%>
+        <%= link_to t('news'), mobile_news_path%>
       </li>
       <% @front_news.each do |item| %>
         <li>
@@ -21,7 +19,7 @@
     </ul>
     <ul data-role="listview" data-inset="true" data-icon="false">
       <li data-role="divider" data-icon="carat-r">
-        <%= link_to "activities", mobile_news_path%>
+        <%= link_to t('activities'), mobile_news_path%>
       </li>
       <% @front_activities.each do |item| %>
         <li>        
