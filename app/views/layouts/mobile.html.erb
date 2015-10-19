@@ -3,18 +3,25 @@
   <head>
     <%= render partial:'common/mobile/mob_head' %>
   </head>
-<body>
-  <!-- 公用头部 -->
-  <%= render partial:'common/mobile/mob_header' %>
-  <!-- 公用头部 完 -->
+  <body>
+    <div data-role="page">
+    <!-- 公用头部 -->
+    <%= render partial:'common/mobile/mob_header' %>
+    <!-- 公用头部 完 -->
 
-  <!-- 主体部分 -->
-    <%=yield%>
-  <!-- 主体部分 完 -->
+    <!-- 主体部分 -->
+    <div data-role="content">
+      <%=yield%>
+    </div>
+    <!-- 主体部分 完 -->
 
-  <!-- 公用底部 -->
-  <%= render partial:'common/mobile/mob_footer' %>
-  <!-- 公用底部 完 -->
+    <!-- 公用底部 -->
+    <%= render partial:'common/mobile/mob_footer' %>
+    <!-- 公用底部 完 -->
 
+    <!--侧边栏-->
+    <%= render partial: 'common/mobile/mob_panel'%>
+    <!--侧边栏 完-->
+    </div>
   </body>
 </html>

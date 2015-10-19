@@ -1,36 +1,4 @@
-<style type="text/css">
-  .fixed_div{
-    position:fixed;
-    top:0;
-    z-index: 2;
-  }
-  .grow{height:50px;}
-</style>
-<div class="header">
-    <h1 class="wap-logo">
-      <a href="index.html">
-        <img src="/images/logo_.png" alt="logo" style="width:auto;height:31px">
-      </a>
-      <a href="index.html" class="logo-txt">IPA-CRO</a>
-    </h1>
-  </div>
-  <div class="nav" id="tobefixed">
-    <div class="nav-box">
-      <a href="list.html" title="关于我们">关于我们</a>
-    </div>
-    <div class="nav-box">
-      <a href="list.html" title="我们的服务">我们的服务</a>
-    </div>
-    <div class="nav-box">
-      <a href="list.html" title="联系我们">联系我们</a>
-    </div>
-  </div>
-  <div id="tobeseen"></div>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $(document).on('scroll', function(){
-      $('#tobefixed').toggleClass('fixed_div',$(document).scrollTop()>=50);
-      $('#tobeseen').toggleClass('grow',$(document).scrollTop()>=50);
-    });
-  });
-</script>
+<div data-role="header" data-position="fixed" class="ui-nodisc-icon">
+  <h1 style="color:#eee;letter-spacing:1.1px;text-shadow:none">IPA-CRO</h1>
+  <a data-icon="bars" data-iconpos="notext" style="background-color:#3991e5;border-color:#2981d5" href="#thepanel"></a>
+</div>
