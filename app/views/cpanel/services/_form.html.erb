@@ -5,7 +5,7 @@
     <%= f.input :title,label:'服务名称：' %>
     <br>
     <span>选择语言：</span>
-    <%= f.input_field :lang, as: :radio_buttons, collection:[ ['中  文 ', 'cn'],['英  文','en'] ], checked: 'cn'%>
+    <%= f.input_field :lang, as: :radio_buttons, collection:[ ['中  文 ', 'cn'],['英  文','en'],['world','world'] ], checked: 'cn'%>
     <br>
     <br>
     <%= f.text_area :content,label:'服务内容：' %>
