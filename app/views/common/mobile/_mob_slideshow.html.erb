@@ -1,57 +1,41 @@
-  <div class="hot-img" id="hot-img" >
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" hot-title="《雷霆战机》魔龙壁垒和月光之轮哪个好？ 对比详情公布">
-        <a href="detail.html">
-          <img src="http://img.douxie.com/upload/image/i9c/fqx/BeiloRB5ntJ66ru7Sohu.jpg" title="《雷霆战机》魔龙壁垒和月光之轮哪个好？ 对比详情公布" alt="《雷霆战机》魔龙壁垒和月光之轮哪个好？ 对比详情公布">
-        </a>
-        <div class="hot-title-box">
-          <h2>《雷霆战机》魔龙壁垒和月光之轮哪个好？ 对比详情公布</h2>
-        </div>
-      </div>
-      <div class="swiper-slide" hot-title="《全民英雄》Boss卡超值礼包限时促销 充值返魔钻活动介绍">
-        <a href="detail.html"><img src="http://img.douxie.com/upload/image/ydt/zb7/k3agGqcB0DCsLQFVGNMZ.jpg" title="《全民英雄》Boss卡超值礼包限时促销 充值返魔钻活动介绍" alt="《全民英雄》Boss卡超值礼包限时促销 充值返魔钻活动介绍"></a>
+<!-- <link href="/js/mobslider/css/reset.css" rel="stylesheet" />
+<link href="/js/mobslider/css/style.css" rel="stylesheet" /> -->
+<script src="/js/mobslider/js/jquery.excoloSlider.js"></script>
+<link href="/js/mobslider/css/jquery.excoloSlider.css" rel="stylesheet" />
+<script>
+  // Settings for Adaptive.js
+  var ADAPT_CONFIG = {
+    path: '/js/mobslider/css/',
+    dynamic: true,
+    range: [
+      '0px    to 760px  = mobile.min.css',
+      '760px  to 980px  = 720.min.css',
+      '980px            = 960.min.css'
+    ]
+  };
+</script>
+<script src="/js/mobslider/js/adapt.min.js"></script>
+<script>
+  $(function () {
+    $("#sliderA").excoloSlider();
+    //$("#sliderB").excoloSlider();
+});
+</script>
 
-        <div class="hot-title-box">
-          <h2>《全民英雄》Boss卡超值礼包限时促销 充值返魔钻活动介绍</h2>
-        </div>
-      </div>
-      <div class="swiper-slide" hot-title="《天天飞车》R车涡轮火狐征服者半价活动详情">
-        <a href="detail.html"><img src="http://img.douxie.com/upload/image/thc/vs0/JZeFYNksL8Zgzn0GXIwS.jpg" title="《天天飞车》R车涡轮火狐征服者半价活动详情" alt="《天天飞车》R车涡轮火狐征服者半价活动详情"></a>
-        <div class="hot-title-box">
-          <h2>《天天飞车》R车涡轮火狐征服者半价活动详情</h2>
-        </div>
-      </div>
-      <div class="swiper-slide" hot-title="《全民飞机大战》光电魔球满级属性及满级技能介绍 七月新宠登场">
-        <a href="detail.html"><img src="http://img.douxie.com/upload/image/rov/9x6/JpeEKtSNz4xr5RM3Wyyv.jpg" title="《全民飞机大战》光电魔球满级属性及满级技能介绍 七月新宠登场" alt="《全民飞机大战》光电魔球满级属性及满级技能介绍 七月新宠登场"></a>
-        <div class="hot-title-box">
-          <h2>《全民飞机大战》光电魔球满级属性及满级技能介绍 七月新宠登场</h2>
-        </div>
-      </div>
-      <div class="swiper-slide" hot-title="《天天酷跑》烈焰甜心解锁获取方式揭秘">
-
-        <a href="detail.html"><img src="http://img.douxie.com/upload/image/bqh/smq/HL6H2TGQgwjl4JzgetHK.jpg" title="《天天酷跑》烈焰甜心解锁获取方式揭秘" alt="《天天酷跑》烈焰甜心解锁获取方式揭秘"></a>
-
-        <div class="hot-title-box">
-
-          <h2>《天天酷跑》烈焰甜心解锁获取方式揭秘</h2>
-
-        </div>
-
-        </div>
-
-              <div class="swiper-slide" hot-title="《天天飞车》S车天际属性技能介绍 10倍成功率登录幸运点夺宝">
-
-        <a href="detail.html"><img src="http://img.douxie.com/upload/image/n49/kln/hrg8w8NGhwWjZKZRbymn.png" title="《天天飞车》S车天际属性技能介绍 10倍成功率登录幸运点夺宝" alt="《天天飞车》S车天际属性技能介绍 10倍成功率登录幸运点夺宝"></a>
-
-        <div class="hot-title-box">
-
-          <h2>《天天飞车》S车天际属性技能介绍 10倍成功率登录幸运点夺宝</h2>
-
-        </div>
-
-        </div>
-
-        </div>
-
-    <div class="hot-btn-box"></div>
-  </div>
+<div id="sliderA" style="width:90%;margin:0 auto">
+  <!-- <div style="background-color: #ff7500"><h2>First slide</h2></div>
+  <div style="background-color: #b6ff00"><h2>Second slide</h2></div>
+  <div style="background-color: #00ff05"><h2>Third slide</h2></div>
+  <div style="background-color: #00d8ff"><h2>Fourth slide</h2></div>
+  <div style="background-color: #8000ff"><h2>Fifth slide</h2></div>
+  <div style="background-color: #ff008d"><h2>Sixth slide</h2></div> -->
+  <% @slides.each do |slide| %>
+  <% if slide.picture && slide.picture.avatar %>
+    <div id="theslide">
+      <img src="<%= slide.picture.avatar.url(:thumb) %>" />
+      <div><%= slide.title %></div>
+      <div><%= slide.sub_title %></div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
