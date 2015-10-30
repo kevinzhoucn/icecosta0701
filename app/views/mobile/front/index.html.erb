@@ -1,44 +1,21 @@
   <!-- 幻灯片-->
-  <%#= render partial:'common/mobile/mob_slideshow' %>
+  <%= render partial:'common/mobile/mob_slideshow' %>
    <!-- 幻灯片 完-->
-
-  <!-- 头条 
-  <div class="hot-toutiao">
-    <span class="tag">头条</span>
-    <li><a class="con" href="detail.html">
-      国务院取消境外电子出版物审批 知名大作再无审批门槛
-    </a></li>
-  </div>
-  头条 完 -->
 
   <!-- 列表 -->
 
   <!-- 最新资讯 -->
-  <h2>最新资讯</h2>
-    <ul data-role="listview">
-      <li><a href="detail.html" style="font-size:0.5em">
-          艾滋病有救了  
+    <ul data-role="listview" data-inset="true" data-icon="false">
+      <li data-role="divider" data-icon="carat-r">
+        <%= link_to "最新资讯", mobile_news_path%>
+      </li>
+      <% @front_news.each do |item| %>
+        <li>
         
-      </a></li>
-      <li><a href="detail.html">
-          癌症有救了  
-        
-      </a></li>
-      <li><a href="detail.html">
-          非典有救了  
-        
-      </a></li>
-      <li><a href="detail.html">
-          糖尿病有救了  
-        
-      </a></li>
-      <li><a href="detail.html">
-          包治百病  
-        
-      </a></li>
-      <li><a href="list.html">
-    查看更多
-  </a></li>
+          <%= link_to item.title, mobile_news_path(item) %>
+        </li>
+        <% end %>
+
     </ul>
 
     <!-- <ul>  
@@ -54,3 +31,5 @@
  -->
   
   <!-- 最新资讯 完 -->
+
+    

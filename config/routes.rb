@@ -7,6 +7,8 @@ Rails40Starter::Application.routes.draw do
     get '/news' => 'front#news'
     get '/activities' => 'front#activities'
     get '/positions' => 'front#positions'
+    get '/contact' => 'front#contact'
+    get '/news/:id' => 'front#news_show'
   end
 
   scope "(:locale)", :locale => /en|zh-CN/ do

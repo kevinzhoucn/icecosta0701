@@ -1,8 +1,9 @@
-<p>mobile page!</p>
-<ul>
-            <% @items.each do |item| %>
-              <li><%= item.title %></li>
-            <% end %>
-          </table>
-          <%= paginate @items %>
+<ul data-role="listview">
+  <li data-role="divider">最新资讯</li>
+    <% @items.each do |item| %>
+        <li><%= item.title %></li>
+      <% end %>
+    </table>
+    <%= paginate @items %>
 </ul>
+
