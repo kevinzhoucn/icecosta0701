@@ -1,14 +1,19 @@
 Rails40Starter::Application.routes.draw do
   # resources :abouts, only: [:index, :show]
-  namespace :mobile do
-    get '/' => 'front#index'
-    get '/about' => 'front#about'
-    get '/services' => 'front#services'
-    get '/news' => 'front#news'
-    get '/activities' => 'front#activities'
-    get '/positions' => 'front#positions'
-    get '/contact' => 'front#contact'
-    get '/news/:id' => 'front#news_show'
+  scope "(:locale)", :locale => /en|zh-CN/ do
+    namespace :mobile do
+      get '/' => 'front#index'
+      get '/about' => 'front#about'
+      get '/services' => 'front#services'
+      get '/news' => 'front#news'
+      get '/activities' => 'front#activities'
+      get '/positions' => 'front#positions'
+      get '/contact' => 'front#contact'
+      get '/news/:id' => 'front#news_show', as: :news_show
+      get '/activities/:id' => 'front#activity_show', as: :activity_show
+      get '/services/:id' => 'front#service_show', as: :service_show
+      get '/positions/:id' => 'front#position_show', as: :position_show
+    end
   end
 
   scope "(:locale)", :locale => /en|zh-CN/ do

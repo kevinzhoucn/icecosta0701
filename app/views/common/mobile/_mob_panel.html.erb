@@ -4,12 +4,12 @@
 
     <h1>dapja</h1>
 <a href="#" data-role="button" data-rel="close" data-iconpos="notext" data-icon="delete" class="ui-btn-right">sss</a>
-    <li><%= link_to "Home", '/mobile' %></li>
-    <li><%= link_to "about", '/mobile/about' %></li>
-    <li><%= link_to "services", '/mobile/services' %></li>
-    <li><%= link_to "news", '/mobile/news' %></li>
-    <li><%= link_to "activities", '/mobile/activities' %></li>
-    <li><%= link_to "positions", '/mobile/positions' %></li>
-    <li><%= link_to "contact", '/mobile/contact' %></li>
+    <li><%= link_to t('home'), mobile_path %></li>
+    <li><%= link_to t('about'), mobile_about_path %></li>
+    <li><%= link_to t('services'), mobile_services_path %></li>
+    <li><%= link_to "news", mobile_news_path %></li>
+    <li><%= link_to "activities", mobile_activities_path %></li>
+    <li><%= link_to "positions", mobile_positions_path %></li>
+    <li><%= link_to "contact", mobile_contact_path %></li>
   </ul>
 </div>
