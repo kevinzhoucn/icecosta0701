@@ -7,12 +7,12 @@
   <!-- 最新资讯 -->
     <ul data-role="listview" data-inset="true" data-icon="false">
       <li data-role="divider" data-icon="carat-r">
-        <%= link_to t('news'), mobile_news_path%>
+        <%=t('Top News')%>
       </li>
       <% @front_news.each do |item| %>
         <li>
         
-          <%= link_to item.title, mobile_news_show_path(item) %>
+          <%= link_to item.title, mobile_news_show_path(item), style:"font-size:0.8em;font-weight:normal" %>
         </li>
         <% end %>
 
@@ -23,25 +23,8 @@
       </li>
       <% @front_activities.each do |item| %>
         <li>        
-          <%= link_to item.title, mobile_activity_show_path(item) %>
+          <%= link_to item.title, mobile_activity_show_path(item), style:"font-size:0.8em;font-weight:normal" %>
         </li>
         <% end %>
 
-    </ul>
-
-
-    <!-- <ul>  
-      Links:
-      <li>
-        <%= link_to "about", '/mobile/about' %>
-        <%= link_to "services", '/mobile/services' %>
-        <%= link_to "news", '/mobile/news' %>
-        <%= link_to "activities", '/mobile/activities' %>
-        <%= link_to "positions", '/mobile/positions' %>
-      </li>
-    </ul>
- -->
-  
-  <!-- 最新资讯 完 -->
-
-    
+    </ul>    

@@ -1,8 +1,9 @@
 <p>mobile page!</p>
 <ul>
-            <% @items.each do |item| %>
-              <li><%= item.title %></li>
-            <% end %>
-          </table>
-          <%= paginate @items %>
+
+    <% @items.each do |item| %>
+      <li><%= item.title %></li>
+    <% end %>
+
+  <%= paginate @items %>
 </ul>

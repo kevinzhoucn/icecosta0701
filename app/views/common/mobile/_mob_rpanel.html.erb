@@ -1,7 +1,7 @@
 <div data-role="panel" id="language" data-display="push" data-position-fixed="true" data-position="right">
   <div>
-    <a href="#" data-role="button" data-icon="delete" data-rel="close" data-iconpos="notext">Close</a>
-    <%= link_to '中文', mobile_path(:locale => 'zh-CN'), class:"ui-btn" %>
-    <%= link_to 'English', mobile_path(:locale => 'en'), class:"ui-btn" %>
+    <%= link_to '中文', mobile_path(:locale => 'zh-CN'),data:{ajax: "false"},data:{role:"button"} %>
+    <%= link_to 'English', mobile_path(:locale => 'en'),data:{ajax: "false"},data:{role:"button"} %>
+    <a data-role="button" data-icon="delete" data-rel="close"><%=t('cancel')%></a>
   </div>
 </div>

@@ -1,41 +1,75 @@
-<!-- <link href="/js/mobslider/css/reset.css" rel="stylesheet" />
-<link href="/js/mobslider/css/style.css" rel="stylesheet" /> -->
-<script src="/js/mobslider/js/jquery.excoloSlider.js"></script>
-<link href="/js/mobslider/css/jquery.excoloSlider.css" rel="stylesheet" />
-<script>
-  // Settings for Adaptive.js
-  var ADAPT_CONFIG = {
-    path: '/js/mobslider/css/',
-    dynamic: true,
-    range: [
-      '0px    to 760px  = mobile.min.css',
-      '760px  to 980px  = 720.min.css',
-      '980px            = 960.min.css'
-    ]
-  };
-</script>
-<script src="/js/mobslider/js/adapt.min.js"></script>
-<script>
-  $(function () {
-    $("#sliderA").excoloSlider({interval: 2500,autosize: true, width: 100, height: 40});
-    //$("#sliderB").excoloSlider();
-});
-</script>
+<link href="/css/mobile/swiper.min.css" rel="stylesheet" />
 
-<div id="sliderA" style="">
-  <!-- <div style="background-color: #ff7500"><h2>First slide</h2></div>
-  <div style="background-color: #b6ff00"><h2>Second slide</h2></div>
-  <div style="background-color: #00ff05"><h2>Third slide</h2></div>
-  <div style="background-color: #00d8ff"><h2>Fourth slide</h2></div>
-  <div style="background-color: #8000ff"><h2>Fifth slide</h2></div>
-  <div style="background-color: #ff008d"><h2>Sixth slide</h2></div> -->
-  <% @slides.each do |slide| %>
-  <% if slide.picture && slide.picture.avatar %>
-    <div id="theslide">
-      <img src="<%= slide.picture.avatar.url(:medium) %>" />
-      <div><%= slide.title %></div>
-      <div><%= slide.sub_title %></div>
-    </div>
+<style>
+  .swiper-container {
+      width: 98%;
+      height: auto;
+      min-height: 110px;
+      margin: 10px auto;
+  }
+  .swiper-wrapper{
+    position:absolute;
+    height:100%;
+  }
+  .swiper-slide {
+      /*text-align: center;*/
+      font-size: 18px;
+      background: #797;
+      height: 100%;
+
+      /* Center slide text vertically */
+/*      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+*/  
+  }
+  .swiper-slide p{
+    margin: 5px;
+    padding:5px;
+    color:#5E8523;
+    font-weight: bold;
+    text-shadow: none;
+  }
+  .swiper-slide p:nth-child(2){
+    margin-left:15px;
+    font-size:0.75em;
+  }
+</style>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <% @slides.each do |slide| %>
+      <% if slide.picture && slide.picture.avatar %>
+        <div class="swiper-slide" style="background-image: url(<%= slide.picture.avatar.url(:medium) %>);background-size:100% 100%">
+          <p><%= slide.title %> </p>
+          <p><%= slide.sub_title %></p>
+        </div>
+      <% end %>
+
     <% end %>
-  <% end %>
+  </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
 </div>
+
+<script src="/js/mobile/swiper.min.js"></script>
+<script>
+$(document).ready(function(){
+  var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    autoplay: 2000,
+    autoplayDisableOnInteraction: false,
+    speed: 650,
+    loop: true
+  });
+})
+</script>

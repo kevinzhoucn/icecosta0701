@@ -59,7 +59,11 @@ class Mobile::FrontController < Mobile::ApplicationController
   end
 
   def positions
-    @item = Position.all.page params[:page]
+    if params[:locale] == 'en'
+      @items = Activity.find_en.page params[:page]
+    else
+      @items = Activity.find_cn.page params[:page]
+    end
   end
 
   def position_show

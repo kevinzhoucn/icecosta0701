@@ -1,12 +1,20 @@
 
 <div data-role="footer" data-position="fixed">
-  <div data-role="navbar" >
+  <div data-role="navbar" data-iconpos="top">
     <ul>
-      <li><%= link_to t('about'), mobile_about_path %></li>
-      <li><%= link_to t('services'), mobile_services_path %></li>
-      <li><%= link_to "positions", mobile_positions_path %></li>
-      <li><%= link_to "contact", mobile_contact_path %></li>
+      <li>
+        <%= link_to t('about'), mobile_about_path, data:{ajax: "false"},data:{icon:"info"},id:"about",rel:"external" %>
+      </li>
+      <li>
+        <%= link_to t('services'), mobile_services_path, data:{ajax: "false"},data:{icon:"bullets"} ,id:"services",rel:"external"%>
+      </li>
+      <li>
+        <%= link_to t('positions'), mobile_positions_path, data:{ajax: "false"},data:{icon:"user"}, id:"positions",rel:"external" %>
+      </li>
+      <li>
+        <%= link_to t('contact_us'), mobile_contact_path,data:{ajax:"false"},data:{icon:"phone"},id:"contact",rel:"external"%>
+      </li>
     </ul>
   </div>
-  <h6>Copyright &copy; IPA-CRO</h6>
 </div>
+
