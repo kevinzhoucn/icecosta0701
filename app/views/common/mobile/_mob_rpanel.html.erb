@@ -3,5 +3,7 @@
     <%= link_to '中文', mobile_path(:locale => 'zh-CN'),data:{ajax: "false"},data:{role:"button"} %>
     <%= link_to 'English', mobile_path(:locale => 'en'),data:{ajax: "false"},data:{role:"button"} %>
     <a data-role="button" data-icon="delete" data-rel="close"><%=t('cancel')%></a>
+    <%= link_to 'Desktop', '/?&desktop=set', data:{role:"button"} %>
+    <%= link_to 'Mobile', '/?&desktop=unset', data:{role:"button"} %>
   </div>
 </div>
