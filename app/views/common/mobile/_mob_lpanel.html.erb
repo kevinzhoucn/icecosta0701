@@ -1,7 +1,7 @@
-<div data-role="panel" id="thepanel" data-display="overlay" data-position-fixed="true" >
+<div data-role="panel" id="thepanel" data-display="overlay" data-position-fixed="true" style="background-color:#3991e5">
     <!-- panel content goes here -->
   <ul data-role="listview">
-    <li data-role="separator">IPA-CRO</li>
+    <li data-role="separator" style="background-color:#3991e5 !important;color:#fff"><h3><%=t('site_title')%></h3></li>
     <li><%= link_to t('home'), mobile_path, data:{ajax: "false"},rel:"external" %></li>
     <li><%= link_to t('about'), mobile_about_path, data:{ajax: "false"},rel:"external" %></li>
     <li><%= link_to t('services'), mobile_services_path, data:{ajax: "false"},rel:"external" %></li>
@@ -10,5 +10,5 @@
     <li><%= link_to t('positions'), mobile_positions_path, data:{ajax: "false"},rel:"external" %></li>
     <li><%= link_to t('contact_us'), mobile_contact_path, data:{ajax: "false"},rel:"external" %></li>
   </ul>
-<a data-role="button" data-rel="close" style="margin-top:30px" data-icon="delete">Close</a>
+<a data-role="button" data-rel="close" style="margin-top:30px" data-icon="delete" data-mini="true"><%=t('close')%></a>
 </div>
