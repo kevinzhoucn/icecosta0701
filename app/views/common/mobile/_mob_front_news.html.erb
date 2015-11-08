@@ -1,0 +1,13 @@
+<ul data-role="listview" data-inset="true" data-icon="false" class="newsactivities">
+  <li data-role="divider">
+    <%=t('Top News')%>
+  </li>
+  <% @front_news.each do |item| %>
+    <li>
+      <%= link_to item.title, mobile_news_show_path(item) %>
+    </li>
+  <% end %>
+    <li>
+      <%=link_to t('More'), mobile_news_path, data:{role:"button"},data:{inline:"true"},style:"text-align:right"%>
+    </li>
+</ul>

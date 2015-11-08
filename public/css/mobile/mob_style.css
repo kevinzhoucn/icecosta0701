@@ -1,0 +1,18 @@
+*{font-family: 'Microsoft yahei','新宋体',sans-serif，Arial !important;}
+p{white-space:normal; word-wrap:break-word;}
+.ui-bar-inherit {
+  border-bottom: 1px solid #2f73b2 !important;
+  background-color: #3991e5 !important;
+}
+.ui-header .ui-title, .ui-footer .ui-title{
+  color: #eee;
+  text-shadow: none;
+}
+.newsactivities li a{
+  font-size:0.8em;
+  font-weight:normal;
+}
+.newsactivities li:first-child{
+  background-color:#3991e5;
+  color:#fff
+}

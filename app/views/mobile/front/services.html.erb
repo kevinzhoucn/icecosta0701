@@ -1,9 +1,19 @@
-<p>mobile page!</p>
-<ul>
-
-    <% @items.each do |item| %>
-      <li><%= item.title %></li>
-    <% end %>
-
-  <%= paginate @items %>
+<div data-role="controlgroup" data-type="horizontal" style="margin:-1em 0 1em 0">
+  <a href="<%=mobile_path%>" data-role="button" data-icon="back"  data-mini="true"><%=t('home')%></a>
+</div>
+<h3>
+<%= t('news')%>
+</h3>
+<ul data-role="listview" data-icon="false" style="margin-top:1em" class="newsactivities">
+  <% @items.each do |item| %>
+    <li>
+      <a href="<%=mobile_service_show_path(item)%>">
+        &nbsp;&nbsp;
+        <%=item.title%>
+      </a>
+    </li>
+  <% end %>
+  <li>
+    <%= paginate @items %>
+  </li>
 </ul>

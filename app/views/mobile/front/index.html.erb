@@ -1,30 +1,5 @@
-  <!-- 幻灯片-->
-  <%= render partial:'common/mobile/mob_slideshow' %>
-   <!-- 幻灯片 完-->
+<%= render partial:'common/mobile/mob_slideshow' %>
 
-  <!-- 列表 -->
+<%= render partial:'common/mobile/mob_front_news' %>
 
-  <!-- 最新资讯 -->
-    <ul data-role="listview" data-inset="true" data-icon="false">
-      <li data-role="divider" data-icon="carat-r">
-        <%=t('Top News')%>
-      </li>
-      <% @front_news.each do |item| %>
-        <li>
-        
-          <%= link_to item.title, mobile_news_show_path(item), style:"font-size:0.8em;font-weight:normal" %>
-        </li>
-        <% end %>
-
-    </ul>
-    <ul data-role="listview" data-inset="true" data-icon="false">
-      <li data-role="divider" data-icon="carat-r">
-        <%= link_to t('activities'), mobile_news_path%>
-      </li>
-      <% @front_activities.each do |item| %>
-        <li>        
-          <%= link_to item.title, mobile_activity_show_path(item), style:"font-size:0.8em;font-weight:normal" %>
-        </li>
-        <% end %>
-
-    </ul>    
+<%= render partial:'common/mobile/mob_front_activities' %>

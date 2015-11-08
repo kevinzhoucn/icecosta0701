@@ -1,17 +1,24 @@
-  <ul data-role="listview">
+<div data-role="controlgroup" data-type="horizontal" style="margin:-1em 0 1em 0">
+  <a href="<%=mobile_path%>" data-role="button" data-icon="back"  data-mini="true"><%=t('home')%></a>
+</div>
+<h3>
+<%= t('news')%>
+</h3>
+<ul data-role="listview" data-icon="false" style="margin-top:1em" class="newsactivities">
+  <% @items.each do |item| %>
     <li>
-      <%=t('news')%>
+      <a href="<%=mobile_news_show_path(item)%>">
+        <% if item.created_at %>
+          <%= item.created_at.strftime('%Y-%m-%d') %>
+        <%else%>
+          &nbsp;
+        <% end %>
+        &nbsp;&nbsp;
+        <%=item.title%>
+      </a>
     </li>
-    <% @items.each do |item| %>
-      <li>
-        <a href="<%=mobile_news_show_path(item)%>"><%=item.title%>
-          <% if item.created_at %>
-            &nbsp;&nbsp;<%= item.created_at.strftime('%Y-%m-%d') %>
-          <%else%>
-            &nbsp;
-          <% end %>
-        </a>
-      </li>
-    <% end %>
-  </ul>
-<%= paginate @items %>
+  <% end %>
+  <li>
+    <%= paginate @items %>
+  </li>
+</ul>

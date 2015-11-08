@@ -60,20 +60,21 @@ class Mobile::FrontController < Mobile::ApplicationController
 
   def positions
     if params[:locale] == 'en'
-      @items = Activity.find_en.page params[:page]
-    else
-      @items = Activity.find_cn.page params[:page]
-    end
-  end
-
-  def position_show
-    if params[:locale] == 'en'
       @items = Position.find_en.page params[:page]
     else
       @items = Position.find_cn.page params[:page]
     end
   end
 
+  def position_show
+    @item = Position.find(params[:id])
+  end
+
   def contact
+    if params[:locale] == 'zh-CN'
+      @contact_locale = SiteConfig.contact_cn
+    else
+      @contact_locale = SiteConfig.contact_en
+    end
   end
 end

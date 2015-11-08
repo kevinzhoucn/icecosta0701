@@ -1,3 +1,10 @@
-<p>News Item</p>
-<p><%= @item.title %></p>
-<p><%= @item.title %></p>
+<div data-role="controlgroup" data-type="horizontal" style="margin:-1em 0 1em 0">
+  <a href="<%=mobile_news_path%>" data-role="button" data-icon="back"  data-mini="true"><%=t('news')%></a>
+  <a href="<%=mobile_path%>" data-role="button" data-icon="home"  data-mini="true"><%=t('home')%></a>
+</div>
+
+<h3 style="text-align:center"><%= @item.title %></h3>
+
+<div>
+  <%=@item.content.html_safe%>
+</div>
