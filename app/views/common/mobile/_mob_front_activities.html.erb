@@ -4,7 +4,15 @@
   </li>
   <% @front_activities.each do |item| %>
     <li>        
-      <%= link_to item.title, mobile_activity_show_path(item) %>
+      <a href="<%=mobile_activity_show_path(item)%>">
+        <% if item.created_at %>
+          <%= item.created_at.strftime('%Y-%m-%d') %>
+        <%else%>
+          &nbsp;
+        <% end %>
+        &nbsp;&nbsp;
+        <%=item.title%>
+      </a>
     </li>
     <% end %>
     <li>
