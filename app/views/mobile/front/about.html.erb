@@ -1,3 +1,5 @@
 <div style="display:inline">
-  <%= @about_en.html_safe %>
+  <% if @about_content %>
+    <%= @about_content.html_safe %>
+  <% end %>
 </div>
