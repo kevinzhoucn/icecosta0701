@@ -6,6 +6,8 @@ class News
   field :news_type, type: String
   field :lang, type: String
 
+  scope :mobile_order, -> { desc(:created_at) }
+
   def self.search(search)
     if search
       where(title: /#{search}/i)

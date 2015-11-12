@@ -1,11 +1,12 @@
 class Activity
   include Mongoid::Document
-  #added timestamp ---- Albert
   include Mongoid::Timestamps
   field :title, type: String
   field :content, type: String
   field :activity_type, type: String
   field :lang, type: String
+
+  scope :mobile_order, -> { desc(:created_at) }
   
   def self.search(search)
     if search

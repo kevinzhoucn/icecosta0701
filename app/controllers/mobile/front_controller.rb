@@ -3,14 +3,14 @@ class Mobile::FrontController < Mobile::ApplicationController
     @slides = Slide.shows.all
 
     if params[:locale] == 'en'
-      @front_news = News.find_en.limit(5)
-      @front_activities = Activity.find_en.limit(5)
+      @front_news = News.find_en.mobile_order.limit(5)
+      @front_activities = Activity.find_en.mobile_order.limit(5)
       @front_services = Service.find_en.limit(5)
       @front_positions = Position.limit(5)
       @english = true
     else
-      @front_news = News.find_cn.limit(5)
-      @front_activities = Activity.find_cn.limit(5)
+      @front_news = News.find_cn.mobile_order.limit(5)
+      @front_activities = Activity.find_cn.mobile_order.limit(5)
       @front_services = Service.find_cn.limit(5)
       @front_positions = Position.limit(5)
     end
@@ -21,11 +21,11 @@ class Mobile::FrontController < Mobile::ApplicationController
   def about
     if params[:locale] == 'en'
       @about_content = SiteConfig.get_config('about_content_en').value
-      @abouts = About.find_en.page params[:page] 
+      @abouts = About.find_en.mobile_order.page params[:page] 
       @english = true
     else
       @about_content = SiteConfig.get_config('about_content_cn').value
-      @abouts = About.find_cn.page params[:page] 
+      @abouts = About.find_cn.mobile_order.page params[:page] 
 
     end
   end
@@ -40,9 +40,9 @@ class Mobile::FrontController < Mobile::ApplicationController
 
   def news
     if params[:locale] == 'en'
-      @items = News.find_en.page params[:page]
+      @items = News.find_en.mobile_order.page params[:page]
     else
-      @items = News.find_cn.page params[:page]
+      @items = News.find_cn.mobile_order.page params[:page]
     end
   end
 
@@ -52,9 +52,9 @@ class Mobile::FrontController < Mobile::ApplicationController
 
   def activities
     if params[:locale] == 'en'
-      @items = Activity.find_en.page params[:page]
+      @items = Activity.find_en.mobile_order.page params[:page]
     else
-      @items = Activity.find_cn.page params[:page]
+      @items = Activity.find_cn.mobile_order.page params[:page]
     end
   end
 
