@@ -21,11 +21,11 @@ class Mobile::FrontController < Mobile::ApplicationController
   def about
     if params[:locale] == 'en'
       @about_content = SiteConfig.get_config('about_content_en').value
-      @abouts = About.find_en.mobile_order.page params[:page] 
+      @abouts = About.find_en.page params[:page] 
       @english = true
     else
       @about_content = SiteConfig.get_config('about_content_cn').value
-      @abouts = About.find_cn.mobile_order.page params[:page] 
+      @abouts = About.find_cn.page params[:page] 
 
     end
   end
