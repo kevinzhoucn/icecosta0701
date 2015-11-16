@@ -5,9 +5,9 @@ class PositionsController < ApplicationController
 
   def index
     if params[:locale] == 'en'
-      @positions = Position.find_en.page params[:page] 
+      @positions = Position.find_en.mobile_order.page params[:page] 
     else
-      @positions = Position.find_cn.page params[:page] 
+      @positions = Position.find_cn.mobile_order.page params[:page] 
     end
     @position_bar_image = Slide.get_bar_image("position_bar_image")
     @position_content_image = Slide.get_bar_image("position_content_image")

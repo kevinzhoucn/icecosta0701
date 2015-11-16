@@ -3,8 +3,8 @@ class FrontController < ApplicationController
     @slides = Slide.shows.all
 
     if params[:locale] == 'en'
-      @front_news = News.find_en.limit(5)
-      @front_activites = Activity.find_en.limit(5)
+      @front_news = News.find_en.mobile_order.limit(5)
+      @front_activites = Activity.find_en.mobile_order.limit(5)
       @front_services = Service.find_en.limit(5)
       @front_positions = Position.limit(5)
       @about_abstract_locale = SiteConfig.get_config_value("about_abstract_en")
@@ -12,8 +12,8 @@ class FrontController < ApplicationController
       @position_abstract_locale = SiteConfig.get_config_value("position_abstract_en")
       @english = true
     else
-      @front_news = News.find_cn.limit(5)
-      @front_activites = Activity.find_cn.limit(5)
+      @front_news = News.find_cn.mobile_order.limit(5)
+      @front_activites = Activity.find_cn.mobile_order.limit(5)
       @front_services = Service.find_cn.limit(5)
       @front_positions = Position.limit(5)
       @about_abstract_locale = SiteConfig.get_config_value("about_abstract_cn") 

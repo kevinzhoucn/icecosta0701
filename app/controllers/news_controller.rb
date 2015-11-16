@@ -5,9 +5,9 @@ class NewsController < ApplicationController
 
   def index
     if params[:locale] == 'en'
-      @news = News.find_en.page params[:page] 
+      @news = News.find_en.mobile_order.page params[:page] 
     else
-      @news = News.find_cn.page params[:page] 
+      @news = News.find_cn.mobile_order.page params[:page] 
     end
     @news_bar_image = Slide.get_bar_image("news_bar_image")
     @news_content_image = Slide.get_bar_image("news_content_image")

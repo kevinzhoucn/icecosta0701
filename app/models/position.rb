@@ -8,6 +8,7 @@ class Position
   field :lang, type: String
   has_many :resumes
 
+  scope :mobile_order, -> { desc(:created_at) }
   def self.search(search)
     if search
       where(title: /#{search}/i)

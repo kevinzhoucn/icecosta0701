@@ -9,6 +9,7 @@ Rails40Starter::Application.routes.draw do
       get '/activities' => 'front#activities'
       get '/positions' => 'front#positions'
       get '/contact' => 'front#contact'
+      get '/about/:id' => 'front#about_show', as: :about_show
       get '/news/:id' => 'front#news_show', as: :news_show
       get '/activities/:id' => 'front#activity_show', as: :activity_show
       get '/services/:id' => 'front#service_show', as: :service_show

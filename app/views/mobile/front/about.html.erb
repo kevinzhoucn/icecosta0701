@@ -1,3 +1,19 @@
+<div data-role="controlgroup" data-type="horizontal" style="margin:-1em 0 1em 0;position:fixed;z-index:99">
+  <a href="<%=mobile_path%>" data-role="button" data-icon="back"  data-mini="true" data-ajax="false"><%=t('home')%></a>
+</div>
+<h3 style="margin-top:1.25em">
+<%= t('about')%>
+</h3>
+<div data-role="navbar" style="margin-top:1em">
+  <ul>
+    <% @items.each do |item| %>
+    <li>
+      <a href="<%= mobile_about_show_path(item) %>" data-ajax="false"><%=item.title%></a>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
 <div style="display:inline">
   <% if @about_content %>
     <%= @about_content.html_safe %>

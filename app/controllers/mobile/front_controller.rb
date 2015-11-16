@@ -21,20 +21,31 @@ class Mobile::FrontController < Mobile::ApplicationController
   def about
     if params[:locale] == 'en'
       @about_content = SiteConfig.get_config('about_content_en').value
-      @abouts = About.find_en.page params[:page] 
+      @items = About.find_en.page params[:page] 
       @english = true
     else
       @about_content = SiteConfig.get_config('about_content_cn').value
-      @abouts = About.find_cn.page params[:page] 
+      @items = About.find_cn.page params[:page] 
 
+    end
+  end
+
+  def about_show
+    @item = About.find(params[:id])
+    if params[:locale] == 'en'
+      @items = About.find_en.page params[:page]
+    else
+      @items = About.find_cn.page params[:page]
     end
   end
 
   def services
     if params[:locale] == 'en'
       @items = Service.find_en.page params[:page]
+      @service_content = SiteConfig.get_config('service_content_en').value
     else
       @items = Service.find_cn.page params[:page]
+      @service_content = SiteConfig.get_config('service_content_cn').value
     end
   end
 
@@ -64,6 +75,11 @@ class Mobile::FrontController < Mobile::ApplicationController
 
   def service_show
     @item = Service.find(params[:id])
+    if params[:locale] == 'en'
+      @items = Service.find_en.page params[:page]
+    else
+      @items = Service.find_cn.page params[:page]
+    end
   end
 
   def positions

@@ -5,9 +5,9 @@ class ActivitiesController < ApplicationController
 
   def index
     if params[:locale] == 'en'
-      @activities = Activity.find_en.page params[:page] 
+      @activities = Activity.find_en.mobile_order.page params[:page] 
     else
-      @activities = Activity.find_cn.page params[:page] 
+      @activities = Activity.find_cn.mobile_order.page params[:page] 
     end
     @activity_bar_image = Slide.get_bar_image("activity_bar_image")
     @activity_content_image = Slide.get_bar_image("activity_content_image")

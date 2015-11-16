@@ -163,6 +163,7 @@ hr{border-top:1px solid #aaccEC;margin:10px 0;}
 @font-face {
     font-family: 'stxingkairegular';
     src: url('fonts/xingkai.ttf') format('truetype');
+    src: url('fonts/xingkai.eot');
     font-weight: normal;
     font-style: normal;
 

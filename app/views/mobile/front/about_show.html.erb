@@ -1,18 +1,17 @@
 <div data-role="controlgroup" data-type="horizontal" style="margin:-1em 0 1em 0;position:fixed;z-index:99">
-  <a href="<%=mobile_services_path%>" data-role="button" data-icon="back"  data-mini="true" data-ajax="false"><%=t('services')%></a>
+  <a href="<%=mobile_about_path%>" data-role="button" data-icon="back"  data-mini="true" data-ajax="false"><%=t('about')%></a>
   <a href="<%=mobile_path%>" data-role="button" data-icon="home"  data-mini="true" data-ajax="false"><%=t('home')%></a>
 </div>
 <div data-role="navbar" style="margin-top:2em">
   <ul>
     <% @items.each do |item| %>
     <li>
-      <a href="<%=mobile_service_show_path(item)%>" data-ajax="false"><%=item.title%></a>
+      <a href="<%=mobile_about_show_path(item)%>" data-ajax="false"><%=item.title%></a>
       </li>
     <% end %>
   </ul>
 </div>
-<h3 style="text-align:center"><%= @item.title %></h3>
-
 <div>
-  <%=@item.content.html_safe%>
+<h3 style="text-align:center"><%= @item.title %></h3>
+  <%= @item.content.html_safe%>
 </div>

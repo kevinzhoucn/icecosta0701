@@ -7,12 +7,14 @@
 <ul data-role="listview" data-icon="false" style="margin-top:1em" class="newsactivities">
   <% @items.each do |item| %>
     <li>
-      <a href="<%=mobile_position_show_path(item)%>">
+      <a href="<%=mobile_position_show_path(item)%>" data-ajax="false">
         <% if item.created_at %>
           <%= item.created_at.strftime('%Y-%m-%d') %>
         <%else%>
           &nbsp;
         <% end %>
+        &nbsp;&nbsp;
+        <%=t('region')%>: <%= item.position_type%>
         &nbsp;&nbsp;
         <%=item.title%>
       </a>
