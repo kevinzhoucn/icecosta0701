@@ -15,10 +15,14 @@ class ApplicationController < ActionController::Base
       # devise_controller? || "application"
 
       layout_str = "application"
-      layout_str = "app_maintenance" if SiteConfig.get_config('maintenance_notice').value.length > 5
-      layout_str = "applogin" if devise_controller?
 
-      # layout_str = "app_maintenance" if true
+      if SiteConfig.get_config('maintenance_notice').value.length > 5  
+        layout_str = "app_maintenance"
+      elsif devise_controller?
+        layout_str = "applogin"
+      end
+
+      return layout_str 
     end
 
     def set_locale  

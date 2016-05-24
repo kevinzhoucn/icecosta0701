@@ -40,6 +40,9 @@ class Cpanel::FrontController < Cpanel::ApplicationController
 
     @site_maintenace = SiteConfig.get_config('maintenance')
     @site_maintenace_notice = SiteConfig.get_config('maintenance_notice')
+
+    @site_keywords = SiteConfig.get_config('keywords')
+    @site_description = SiteConfig.get_config('description')
   end
 
   # def about
