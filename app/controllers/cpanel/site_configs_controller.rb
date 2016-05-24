@@ -8,6 +8,8 @@ class Cpanel::SiteConfigsController < Cpanel::ApplicationController
     @cpanel_site_configs_other = []
     @cpanel_site_configs_other << SiteConfig.where(key: 'site_logo').first
     @cpanel_site_configs_other << SiteConfig.where(key: 'site_slogan').first
+    @cpanel_site_configs_other << SiteConfig.where(key: 'keywords').first
+    @cpanel_site_configs_other << SiteConfig.where(key: 'description').first
     respond_with(@cpanel_site_configs_other)
   end
 

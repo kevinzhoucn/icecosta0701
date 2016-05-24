@@ -15,11 +15,11 @@
     <%= f.label :key %><br>
     <%= f.text_field :key %>
   </div>
-  <div class="field">
+  <div class="field"  style="margin: 2em 5em;">
     <%= f.text_area :value %>
   </div>
 
-  <div class="quick-press">
+  <div class="quick-press"  style="margin: 2em 5em;">
     <%= f.submit class:"submitbutton",style:'padding:1px 5px', value:' 保 存 '%>
     <button class="submitbutton" style="padding:1px 10px;margin:0px 15px" onclick="window.history.go(-1);return false;">取 消</button>
   </div>
@@ -27,8 +27,8 @@
 <% end %>
 
 <script>
-CKEDITOR.replace('site_config_value',{
-  "extraPlugins": "imagebrowser",
-  "imageBrowser_listUrl": "/ckeditor/pictures/image_list.json"
-});
+//CKEDITOR.replace('site_config_value',{
+//   "extraPlugins": "imagebrowser",
+//   "imageBrowser_listUrl": "/ckeditor/pictures/image_list.json"
+// });
 </script>

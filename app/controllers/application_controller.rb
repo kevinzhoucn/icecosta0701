@@ -38,5 +38,8 @@ class ApplicationController < ActionController::Base
         @services = Service.find_cn.page params[:page] 
         @abouts = About.find_cn
       end
+
+      @site_keywords = SiteConfig.get_config_value('keywords')
+      @site_description = SiteConfig.get_config_value('description')
     end
 end
