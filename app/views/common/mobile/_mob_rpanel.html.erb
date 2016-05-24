@@ -8,5 +8,7 @@
     <a href="<%=mobile_path(:locale => 'zh-CN')%>" data-role="button" data-icon="home" data-ajax="false">中文版</a>
     <a href="<%=mobile_path(:locale => 'en')%>" data-role="button" data-icon="home" data-ajax="false">English</a>
     <a data-role="button" data-icon="delete" data-rel="close"><%=t('cancel')%></a>
+    <%= link_to 'Desktop', '/?&desktop=set', data:{role:"button"} %>
+    <%= link_to 'Mobile', '/?&desktop=unset', data:{role:"button"} %>
   </div>
 </div>

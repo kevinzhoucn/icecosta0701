@@ -1,5 +1,8 @@
 class FrontController < ApplicationController
   def index
+    @session_desktop = session[:desktop] = true if params[:desktop] == 'set'
+    @session_desktop = session[:desktop] = false if params[:desktop] == 'unset'
+
     @slides = Slide.shows.all
 
     if params[:locale] == 'en'
