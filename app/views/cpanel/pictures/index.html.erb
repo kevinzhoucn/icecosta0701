@@ -15,14 +15,6 @@
   <div class="monitor">
     <div class="clearfix">
       <div style="border:1px solid rgb(235,235,235);margin: 10px 40px;border-radius:5px;height:400px;overflow-y:scroll">
-        <!-- 旧版图片列表 -->
-        <!-- <ul>
-          <% @pictures.each do |picture| %>
-          <li class="picthumb" style="background-image:url('<%= picture.avatar.url(:tile)%>')">
-            <%= link_to 'X', cpanel_picture_path(picture), method: :delete, data: { confirm: '确定要删除图片吗' },class:'submitbutton',style:'float:right;padding:1px 10px'%>
-          </li>
-          <% end %>
-        </ul> -->
         <% @pictures.each do |picture| %>
           <div style="width:auto;height:auto;overflow:hidden;float:left;position:relative;margin:5px 15px;padding:1px 1px !important;">
             <img src="<%= picture.avatar.url%>" style="width:auto;height:auto;max-width:300px;max-height:300px">

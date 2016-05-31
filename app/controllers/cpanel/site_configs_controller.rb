@@ -6,8 +6,9 @@ class Cpanel::SiteConfigsController < Cpanel::ApplicationController
   def index
     # @cpanel_site_configs = SiteConfig.all
     @cpanel_site_configs_other = []
-    @cpanel_site_configs_other << SiteConfig.where(key: 'site_logo').first
-    @cpanel_site_configs_other << SiteConfig.where(key: 'site_slogan').first
+    # @cpanel_site_configs_other << SiteConfig.where(key: 'site_logo').first
+    # @cpanel_site_configs_other << SiteConfig.where(key: 'site_slogan').first
+    # site_logo 和 site_slogan暂时用不上
     @cpanel_site_configs_other << SiteConfig.where(key: 'keywords').first
     @cpanel_site_configs_other << SiteConfig.where(key: 'description').first
     respond_with(@cpanel_site_configs_other)

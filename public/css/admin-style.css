@@ -1,3 +1,4 @@
+/*modified on 20160531*/
 table {width: auto!important;}
 td{table-layout: fixed !important;}
 div {word-wrap:break-word;}
@@ -37,7 +38,7 @@ div {word-wrap:break-word;}
     /*slidebar²à±ßÀ¸*/
     .slidebar {
       width: 20%;
-      min-height: 690px;
+      min-height: 710px;
       float: left;
       border-right: 1px solid rgb(235,235,235);
       background-color: rgb(247,247,247);
@@ -78,7 +79,7 @@ div {word-wrap:break-word;}
       float: left;
       width: 79%;
       height: auto;
-      min-height:690px;
+      min-height:710px;
       background-color: rgb(255,255,255);
       position: relative;
       font-family: helvetica,verdana,sans-serif;
